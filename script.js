@@ -7,6 +7,8 @@ const FEEDS = {
 };
 
 const API_BASE = 'https://api.rss2json.com/v1/api.json?rss_url=';
+// CORS proxy for GitHub Pages (bypasses cross-origin restrictions)
+const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
 
 const loadingEl = document.getElementById('loading');
 const errorEl = document.getElementById('error');
@@ -16,7 +18,8 @@ const refreshBtn = document.getElementById('refreshBtn');
 let currentFeed = 'headlines';
 
 async function fetchNews(feedKey) {
-    const url = `${API_BASE}${encodeURIComponent(FEEDS[feedKey])}`;
+    const apiUrl = `${API_BASE}${encodeURIComponent(FEEDS[feedKey])}`;
+    const url = `${CORS_PROXY}${encodeURIComponent(apiUrl)}`;
     const response = await fetch(url);
     if (!response.ok) throw new Error('Network error');
     return response.json();
