@@ -1,58 +1,57 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한국 뉴스 | Korea News</title>
+    <title>中文历史杂志资源库</title>
+    <meta name="description" content="抓取并展示中文历史杂志与期刊资源，可直接部署到 GitHub Pages。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="header">
         <div class="header-content">
-            <h1 class="logo">
-                <span class="logo-ko">한국 뉴스</span>
-                <span class="logo-en">Korea News</span>
-            </h1>
-            <p class="tagline">실시간 한국 주요 뉴스</p>
+            <h1 class="logo">中文历史杂志资源库</h1>
+            <p class="tagline">自动抓取中文历史杂志资源 · 支持 GitHub Pages 部署</p>
         </div>
     </header>
 
     <main class="main">
-        <div class="controls">
-            <div class="category-tabs">
-                <button class="tab active" data-feed="headlines">전체 헤드라인</button>
-                <button class="tab" data-feed="politics">정치</button>
-                <button class="tab" data-feed="economy">경제</button>
-                <button class="tab" data-feed="society">사회</button>
+        <section class="panel controls">
+            <div class="search-row">
+                <input id="searchInput" type="text" placeholder="输入标题或关键词，例如：东方杂志 / 民国">
+                <button id="clearSearchBtn" class="ghost-btn" type="button">清空</button>
             </div>
-            <button class="refresh-btn" id="refreshBtn" title="새로고침">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M23 4v6h-6M1 20v-6h6"/>
-                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
-                </svg>
-                <span>새로고침</span>
-            </button>
-        </div>
+            <div class="filter-row">
+                <button class="tab active" data-source="all">全部来源</button>
+                <button class="tab" data-source="shuge">书格</button>
+                <button class="tab" data-source="zh-wikipedia">中文维基百科</button>
+                <button id="refreshBtn" class="refresh-btn" type="button">刷新页面</button>
+            </div>
+        </section>
+
+        <section class="panel meta">
+            <p>数据更新时间：<strong id="updatedAt">加载中...</strong></p>
+            <p>当前结果数：<strong id="totalCount">0</strong></p>
+            <p id="sourceSummary"></p>
+        </section>
 
         <div class="loading" id="loading">
             <div class="spinner"></div>
-            <p>뉴스 로딩 중...</p>
+            <p>正在加载资源...</p>
         </div>
 
         <div class="error" id="error" style="display: none;">
-            <p>뉴스를 불러올 수 없습니다. 잠시 후 다시 시도해 주세요.</p>
+            <p>未能加载资源数据，请稍后重试。</p>
         </div>
 
-        <section class="news-grid" id="newsContainer">
-            <!-- News cards will be inserted here -->
-        </section>
+        <section class="cards" id="resourceContainer"></section>
     </main>
 
     <footer class="footer">
-        <p>데이터 출처: Google News Korea · RSS 피드 기반</p>
+        <p>本网站仅聚合公开可访问的中文历史杂志索引，版权归原站点及作者所有。</p>
     </footer>
 
     <script src="script.js"></script>
