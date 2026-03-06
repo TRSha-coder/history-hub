@@ -1,78 +1,63 @@
-// RSS Feed URLs - 联联社(연합뉴스) 分类 + Google News 综合
-const FEEDS = {
-    headlines: 'https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko',
-    politics: 'https://www.yna.co.kr/rss/politics.xml',
-    economy: 'https://www.yna.co.kr/rss/economy.xml',
-    society: 'https://www.yna.co.kr/rss/society.xml'
-};
-
-const API_BASE = 'https://api.rss2json.com/v1/api.json?rss_url=';
-const CORS_PROXIES = [
-    'https://api.codetabs.com/v1/proxy?quest=',
-    'https://api.allorigins.win/raw?url=',
-    'https://corsproxy.io/?'
-];
-
 const loadingEl = document.getElementById('loading');
 const errorEl = document.getElementById('error');
-const newsContainer = document.getElementById('newsContainer');
+const resourceContainer = document.getElementById('resourceContainer');
 const refreshBtn = document.getElementById('refreshBtn');
+const updatedAtEl = document.getElementById('updatedAt');
+const totalCountEl = document.getElementById('totalCount');
+const sourceSummaryEl = document.getElementById('sourceSummary');
+const searchInputEl = document.getElementById('searchInput');
+const clearSearchBtnEl = document.getElementById('clearSearchBtn');
 
-let currentFeed = 'headlines';
+let allItems = [];
+let currentSource = 'all';
+let currentKeyword = '';
 
-async function fetchWithProxy(apiUrl) {
-    let lastErr;
-    for (const proxy of CORS_PROXIES) {
-        try {
-            const url = proxy + encodeURIComponent(apiUrl);
-            const ctrl = new AbortController();
-            const timeout = setTimeout(() => ctrl.abort(), 15000);
-            const response = await fetch(url, { signal: ctrl.signal });
-            clearTimeout(timeout);
-            if (!response.ok) throw new Error('Network error');
-            return await response.json();
-        } catch (err) {
-            lastErr = err;
-        }
+function sourceLabel(source) {
+    if (source === 'shuge') return '书格';
+    if (source === 'zh-wikipedia') return '中文维基百科';
+    return source || '未知来源';
+}
+
+function safeText(value) {
+    if (value === null || value === undefined) return '';
+    return String(value);
+}
+
+function formatYear(item) {
+    const year = safeText(item.year).trim();
+    if (year) return year;
+    const date = safeText(item.date).trim();
+    if (/^\d{4}/.test(date)) return date.slice(0, 4);
+    return '年份未知';
+}
+
+function renderCards(items) {
+    if (!items.length) {
+        resourceContainer.innerHTML = '<div class="empty">没有匹配到资源，请尝试其他关键词。</div>';
+        totalCountEl.textContent = '0';
+        return;
     }
-    throw lastErr;
-}
 
-async function fetchNews(feedKey) {
-    try {
-        const res = await fetch(`news-data/${feedKey}.json`);
-        if (res.ok) {
-            const data = await res.json();
-            if (data.status === 'ok' && data.items?.length) return data;
-        }
-    } catch (_) {}
-    const apiUrl = `${API_BASE}${encodeURIComponent(FEEDS[feedKey])}`;
-    return fetchWithProxy(apiUrl);
-}
+    resourceContainer.innerHTML = items.map((item) => {
+        const title = escapeHtml(safeText(item.title) || '未命名资源');
+        const summary = escapeHtml(safeText(item.summary) || '暂无摘要');
+        const year = escapeHtml(formatYear(item));
+        const source = escapeHtml(sourceLabel(item.source));
+        const link = safeText(item.link) || '#';
+        return `
+            <article class="card">
+                <div class="card-meta">
+                    <span class="badge">${source}</span>
+                    <span class="year">${year}</span>
+                </div>
+                <h3>${title}</h3>
+                <p>${summary}</p>
+                <a href="${encodeURI(link)}" target="_blank" rel="noopener noreferrer">查看原文</a>
+            </article>
+        `;
+    }).join('');
 
-function formatDate(dateStr) {
-    const date = new Date(dateStr);
-    const now = new Date();
-    const diff = now - date;
-    const mins = Math.floor(diff / 60000);
-    const hours = Math.floor(diff / 3600000);
-    const days = Math.floor(diff / 86400000);
-
-    if (mins < 60) return `${mins}분 전`;
-    if (hours < 24) return `${hours}시간 전`;
-    if (days < 7) return `${days}일 전`;
-    return date.toLocaleDateString('ko-KR');
-}
-
-function renderNews(items) {
-    newsContainer.innerHTML = items.map(item => `
-        <article class="news-card">
-            <a href="${item.link}" target="_blank" rel="noopener noreferrer">
-                <h3>${escapeHtml(item.title)}</h3>
-                <span class="date">${formatDate(item.pubDate)}</span>
-            </a>
-        </article>
-    `).join('');
+    totalCountEl.textContent = String(items.length);
 }
 
 function escapeHtml(text) {
@@ -84,7 +69,7 @@ function escapeHtml(text) {
 function showLoading() {
     loadingEl.style.display = 'block';
     errorEl.style.display = 'none';
-    newsContainer.innerHTML = '';
+    resourceContainer.innerHTML = '';
 }
 
 function hideLoading() {
@@ -96,45 +81,64 @@ function showError() {
     errorEl.style.display = 'block';
 }
 
-async function loadNews(feedKey = currentFeed) {
-    currentFeed = feedKey;
+function applyFilters() {
+    const keyword = currentKeyword.trim().toLowerCase();
+    const filtered = allItems.filter((item) => {
+        const matchSource = currentSource === 'all' || item.source === currentSource;
+        const corpus = `${safeText(item.title)} ${safeText(item.summary)} ${safeText(item.subjects)}`.toLowerCase();
+        const matchKeyword = !keyword || corpus.includes(keyword);
+        return matchSource && matchKeyword;
+    });
+    renderCards(filtered);
+}
+
+function updateSummary(meta) {
+    updatedAtEl.textContent = safeText(meta.updatedAt) || '未知';
+    const sourceLines = Object.entries(meta.sourceStats || {}).map(([key, value]) => {
+        return `${sourceLabel(key)}：${value}`;
+    });
+    sourceSummaryEl.textContent = sourceLines.length ? `来源分布：${sourceLines.join(' · ')}` : '来源分布：暂无';
+}
+
+async function loadData() {
     showLoading();
     refreshBtn.disabled = true;
-
     try {
-        let data = await fetchNews(feedKey);
-
-        if (data.status !== 'ok' || !data.items || data.items.length === 0) {
-            if (feedKey !== 'headlines') {
-                data = await fetchNews('headlines');
-                feedKey = 'headlines';
-            }
-            if (!data || data.status !== 'ok' || !data.items || data.items.length === 0) {
-                throw new Error('No items');
-            }
-        }
-
-        renderNews(data.items);
+        const response = await fetch('data/magazines.json', { cache: 'no-cache' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        allItems = Array.isArray(data.items) ? data.items : [];
+        updateSummary(data.meta || {});
         hideLoading();
-    } catch (err) {
-        console.error(err);
+        applyFilters();
+    } catch (error) {
+        console.error(error);
         showError();
     } finally {
         refreshBtn.disabled = false;
     }
 }
 
-// Tab switching
-document.querySelectorAll('.tab').forEach(tab => {
+document.querySelectorAll('.tab').forEach((tab) => {
     tab.addEventListener('click', () => {
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab').forEach((btn) => btn.classList.remove('active'));
         tab.classList.add('active');
-        loadNews(tab.dataset.feed);
+        currentSource = tab.dataset.source;
+        applyFilters();
     });
 });
 
-// Refresh button
-refreshBtn.addEventListener('click', () => loadNews());
+searchInputEl.addEventListener('input', () => {
+    currentKeyword = searchInputEl.value;
+    applyFilters();
+});
 
-// Initial load
-loadNews();
+clearSearchBtnEl.addEventListener('click', () => {
+    searchInputEl.value = '';
+    currentKeyword = '';
+    applyFilters();
+});
+
+refreshBtn.addEventListener('click', () => window.location.reload());
+
+loadData();

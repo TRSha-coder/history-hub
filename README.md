@@ -1,62 +1,62 @@
-# 한국 뉴스 | Korea News
+# 中文历史杂志资源库
 
-실시간 한국 주요 뉴스를 수집하여 보여주는 정적 웹사이트입니다. GitHub Pages에 무료로 배포할 수 있습니다.
+这是一个可直接部署到 GitHub Pages 的静态网站，用于展示“中文历史杂志/期刊”资源索引。  
+数据通过抓取脚本定时更新，前端只读取本地 JSON 文件，不依赖后端服务。
 
-## 기능
+## 功能
 
-- 📰 Google News Korea RSS 기반 실시간 뉴스
-- 🏷️ 카테고리: 전체 헤드라인, 정치, 경제, 사회
-- 🔄 새로고침 버튼
-- 📱 반응형 디자인
+- 中文界面，支持关键词搜索
+- 按来源筛选（书格 / 中文维基百科）
+- 展示资源标题、年份、摘要、跳转链接
+- GitHub Actions 定时更新资源数据
+- GitHub Pages 自动部署
 
-## 로컬 실행
+## 项目结构
 
-브라우저에서 `index.html`을 직접 열거나, 로컬 서버를 사용하세요:
+```text
+.
+├── index.html
+├── script.js
+├── styles.css
+├── data/
+│   └── magazines.json
+├── scripts/
+│   └── fetch_magazines.py
+└── .github/workflows/
+    ├── update-magazines.yml
+    └── deploy-pages.yml
+```
+
+## 本地运行
 
 ```bash
-# Python 3
+python scripts/fetch_magazines.py
 python -m http.server 8000
-
-# Node.js (npx)
-npx serve
 ```
 
-그 후 http://localhost:8000 에서 확인할 수 있습니다.
+打开 `http://localhost:8000` 即可访问。
 
-## GitHub Pages 배포 방법
+## 自动化说明
 
-### 1. GitHub 저장소 생성
+### 1) 数据更新工作流
 
-1. GitHub에 새 저장소(repository)를 만듭니다 (예: `korean-news`)
-2. **Add a README file** 옵션은 선택하지 않아도 됩니다
+文件：`.github/workflows/update-magazines.yml`
 
-### 2. 코드 업로드
+- 定时执行抓取脚本（每 8 小时）
+- 若 `data/magazines.json` 有变化则自动提交并推送
 
-```bash
-cd korean-news
-git init
-git add .
-git commit -m "Initial commit: Korean news aggregator"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/korean-news.git
-git push -u origin main
-```
+### 2) Pages 部署工作流
 
-### 3. GitHub Pages 활성화
+文件：`.github/workflows/deploy-pages.yml`
 
-1. 저장소 페이지에서 **Settings** 클릭
-2. 왼쪽 메뉴에서 **Pages** 선택
-3. **Source**에서 **Deploy from a branch** 선택
-4. **Branch**를 `main`으로, **Folder**를 `/ (root)`로 설정
-5. **Save** 클릭
+- 分支 push 或手动触发时自动部署
+- 将仓库根目录作为静态站点发布内容
 
-몇 분 후 `https://YOUR_USERNAME.github.io/korean-news/` 에서 사이트가 공개됩니다.
+## GitHub Pages 地址
 
-## 기술 스택
+- 用户主页仓库（`<username>.github.io`）：`https://<username>.github.io/`
+- 项目仓库（如 `korean-news`）：`https://<username>.github.io/korean-news/`
 
-- 순수 HTML, CSS, JavaScript (빌드 도구 불필요)
-- [RSS2JSON API](https://rss2json.com/) - RSS를 JSON으로 변환 (무료, API 키 불필요)
+## 说明
 
-## 라이선스
-
-MIT
+本项目仅聚合公开可访问资源链接，内容版权归原始站点及作者所有。
