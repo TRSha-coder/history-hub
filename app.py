@@ -101,10 +101,13 @@ async def _search_magazines(query: str, limit: int) -> list[dict[str, Any]]:
             "fl": "identifier,title,creator,date,description,subject",
             "sort": "date desc",
         }
-        resp = await HTTP_CLIENT.get(IA_SEARCH_URL, params=fallback_params)
-        resp.raise_for_status()
-        data = resp.json()
-        docs = data.get("response", {}).get("docs", [])
+        try:
+            resp = await HTTP_CLIENT.get(IA_SEARCH_URL, params=fallback_params)
+            resp.raise_for_status()
+            data = resp.json()
+            docs = data.get("response", {}).get("docs", [])
+        except Exception as exc:
+            raise RuntimeError(f"Internet Archive 备用搜索失败: {exc}") from exc
 
     return [_normalize_magazine_entry(d) for d in docs if d.get("identifier")]
 
@@ -134,10 +137,16 @@ async def magazine_info(identifier: str) -> JSONResponse:
         resp = await HTTP_CLIENT.get(url)
         resp.raise_for_status()
         data = resp.json()
+    except httpx.HTTPStatusError as exc:
+        if exc.response.status_code == 404:
+            raise HTTPException(status_code=404, detail=f"杂志不存在: {identifier}") from exc
+        raise HTTPException(status_code=502, detail=f"获取杂志详情失败: {exc}") from exc
     except Exception as exc:
         raise HTTPException(status_code=502, detail=f"获取杂志详情失败: {exc}") from exc
 
     metadata = data.get("metadata", {})
+    if not metadata:
+        raise HTTPException(status_code=404, detail=f"杂志不存在: {identifier}")
     title = metadata.get("title", "无标题")
     creator = metadata.get("creator", "未知")
     date = metadata.get("date", "")
