@@ -1,20 +1,37 @@
 """
 历史杂志抓取网站 - 从 Internet Archive 抓取并展示历史杂志
 """
-import asyncio
+from contextlib import asynccontextmanager
 from typing import Any
 
 import httpx
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
-
-app = FastAPI(title="历史杂志馆", version="1.0.0")
-
-HTTP_CLIENT = httpx.AsyncClient(timeout=30.0, follow_redirects=True)
 
 IA_SEARCH_URL = "https://archive.org/advancedsearch.php"
 IA_IMG_BASE = "https://archive.org/services/img/"
 IA_DETAILS_BASE = "https://archive.org/details/"
+
+HTTP_CLIENT: httpx.AsyncClient
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    global HTTP_CLIENT
+    HTTP_CLIENT = httpx.AsyncClient(timeout=30.0, follow_redirects=True)
+    yield
+    await HTTP_CLIENT.aclose()
+
+
+app = FastAPI(title="历史杂志馆", version="1.0.0", lifespan=lifespan)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["GET"],
+    allow_headers=["*"],
+)
 
 
 def _normalize_magazine_entry(doc: dict[str, Any]) -> dict[str, Any]:
@@ -154,8 +171,3 @@ async def styles() -> FileResponse:
 @app.get("/script.js", include_in_schema=False)
 async def script() -> FileResponse:
     return FileResponse("script.js")
-
-
-@app.on_event("shutdown")
-async def on_shutdown() -> None:
-    await HTTP_CLIENT.aclose()
