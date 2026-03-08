@@ -38,3 +38,50 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Notify Slack on deploy success
+        if: success()
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          payload: |
+            {
+              "text": "🚀 *GitHub Pages 部署成功*",
+              "attachments": [
+                {
+                  "color": "good",
+                  "fields": [
+                    { "title": "仓库", "value": "${{ github.repository }}", "short": true },
+                    { "title": "分支", "value": "${{ github.ref_name }}", "short": true },
+                    { "title": "部署地址", "value": "${{ steps.deployment.outputs.page_url }}", "short": false },
+                    { "title": "触发者", "value": "${{ github.actor }}", "short": true },
+                    { "title": "详情", "value": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}", "short": false }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+
+      - name: Notify Slack on deploy failure
+        if: failure()
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          payload: |
+            {
+              "text": "❌ *GitHub Pages 部署失败*",
+              "attachments": [
+                {
+                  "color": "danger",
+                  "fields": [
+                    { "title": "仓库", "value": "${{ github.repository }}", "short": true },
+                    { "title": "分支", "value": "${{ github.ref_name }}", "short": true },
+                    { "title": "触发者", "value": "${{ github.actor }}", "short": true },
+                    { "title": "详情", "value": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}", "short": false }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK

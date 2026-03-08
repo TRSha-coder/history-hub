@@ -22,3 +22,51 @@ jobs:
 
       - name: Syntax check
         run: python -m py_compile app.py
+
+      - name: Notify Slack on success
+        if: success()
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          payload: |
+            {
+              "text": "✅ *CI 构建成功*",
+              "attachments": [
+                {
+                  "color": "good",
+                  "fields": [
+                    { "title": "仓库", "value": "${{ github.repository }}", "short": true },
+                    { "title": "分支", "value": "${{ github.ref_name }}", "short": true },
+                    { "title": "提交信息", "value": "${{ github.event.head_commit.message }}", "short": false },
+                    { "title": "触发者", "value": "${{ github.actor }}", "short": true },
+                    { "title": "详情", "value": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}", "short": false }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+
+      - name: Notify Slack on failure
+        if: failure()
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          payload: |
+            {
+              "text": "❌ *CI 构建失败*",
+              "attachments": [
+                {
+                  "color": "danger",
+                  "fields": [
+                    { "title": "仓库", "value": "${{ github.repository }}", "short": true },
+                    { "title": "分支", "value": "${{ github.ref_name }}", "short": true },
+                    { "title": "提交信息", "value": "${{ github.event.head_commit.message }}", "short": false },
+                    { "title": "触发者", "value": "${{ github.actor }}", "short": true },
+                    { "title": "详情", "value": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}", "short": false }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
