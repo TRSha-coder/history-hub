@@ -1,5 +1,6 @@
 import asyncio
 import os
+import re
 import time
 from typing import Any
 
@@ -17,6 +18,7 @@ stream_cache: dict[str, dict[str, Any]] = {}
 NODE_RUNTIME_PATH = os.getenv("YTDLP_NODE_PATH", "/usr/local/lighthouse/softwares/nodejs/node/bin/node")
 POT_PROVIDER_BASE_URL = os.getenv("YTDLP_POT_PROVIDER_URL", "http://127.0.0.1:4416")
 YTDLP_COOKIE_FILE = os.getenv("YTDLP_COOKIE_FILE", "").strip()
+RANGE_PAIR_RE = re.compile(r"^bytes=(\d+)-(\d+)$")
 
 
 def _video_ydl_opts() -> dict[str, Any]:
@@ -255,6 +257,15 @@ async def stream_video(video_id: str, request: Request, format_id: str | None = 
         refreshed = await resolve_stream(video_id, format_id)
         req = HTTP_CLIENT.build_request("GET", refreshed["url"], headers=headers)
         upstream = await HTTP_CLIENT.send(req, stream=True)
+    if upstream.status_code in (401, 403) and headers.get("Range"):
+        # Some CDNs reject tiny closed byte ranges; retry as open-ended range.
+        match = RANGE_PAIR_RE.match(headers["Range"])
+        if match:
+            retry_headers = dict(headers)
+            retry_headers["Range"] = f"bytes={match.group(1)}-"
+            await upstream.aclose()
+            req = HTTP_CLIENT.build_request("GET", resolved["url"], headers=retry_headers)
+            upstream = await HTTP_CLIENT.send(req, stream=True)
     if upstream.status_code >= 400:
         body = (await upstream.aread())[:200]
         await upstream.aclose()
