@@ -448,23 +448,33 @@ function _notifyTranslationPlugins() {
   while (node && node !== document.documentElement) {
     node.removeAttribute("data-immersive-translate-walked");
     node.removeAttribute("data-immersive-translate-effect");
+    node.removeAttribute("data-immersive-translate-block-id");
     node = node.parentElement;
   }
 
   // 同时清除 #chapterText 内所有子元素的标记（切换章节时残留）
   chapterText
-    .querySelectorAll("[data-immersive-translate-walked],[data-immersive-translate-effect]")
+    .querySelectorAll(
+      "[data-immersive-translate-walked],[data-immersive-translate-effect],[data-immersive-translate-block-id]"
+    )
     .forEach(el => {
       el.removeAttribute("data-immersive-translate-walked");
       el.removeAttribute("data-immersive-translate-effect");
+      el.removeAttribute("data-immersive-translate-block-id");
     });
 
   // 等渲染完成后调用插件 API
   requestAnimationFrame(() => {
     setTimeout(() => {
       try {
+        // 内部全页 API（最完整，含等待机制）
         if (window.__immersiveTranslate?.translatePageAndWait) {
           window.__immersiveTranslate.translatePageAndWait();
+          return;
+        }
+        // 公开 API：优先针对具体元素，精准触发正文区域翻译；否则回退到整页翻译
+        if (window.immersiveTranslate?.translateElement) {
+          window.immersiveTranslate.translateElement(chapterText);
           return;
         }
         if (window.immersiveTranslate?.translatePage) {
