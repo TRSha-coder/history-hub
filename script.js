@@ -414,11 +414,32 @@ function switchTab(tabName) {
 }
 
 // ─── 阅读器 ────────────────────────────────────────────────────────────────
+/**
+ * 将章节纯文本渲染为 <p> 段落，提升沉浸式翻译等插件的兼容性。
+ * 按双换行切分段落；单行换行保留在 <p> 内（white-space:pre-wrap）。
+ */
+function _renderParagraphs(text) {
+  chapterText.innerHTML = "";
+  const paragraphs = text.split(/\n\n+/).map(p => p.trim()).filter(Boolean);
+  const fragment = document.createDocumentFragment();
+  for (const para of paragraphs) {
+    const p = document.createElement("p");
+    p.textContent = para;
+    fragment.appendChild(p);
+  }
+  if (!fragment.childNodes.length) {
+    const p = document.createElement("p");
+    p.textContent = text;
+    fragment.appendChild(p);
+  }
+  chapterText.appendChild(fragment);
+}
+
 async function openReader(bookId, bookTitle, webpageUrl) {
   readerTitle.textContent    = bookTitle;
   readerChapterInfo.textContent = "";
   chapterTitle.textContent   = "";
-  chapterText.textContent    = "";
+  chapterText.innerHTML      = "";
   chapterList.innerHTML      = '<li class="chapter-loading">正在加载章节目录…</li>';
   chapterLoading.classList.remove("hidden");
   prevChapterBtn.disabled    = true;
@@ -453,7 +474,7 @@ async function openReader(bookId, bookTitle, webpageUrl) {
     await loadChapter(bookId, savedChapter);
   } catch (err) {
     chapterLoading.classList.add("hidden");
-    chapterText.textContent = `加载失败：${err.message}`;
+    _renderParagraphs(`加载失败：${err.message}`);
 
     if (webpageUrl) {
       const link = document.createElement("a");
@@ -477,7 +498,7 @@ function renderChapterList(chapters, activeIndex) {
 async function loadChapter(bookId, chapterNum) {
   chapterLoading.classList.remove("hidden");
   chapterTitle.textContent = "";
-  chapterText.textContent  = "";
+  chapterText.innerHTML    = "";
   readerContent.scrollTop  = 0;
 
   try {
@@ -491,7 +512,7 @@ async function loadChapter(bookId, chapterNum) {
     const total   = chapters.length;
 
     chapterTitle.textContent = chapter.title;
-    chapterText.textContent  = chapter.content;
+    _renderParagraphs(chapter.content);
     readerState.currentChapter = chapterNum;
 
     prevChapterBtn.disabled   = chapterNum <= 0;
@@ -514,7 +535,7 @@ async function loadChapter(bookId, chapterNum) {
     saveReadingProgress(bookId, chapterNum, total);
 
   } catch (err) {
-    chapterText.textContent = `加载章节失败：${err.message}`;
+    _renderParagraphs(`加载章节失败：${err.message}`);
   } finally {
     chapterLoading.classList.add("hidden");
   }

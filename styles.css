@@ -561,8 +561,16 @@ body {
   font-size: 1rem;
   line-height: 1.95;
   color: var(--text-main);
+}
+
+.chapter-body p {
   white-space: pre-wrap;
   word-break: break-word;
+  margin-bottom: 1.2em;
+}
+
+.chapter-body p:last-child {
+  margin-bottom: 0;
 }
 
 /* 章节翻页控制栏 */
