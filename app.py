@@ -6,6 +6,8 @@ from html import unescape
 from html.parser import HTMLParser
 from typing import Any
 
+import asyncio
+
 import httpx
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
@@ -19,7 +21,14 @@ HTTP_CLIENT: httpx.AsyncClient
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global HTTP_CLIENT
-    HTTP_CLIENT = httpx.AsyncClient(timeout=60.0, follow_redirects=True)
+    HTTP_CLIENT = httpx.AsyncClient(
+        timeout=60.0,
+        follow_redirects=True,
+        headers={
+            "User-Agent": "HistoryHub/1.2 (+https://github.com/TRSha-coder/history-hub)",
+            "Accept": "application/json,text/plain,text/html,*/*",
+        },
+    )
     yield
     await HTTP_CLIENT.aclose()
 
@@ -32,6 +41,22 @@ app.add_middleware(
     allow_methods=["GET"],
     allow_headers=["*"],
 )
+
+
+async def _get_with_retry(url: str, *, params: dict[str, Any] | None = None, attempts: int = 3) -> httpx.Response:
+    """带指数退避的 GET 请求，缓解源站偶发超时/限流。"""
+    last_exc: Exception | None = None
+    for idx in range(attempts):
+        try:
+            resp = await HTTP_CLIENT.get(url, params=params)
+            resp.raise_for_status()
+            return resp
+        except Exception as exc:  # noqa: BLE001
+            last_exc = exc
+            if idx >= attempts - 1:
+                break
+            await asyncio.sleep(0.5 * (2**idx))
+    raise RuntimeError(f"请求失败（重试 {attempts} 次）: {url} -> {last_exc}")
 
 
 def _normalize_magazine_entry(doc: dict[str, Any]) -> dict[str, Any]:
@@ -118,11 +143,8 @@ class _VisibleTextExtractor(HTMLParser):
 async def _fetch_magazine_doc(identifier: str) -> dict[str, Any]:
     url = f"{GUTENDEX_API_URL}?ids={identifier}"
     try:
-        resp = await HTTP_CLIENT.get(url)
-        resp.raise_for_status()
+        resp = await _get_with_retry(url)
         data = resp.json()
-    except httpx.HTTPStatusError as exc:
-        raise HTTPException(status_code=502, detail=f"获取详情失败: {exc}") from exc
     except Exception as exc:
         raise HTTPException(status_code=502, detail=f"获取详情失败: {exc}") from exc
 
@@ -161,8 +183,7 @@ async def _search_magazines(query: str, limit: int) -> list[dict[str, Any]]:
     """从 Project Gutenberg 搜索历史刊物及文献"""
     params = {"search": query}
     try:
-        resp = await HTTP_CLIENT.get(GUTENDEX_API_URL, params=params)
-        resp.raise_for_status()
+        resp = await _get_with_retry(GUTENDEX_API_URL, params=params)
         data = resp.json()
     except Exception as exc:
         raise RuntimeError(f"Gutendex API 请求失败: {exc}") from exc
@@ -205,8 +226,7 @@ async def magazine_read(identifier: str) -> JSONResponse:
     formats = doc.get("formats", {})
     source_url, source_format = _pick_read_source(formats, identifier)
     try:
-        resp = await HTTP_CLIENT.get(source_url)
-        resp.raise_for_status()
+        resp = await _get_with_retry(source_url)
         # Decode with the charset declared by the server; fall back to Latin-1
         # (which never raises for arbitrary bytes) if the declared charset fails.
         try:
@@ -216,8 +236,6 @@ async def magazine_read(identifier: str) -> JSONResponse:
         content = _normalize_read_text(raw_text, source_format)
     except HTTPException:
         raise
-    except httpx.HTTPStatusError as exc:
-        raise HTTPException(status_code=502, detail=f"正文获取失败: {exc}") from exc
     except Exception as exc:
         raise HTTPException(status_code=502, detail=f"正文获取失败: {exc}") from exc
     if not content:
