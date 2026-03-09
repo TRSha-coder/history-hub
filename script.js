@@ -4,9 +4,17 @@
  */
 
 // ─── 常量 ──────────────────────────────────────────────────────────────────
-const GUTENDEX_BASE = "https://gutendex.com/books";
-const SHELF_KEY = "history-hub-bookshelf";
-const READER_STATE_KEY = "history-hub-reader-state";
+const GUTENDEX_BASE      = "https://gutendex.com/books";
+const SHELF_KEY          = "history-hub-bookshelf";
+const READER_STATE_KEY   = "history-hub-reader-state";
+const READER_FONT_KEY    = "history-hub-reader-font-size";
+const READER_FONT_MIN    = 14;
+const READER_FONT_MAX    = 26;
+const READER_FONT_STEP   = 2;
+const READER_FONT_DEFAULT = 18;
+
+// ─── 运行时：阅读器字号 ─────────────────────────────────────────────────────
+let readerFontSize = READER_FONT_DEFAULT;
 
 // ─── DOM 引用 ───────────────────────────────────────────────────────────────
 const searchForm       = document.getElementById("searchForm");
@@ -24,10 +32,15 @@ const tabContents      = document.querySelectorAll(".tab-content");
 const shelfCount       = document.getElementById("shelfCount");
 const shelfGrid        = document.getElementById("shelfGrid");
 const shelfStatus      = document.getElementById("shelfStatus");
-const clearLocalReaderBtn = document.getElementById("clearLocalReaderBtn");
-const localReaderStatus = document.getElementById("localReaderStatus");
-const localReaderMeta = document.getElementById("localReaderMeta");
-const localReaderContent = document.getElementById("localReaderContent");
+const clearLocalReaderBtn   = document.getElementById("clearLocalReaderBtn");
+const localReaderStatus     = document.getElementById("localReaderStatus");
+const localReaderMeta       = document.getElementById("localReaderMeta");
+const localReaderContent    = document.getElementById("localReaderContent");
+const readerBookLabel       = document.getElementById("readerBookLabel");
+const readerFontDecBtn      = document.getElementById("readerFontDecBtn");
+const readerFontIncBtn      = document.getElementById("readerFontIncBtn");
+const readerProgressWrap    = document.getElementById("readerProgressWrap");
+const readerProgressBar     = document.getElementById("readerProgressBar");
 
 // ─── 运行时状态 ────────────────────────────────────────────────────────────
 /** 搜索结果缓存，用于书架操作时回填数据 @type {Record<string, Object>} */
@@ -120,7 +133,7 @@ function hideError() {
 
 function setLocalReaderStatus(message, isError = false) {
   localReaderStatus.textContent = message;
-  localReaderStatus.classList.toggle("local-reader-status--error", isError);
+  localReaderStatus.classList.toggle("reader-status-bar--error", isError);
 }
 
 function normalizeReaderText(rawText) {
@@ -149,46 +162,102 @@ async function parseJsonFromResponse(resp, scene) {
 }
 
 function renderLocalReaderMeta(item) {
+  // 工具栏书名标签无论有无书都更新
+  readerBookLabel.textContent = item?.title || "站内阅读器";
+
   if (!item?.title) {
     localReaderMeta.classList.add("hidden");
-    localReaderMeta.innerHTML = "";
     return;
   }
+
+  // 用 textContent 设值，避免 XSS
+  document.getElementById("readerMetaCreator").textContent =
+    item.creator ? `作者：${item.creator}` : "";
+
+  const link = document.getElementById("readerMetaLink");
+  if (item.source) {
+    link.href = item.source;
+    link.hidden = false;
+  } else {
+    link.hidden = true;
+  }
+
   localReaderMeta.classList.remove("hidden");
-  const title = escapeHtml(item.title || "无标题");
-  const creator = escapeHtml(item.creator || "未知");
-  const source = escapeHtml(item.source || "");
-  localReaderMeta.innerHTML = `
-    <h3>${title}</h3>
-    <p>作者：${creator}</p>
-    ${source ? `<a href="${source}" target="_blank" rel="noopener noreferrer">查看 Project Gutenberg 原页</a>` : ""}
-  `;
 }
 
 function renderLocalReaderContent(content, sourceLabel, metaItem = null) {
   const normalized = normalizeReaderText(content);
   renderLocalReaderMeta(metaItem);
+
   if (!normalized) {
-    localReaderContent.innerHTML = '<p class="local-reader-empty">当前书籍暂无可显示正文。</p>';
+    localReaderContent.innerHTML = '<p class="reader-placeholder">当前书籍暂无可显示正文。</p>';
     setLocalReaderStatus(`加载失败：${sourceLabel} 没有可显示正文`, true);
+    readerProgressWrap.classList.add("hidden");
     return;
   }
 
-  const html = normalized
-    .split("\n\n")
-    .map(paragraph => `<p>${escapeHtml(paragraph)}</p>`)
-    .join("");
-  localReaderContent.innerHTML = html;
+  // DOM 构建段落，textContent 天然防 XSS
+  const frag = document.createDocumentFragment();
+  for (const block of normalized.split("\n\n")) {
+    const trimmed = block.trim();
+    if (!trimmed) continue;
+    const p = document.createElement("p");
+    p.textContent = trimmed.replace(/\n/g, " ");
+    frag.appendChild(p);
+  }
+  localReaderContent.innerHTML = "";
+  localReaderContent.appendChild(frag);
+  applyReaderFontSize();
+
   setLocalReaderStatus(`已加载：${sourceLabel}`);
+  readerProgressWrap.classList.remove("hidden");
+  updateReaderProgress();
 }
 
 function clearLocalReader() {
   localStorage.removeItem(READER_STATE_KEY);
-  localReaderMeta.classList.add("hidden");
-  localReaderMeta.innerHTML = "";
-  localReaderContent.innerHTML = '<p class="local-reader-empty">请在搜索结果或书架中点击“站内阅读”开始。</p>';
-  setLocalReaderStatus("已清空阅读内容");
+  readerBookLabel.textContent = “站内阅读器”;
+  localReaderMeta.classList.add(“hidden”);
+  readerProgressWrap.classList.add(“hidden”);
+  readerProgressBar.style.width = “0%”;
+  localReaderContent.innerHTML = '<p class=”reader-placeholder”>请在搜索结果或书架中点击”🧾 站内阅读”开始阅读。</p>';
+  setLocalReaderStatus(“已清空阅读内容”);
 }
+
+// ─── 阅读器字号控制 ─────────────────────────────────────────────────────────
+function initReaderFontSize() {
+  const saved = parseInt(localStorage.getItem(READER_FONT_KEY) || "", 10);
+  if (!isNaN(saved) && saved >= READER_FONT_MIN && saved <= READER_FONT_MAX) {
+    readerFontSize = saved;
+  }
+  applyReaderFontSize();
+}
+
+function applyReaderFontSize() {
+  localReaderContent.style.fontSize = `${readerFontSize}px`;
+}
+
+function adjustReaderFontSize(delta) {
+  readerFontSize = Math.max(READER_FONT_MIN, Math.min(READER_FONT_MAX, readerFontSize + delta));
+  localStorage.setItem(READER_FONT_KEY, String(readerFontSize));
+  applyReaderFontSize();
+}
+
+// ─── 阅读进度追踪 ────────────────────────────────────────────────────────────
+function updateReaderProgress() {
+  const top = localReaderContent.getBoundingClientRect().top + window.scrollY;
+  const scrollable = localReaderContent.offsetHeight - window.innerHeight;
+  if (scrollable <= 0) {
+    readerProgressBar.style.width = "100%";
+    return;
+  }
+  const pct = Math.min(100, Math.max(0, (window.scrollY - top) / scrollable * 100));
+  readerProgressBar.style.width = `${pct}%`;
+}
+
+window.addEventListener("scroll", () => {
+  if (!readerProgressWrap.classList.contains("hidden")) updateReaderProgress();
+}, { passive: true });
 
 const PLACEHOLDER_SVG =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='293'%3E%3Crect fill='%231a1d24' width='220' height='293'/%3E%3Ctext fill='%239aa3b8' x='110' y='150' text-anchor='middle' font-size='14'%3E无封面%3C/text%3E%3C/svg%3E";
@@ -328,7 +397,7 @@ async function openBookInReader(bookId) {
     } catch (fallbackErr) {
       console.error(fallbackErr);
       renderLocalReaderMeta(null);
-      localReaderContent.innerHTML = '<p class="local-reader-empty">加载失败，请稍后重试或改用原页阅读。</p>';
+      localReaderContent.innerHTML = '<p class="reader-placeholder">加载失败，请稍后重试或改用原页阅读。</p>';
       setLocalReaderStatus(`加载失败：${fallbackErr.message || "未知错误"}`, true);
     }
   }
@@ -476,13 +545,14 @@ quickButtons.forEach(btn => {
   });
 });
 
-clearLocalReaderBtn.addEventListener("click", () => {
-  clearLocalReader();
-});
+clearLocalReaderBtn.addEventListener("click", () => clearLocalReader());
+readerFontDecBtn.addEventListener("click", () => adjustReaderFontSize(-READER_FONT_STEP));
+readerFontIncBtn.addEventListener("click", () => adjustReaderFontSize(READER_FONT_STEP));
 
 // ─── 初始化 ────────────────────────────────────────────────────────────────
 updateShelfBadge();
 hideError();
+initReaderFontSize();
 const localReaderState = loadLocalReaderState();
 if (localReaderState.content) {
   renderLocalReaderContent(
@@ -496,5 +566,6 @@ if (localReaderState.content) {
   );
 } else {
   setLocalReaderStatus("尚未打开书籍");
+  readerProgressWrap.classList.add("hidden");
 }
 fetchSearch("Magazine");
