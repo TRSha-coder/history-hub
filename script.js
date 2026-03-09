@@ -139,6 +139,15 @@ function extractTextFromHtml(htmlText) {
   return doc.body?.textContent || "";
 }
 
+async function parseJsonFromResponse(resp, scene) {
+  const raw = await resp.text();
+  try {
+    return JSON.parse(raw);
+  } catch {
+    throw new Error(`${scene}返回了非 JSON 内容`);
+  }
+}
+
 function renderLocalReaderMeta(item) {
   if (!item?.title) {
     localReaderMeta.classList.add("hidden");
@@ -336,13 +345,7 @@ function renderReaderFromPayload(bookId, data, fallbackItem, fallbackTitle) {
 
 async function fetchReaderPayloadFromApi(bookId) {
   const resp = await fetch(`/api/magazine/${encodeURIComponent(bookId)}/read`);
-  const raw = await resp.text();
-  let data = null;
-  try {
-    data = JSON.parse(raw);
-  } catch {
-    throw new Error("阅读接口不可用（返回非 JSON），已尝试自动回退");
-  }
+  const data = await parseJsonFromResponse(resp, "站内阅读接口");
   if (!resp.ok) {
     throw new Error(data?.detail || `HTTP ${resp.status}`);
   }
@@ -368,7 +371,23 @@ function pickReadableSource(formats, identifier) {
 async function fetchReaderPayloadFromGutendex(bookId, fallbackItem) {
   const detailResp = await fetch(`${GUTENDEX_BASE}/?ids=${encodeURIComponent(bookId)}`);
   if (!detailResp.ok) throw new Error(`获取书籍详情失败：HTTP ${detailResp.status}`);
-  const detailData = await detailResp.json();
+  let detailData = null;
+  try {
+    detailData = await parseJsonFromResponse(detailResp, "Gutendex 详情接口");
+  } catch {
+    if (fallbackItem?.webpage_url) {
+      const pageResp = await fetch(fallbackItem.webpage_url);
+      if (!pageResp.ok) throw new Error(`获取书籍页面失败：HTTP ${pageResp.status}`);
+      const pageText = await pageResp.text();
+      return {
+        title: fallbackItem.title || `书籍 #${bookId}`,
+        creator: fallbackItem.creator || "未知",
+        source_url: fallbackItem.webpage_url,
+        content: extractTextFromHtml(pageText),
+      };
+    }
+    throw new Error("Gutendex 详情不可解析，且无可用回退页面");
+  }
   const doc = Array.isArray(detailData?.results) ? detailData.results[0] : null;
   if (!doc?.id) throw new Error("书籍不存在或无法读取");
 
@@ -423,7 +442,7 @@ async function fetchSearch(query) {
     const url  = `${GUTENDEX_BASE}/?search=${encodeURIComponent(query)}`;
     const resp = await fetch(url);
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    const data    = await resp.json();
+    const data    = await parseJsonFromResponse(resp, "搜索接口");
     const results = Array.isArray(data.results) ? data.results : [];
     const items   = results.slice(0, 18).filter(d => d.id).map(normalizeMagazineEntry);
 
