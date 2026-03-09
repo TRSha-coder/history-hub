@@ -62,19 +62,41 @@
     </section>
 
     <!-- 站内阅读器标签页 -->
-    <section id="tab-local-reader" class="tab-content search-panel">
-      <div class="local-reader-header">
-        <h2>站内阅读器</h2>
-        <p>从搜索结果或书架点击“站内阅读”，正文会在本站页面中渲染，便于沉浸式翻译插件识别。</p>
+    <section id=”tab-local-reader” class=”tab-content reader-panel”>
+
+      <!-- 工具栏：书名 + 字号控制 + 清空 -->
+      <div class=”reader-toolbar”>
+        <span id=”readerBookLabel” class=”reader-book-label”>站内阅读器</span>
+        <div class=”reader-toolbar-end”>
+          <button id=”readerFontDecBtn” class=”reader-ctrl-btn” type=”button”
+                  title=”缩小字号” aria-label=”缩小字号”>A−</button>
+          <button id=”readerFontIncBtn” class=”reader-ctrl-btn” type=”button”
+                  title=”放大字号” aria-label=”放大字号”>A+</button>
+          <button id=”clearLocalReaderBtn” class=”reader-ctrl-btn reader-ctrl-btn--ghost”
+                  type=”button” title=”清空阅读内容” aria-label=”清空阅读内容”>✕</button>
+        </div>
       </div>
-      <div class="local-reader-controls">
-        <button id="clearLocalReaderBtn" class="secondary-btn" type="button">清空内容</button>
+
+      <!-- 状态条 -->
+      <div id=”localReaderStatus” class=”reader-status-bar”>尚未打开书籍</div>
+
+      <!-- 书籍元数据（作者 + 原页链接），有书时才显示 -->
+      <div id=”localReaderMeta” class=”reader-meta hidden”>
+        <span id=”readerMetaCreator” class=”reader-meta-creator”></span>
+        <a id=”readerMetaLink” class=”reader-meta-link”
+           href=”#” target=”_blank” rel=”noopener noreferrer” hidden>查看 Gutenberg 原页</a>
       </div>
-      <div id="localReaderStatus" class="local-reader-status">尚未打开书籍</div>
-      <div id="localReaderMeta" class="local-reader-meta hidden"></div>
-      <article id="localReaderContent" class="local-reader-content">
-        <p class="local-reader-empty">请在搜索结果或书架中点击“站内阅读”开始。</p>
+
+      <!-- 阅读进度条 -->
+      <div id=”readerProgressWrap” class=”reader-progress-wrap hidden”>
+        <div id=”readerProgressBar” class=”reader-progress-fill”></div>
+      </div>
+
+      <!-- 正文区域（<article> 保证沉浸式翻译插件可识别） -->
+      <article id=”localReaderContent” class=”reader-body”>
+        <p class=”reader-placeholder”>请在搜索结果或书架中点击”🧾 站内阅读”开始阅读。</p>
       </article>
+
     </section>
   </main>
 
