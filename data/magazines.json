@@ -1,55 +1,1845 @@
 {
-  "source": "Local Pre-generated Content",
-  "query": "本地中国历史与世界历史数据集",
-  "count": 4,
+  "source": "Project Gutenberg (English History)",
+  "query": "topic: history, languages: en",
+  "count": 150,
   "items": [
     {
-      "identifier": "shiji-01",
-      "title": "史记 · 五帝本纪",
-      "year": "西汉",
+      "identifier": "26184",
+      "title": "Simple Sabotage Field Manual",
+      "year": "N/A",
       "subject": [
-        "中国历史",
-        "纪传体通史",
-        "上古史"
+        "Sabotage"
       ],
-      "description": "作者：司马迁。《史记》是中国历史上第一部纪传体通史，被列为“二十四史”之首。本篇为《五帝本纪》，记载了黄帝、颛顼、帝喾、尧、舜的生平事迹。",
-      "url": "./data/books/shiji-01.html"
+      "description": "Author(s): United States. Office of Strategic Services",
+      "url": "https://www.gutenberg.org/ebooks/26184.html.images"
     },
     {
-      "identifier": "zizhitongjian-01",
-      "title": "资治通鉴 · 周纪一",
-      "year": "北宋",
+      "identifier": "67979",
+      "title": "The Blue Castle: a novel",
+      "year": "N/A",
       "subject": [
-        "中国历史",
-        "编年体通史",
-        "古代政治"
+        "Canada -- History -- 1914-1945 -- Fiction",
+        "Choice (Psychology) -- Fiction",
+        "Love -- Fiction",
+        "Romance fiction",
+        "Self-actualization (Psychology) -- Fiction",
+        "Single women -- Fiction",
+        "Young adult fiction"
       ],
-      "description": "作者：司马光。《资治通鉴》是由北宋史学家司马光主编的一部多卷本编年体史书。本篇起于周威烈王二十三年，终于周烈王三十三年。",
-      "url": "./data/books/zizhitongjian-01.html"
+      "description": "Author(s): Montgomery, L. M. (Lucy Maud)",
+      "url": "https://www.gutenberg.org/ebooks/67979.html.images"
     },
     {
-      "identifier": "history-mag-01",
-      "title": "近代史研究 (示例期刊)",
-      "year": "2023",
+      "identifier": "174",
+      "title": "The Picture of Dorian Gray",
+      "year": "N/A",
       "subject": [
-        "近代史",
-        "学术期刊",
-        "历史研究"
+        "Appearance (Philosophy) -- Fiction",
+        "Conduct of life -- Fiction",
+        "Didactic fiction",
+        "Great Britain -- History -- Victoria, 1837-1901 -- Fiction",
+        "London (England) -- History -- 1800-1950 -- Fiction",
+        "Paranormal fiction",
+        "Portraits -- Fiction",
+        "Supernatural -- Fiction"
       ],
-      "description": "作者：近代史研究所。探讨中国近代史上的重大历史事件与社会变迁。本期特稿：晚清社会经济结构转型分析。",
-      "url": "./data/books/history-mag-01.html"
+      "description": "Author(s): Wilde, Oscar",
+      "url": "https://www.gutenberg.org/ebooks/174.html.images"
     },
     {
-      "identifier": "world-history-01",
-      "title": "世界历史摘要：工业革命",
-      "year": "2024",
+      "identifier": "1259",
+      "title": "Twenty years after",
+      "year": "N/A",
       "subject": [
-        "世界历史",
-        "工业革命",
-        "欧洲史"
+        "France -- History -- Louis XIV, 1643-1715 -- Fiction"
       ],
-      "description": "作者：历史学苑。简述18世纪从英国发源的第一次工业革命如何彻底改变了人类社会的生产方式和阶级结构。",
-      "url": "./data/books/world-history-01.html"
+      "description": "Author(s): Dumas, Alexandre, Maquet, Auguste",
+      "url": "https://www.gutenberg.org/ebooks/1259.html.images"
+    },
+    {
+      "identifier": "98",
+      "title": "A Tale of Two Cities",
+      "year": "N/A",
+      "subject": [
+        "British -- France -- Paris -- Fiction",
+        "Executions and executioners -- Fiction",
+        "France -- History -- Revolution, 1789-1799 -- Fiction",
+        "French -- England -- London -- Fiction",
+        "Historical fiction",
+        "London (England) -- History -- 18th century -- Fiction",
+        "Lookalikes -- Fiction",
+        "Paris (France) -- History -- 1789-1799 -- Fiction",
+        "War stories"
+      ],
+      "description": "Author(s): Dickens, Charles",
+      "url": "https://www.gutenberg.org/ebooks/98.html.images"
+    },
+    {
+      "identifier": "1184",
+      "title": "The Count of Monte Cristo",
+      "year": "N/A",
+      "subject": [
+        "Adventure stories",
+        "Dantès, Edmond (Fictitious character) -- Fiction",
+        "France -- History -- 19th century -- Fiction",
+        "Historical fiction",
+        "Pirates -- Fiction",
+        "Prisoners -- Fiction",
+        "Revenge -- Fiction"
+      ],
+      "description": "Author(s): Dumas, Alexandre, Maquet, Auguste",
+      "url": "https://www.gutenberg.org/ebooks/1184.html.images"
+    },
+    {
+      "identifier": "1232",
+      "title": "The Prince",
+      "year": "N/A",
+      "subject": [
+        "Political ethics -- Early works to 1800",
+        "Political science -- Philosophy -- Early works to 1800",
+        "State, The -- Early works to 1800"
+      ],
+      "description": "Author(s): Machiavelli, Niccolò",
+      "url": "https://www.gutenberg.org/ebooks/1232.html.images"
+    },
+    {
+      "identifier": "3207",
+      "title": "Leviathan",
+      "year": "N/A",
+      "subject": [
+        "Political science -- Early works to 1800",
+        "State, The -- Early works to 1800"
+      ],
+      "description": "Author(s): Hobbes, Thomas",
+      "url": "https://www.gutenberg.org/ebooks/3207.html.images"
+    },
+    {
+      "identifier": "25344",
+      "title": "The Scarlet Letter",
+      "year": "N/A",
+      "subject": [
+        "Adultery -- Fiction",
+        "Boston (Mass.) -- History -- Colonial period, ca. 1600-1775 -- Fiction",
+        "Clergy -- Fiction",
+        "Historical fiction",
+        "Illegitimate children -- Fiction",
+        "Married women -- Fiction",
+        "Psychological fiction",
+        "Puritans -- Fiction",
+        "Revenge -- Fiction",
+        "Triangles (Interpersonal relations) -- Fiction"
+      ],
+      "description": "Author(s): Hawthorne, Nathaniel",
+      "url": "https://www.gutenberg.org/ebooks/25344.html.images"
+    },
+    {
+      "identifier": "205",
+      "title": "Walden, and On The Duty Of Civil Disobedience",
+      "year": "N/A",
+      "subject": [
+        "Authors, American -- 19th century -- Biography",
+        "Civil disobedience",
+        "Government, Resistance to",
+        "Natural history -- Massachusetts -- Walden Woods",
+        "Solitude",
+        "Thoreau, Henry David, 1817-1862 -- Homes and haunts -- Massachusetts -- Walden Woods",
+        "Walden Woods (Mass.) -- Social life and customs",
+        "Wilderness areas -- Massachusetts -- Walden Woods"
+      ],
+      "description": "Author(s): Thoreau, Henry David",
+      "url": "https://www.gutenberg.org/ebooks/205.html.images"
+    },
+    {
+      "identifier": "408",
+      "title": "The Souls of Black Folk",
+      "year": "N/A",
+      "subject": [
+        "African Americans"
+      ],
+      "description": "Author(s): Du Bois, W. E. B. (William Edward Burghardt)",
+      "url": "https://www.gutenberg.org/ebooks/408.html.images"
+    },
+    {
+      "identifier": "2600",
+      "title": "War and Peace",
+      "year": "N/A",
+      "subject": [
+        "Aristocracy (Social class) -- Russia -- Fiction",
+        "Historical fiction",
+        "Napoleonic Wars, 1800-1815 -- Campaigns -- Russia -- Fiction",
+        "Russia -- History -- Alexander I, 1801-1825 -- Fiction",
+        "War stories"
+      ],
+      "description": "Author(s): Tolstoy, Leo, graf",
+      "url": "https://www.gutenberg.org/ebooks/2600.html.images"
+    },
+    {
+      "identifier": "45",
+      "title": "Anne of Green Gables",
+      "year": "N/A",
+      "subject": [
+        "Bildungsromans",
+        "Canada -- History -- 1867-1914 -- Fiction",
+        "Country life -- Prince Edward Island -- Fiction",
+        "Friendship -- Fiction",
+        "Girls -- Fiction",
+        "Islands -- Fiction",
+        "Orphans -- Fiction",
+        "Prince Edward Island -- History -- 20th century -- Fiction",
+        "Shirley, Anne (Fictitious character) -- Fiction"
+      ],
+      "description": "Author(s): Montgomery, L. M. (Lucy Maud)",
+      "url": "https://www.gutenberg.org/ebooks/45.html.images"
+    },
+    {
+      "identifier": "7370",
+      "title": "Second Treatise of Government",
+      "year": "N/A",
+      "subject": [
+        "Liberty -- Early works to 1800",
+        "Political science -- Early works to 1800",
+        "Toleration -- Early works to 1800"
+      ],
+      "description": "Author(s): Locke, John",
+      "url": "https://www.gutenberg.org/ebooks/7370.html.images"
+    },
+    {
+      "identifier": "23",
+      "title": "Narrative of the Life of Frederick Douglass, an American Slave",
+      "year": "N/A",
+      "subject": [
+        "Abolitionists -- United States -- Biography",
+        "African American abolitionists -- Biography",
+        "Douglass, Frederick, 1818-1895",
+        "Enslaved persons -- United States -- Biography"
+      ],
+      "description": "Author(s): Douglass, Frederick",
+      "url": "https://www.gutenberg.org/ebooks/23.html.images"
+    },
+    {
+      "identifier": "45304",
+      "title": "The City of God, Volume I",
+      "year": "N/A",
+      "subject": [
+        "Apologetics -- Early works to 1800",
+        "Kingdom of God -- Early works to 1800"
+      ],
+      "description": "Author(s): Augustine, of Hippo, Saint",
+      "url": "https://www.gutenberg.org/ebooks/45304.html.images"
+    },
+    {
+      "identifier": "15399",
+      "title": "The Interesting Narrative of the Life of Olaudah Equiano, Or Gustavus Vassa, The African: Written By Himself",
+      "year": "N/A",
+      "subject": [
+        "Enslaved persons -- Great Britain -- Biography",
+        "Enslaved persons -- United States -- Biography",
+        "Equiano, Olaudah, 1745-1797"
+      ],
+      "description": "Author(s): Equiano, Olaudah",
+      "url": "https://www.gutenberg.org/ebooks/15399.html.images"
+    },
+    {
+      "identifier": "73887",
+      "title": "Modern ships of war",
+      "year": "N/A",
+      "subject": [
+        "Navies",
+        "Warships"
+      ],
+      "description": "Author(s): Reed, Edward J. (Edward James), Sir, Simpson, Edward",
+      "url": "https://www.gutenberg.org/ebooks/73887.html.images"
+    },
+    {
+      "identifier": "1719",
+      "title": "The Ballad of the White Horse",
+      "year": "N/A",
+      "subject": [
+        "Alfred, King of England, 849-899 -- Poetry",
+        "Christian poetry",
+        "Epic poetry",
+        "Great Britain -- History -- Alfred, 871-899 -- Poetry",
+        "Historical poetry",
+        "White Horse, Vale of (England) -- Poetry"
+      ],
+      "description": "Author(s): Chesterton, G. K. (Gilbert Keith)",
+      "url": "https://www.gutenberg.org/ebooks/1719.html.images"
+    },
+    {
+      "identifier": "132",
+      "title": "The Art of War",
+      "year": "N/A",
+      "subject": [
+        "Military art and science -- Early works to 1800",
+        "War -- Early works to 1800"
+      ],
+      "description": "Author(s): Sunzi, active 6th century B.C.",
+      "url": "https://www.gutenberg.org/ebooks/132.html.images"
+    },
+    {
+      "identifier": "10676",
+      "title": "The Reign of Greed",
+      "year": "N/A",
+      "subject": [
+        "Nationalists -- Philippines -- Fiction",
+        "Philippine fiction (Spanish) -- Translations into English",
+        "Philippines -- History -- Fiction"
+      ],
+      "description": "Author(s): Rizal, José",
+      "url": "https://www.gutenberg.org/ebooks/10676.html.images"
+    },
+    {
+      "identifier": "45502",
+      "title": "How the Other Half Lives: Studies Among the Tenements of New York",
+      "year": "N/A",
+      "subject": [
+        "Poor -- New York (State) -- New York",
+        "Tenement houses -- New York (State) -- New York"
+      ],
+      "description": "Author(s): Riis, Jacob A. (Jacob August)",
+      "url": "https://www.gutenberg.org/ebooks/45502.html.images"
+    },
+    {
+      "identifier": "41",
+      "title": "The Legend of Sleepy Hollow",
+      "year": "N/A",
+      "subject": [
+        "Ghosts -- Fiction",
+        "New York (State) -- History -- 1775-1865 -- Fiction"
+      ],
+      "description": "Author(s): Irving, Washington",
+      "url": "https://www.gutenberg.org/ebooks/41.html.images"
+    },
+    {
+      "identifier": "26",
+      "title": "Paradise Lost",
+      "year": "N/A",
+      "subject": [
+        "Adam (Biblical figure) -- Poetry",
+        "Bible. Genesis -- History of Biblical events -- Poetry",
+        "Eve (Biblical figure) -- Poetry",
+        "Fall of man -- Poetry"
+      ],
+      "description": "Author(s): Milton, John",
+      "url": "https://www.gutenberg.org/ebooks/26.html.images"
+    },
+    {
+      "identifier": "3300",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": "N/A",
+      "subject": [
+        "Economics"
+      ],
+      "description": "Author(s): Smith, Adam",
+      "url": "https://www.gutenberg.org/ebooks/3300.html.images"
+    },
+    {
+      "identifier": "600",
+      "title": "Notes from the Underground",
+      "year": "N/A",
+      "subject": [
+        "Political fiction",
+        "Russia -- History -- 1801-1917 -- Fiction",
+        "Russia -- Officials and employees -- Fiction"
+      ],
+      "description": "Author(s): Dostoyevsky, Fyodor",
+      "url": "https://www.gutenberg.org/ebooks/600.html.images"
+    },
+    {
+      "identifier": "245",
+      "title": "Life on the Mississippi",
+      "year": "N/A",
+      "subject": [
+        "Authors, American -- 19th century -- Biography",
+        "Mississippi River -- Description and travel",
+        "Mississippi River Valley -- Social life and customs -- 19th century",
+        "Pilots and pilotage -- Mississippi River",
+        "Twain, Mark, 1835-1910 -- Travel -- Mississippi River"
+      ],
+      "description": "Author(s): Twain, Mark",
+      "url": "https://www.gutenberg.org/ebooks/245.html.images"
+    },
+    {
+      "identifier": "57724",
+      "title": "A Cyclopaedia of Canadian Biography: Being Chiefly Men of the Time: A Collection of Persons Distinguished in Professional and Political Life, Leaders in the Commerce and Industry of Canada, and Successful Pioneers",
+      "year": "N/A",
+      "subject": [
+        "Canada -- Biography",
+        "Canada -- Biography -- Dictionaries"
+      ],
+      "description": "No author info",
+      "url": "https://www.gutenberg.org/ebooks/57724.html.images"
+    },
+    {
+      "identifier": "51912",
+      "title": "The Boss, and How He Came to Rule New York",
+      "year": "N/A",
+      "subject": [
+        "New York (N.Y.) -- Fiction",
+        "Political fiction",
+        "Politicians -- Fiction"
+      ],
+      "description": "Author(s): Lewis, Alfred Henry",
+      "url": "https://www.gutenberg.org/ebooks/51912.html.images"
+    },
+    {
+      "identifier": "24790",
+      "title": "Early English Meals and Manners",
+      "year": "N/A",
+      "subject": [
+        "Education -- Early works to 1800",
+        "England -- Social life and customs -- Early works to 1800",
+        "Etiquette",
+        "Home economics -- Early works to 1800",
+        "Table"
+      ],
+      "description": "No author info",
+      "url": "https://www.gutenberg.org/ebooks/24790.html.images"
+    },
+    {
+      "identifier": "815",
+      "title": "Democracy in America — Volume 1",
+      "year": "N/A",
+      "subject": [
+        "Democracy -- United States",
+        "United States -- Politics and government",
+        "United States -- Social conditions"
+      ],
+      "description": "Author(s): Tocqueville, Alexis de",
+      "url": "https://www.gutenberg.org/ebooks/815.html.images"
+    },
+    {
+      "identifier": "49402",
+      "title": "The Black Hawk War Including a Review of Black Hawk's Life",
+      "year": "N/A",
+      "subject": [
+        "Black Hawk War, 1832",
+        "Black Hawk, Sauk chief, 1767-1838"
+      ],
+      "description": "Author(s): Stevens, Frank Everett",
+      "url": "https://www.gutenberg.org/ebooks/49402.html.images"
+    },
+    {
+      "identifier": "236",
+      "title": "The Jungle Book",
+      "year": "N/A",
+      "subject": [
+        "Adventure stories, English",
+        "Animals -- Fiction",
+        "Feral children -- Fiction",
+        "India -- Fiction",
+        "India -- History -- 19th century -- Fiction",
+        "Jungle animals -- Fiction",
+        "Jungles -- Fiction",
+        "Mowgli (Fictitious character) -- Fiction",
+        "Short stories"
+      ],
+      "description": "Author(s): Kipling, Rudyard",
+      "url": "https://www.gutenberg.org/ebooks/236.html.images"
+    },
+    {
+      "identifier": "1560",
+      "title": "The San Francisco Calamity by Earthquake and Fire",
+      "year": "N/A",
+      "subject": [
+        "Earthquakes -- California -- San Francisco -- History -- 20th century",
+        "Fires -- California -- San Francisco -- History -- 20th century",
+        "San Francisco (Calif.) -- Biography",
+        "San Francisco (Calif.) -- History -- 20th century",
+        "San Francisco Earthquake and Fire, Calif., 1906"
+      ],
+      "description": "Author(s): Morris, Charles",
+      "url": "https://www.gutenberg.org/ebooks/1560.html.images"
+    },
+    {
+      "identifier": "4367",
+      "title": "Personal Memoirs of U. S. Grant, Complete",
+      "year": "N/A",
+      "subject": [
+        "Generals -- United States -- Biography",
+        "Grant, Ulysses S. (Ulysses Simpson), 1822-1885",
+        "Mexican War, 1846-1848 -- Personal narratives",
+        "Presidents -- United States -- Biography",
+        "United States -- History -- Civil War, 1861-1865 -- Campaigns",
+        "United States. Army -- Biography"
+      ],
+      "description": "Author(s): Grant, Ulysses S. (Ulysses Simpson)",
+      "url": "https://www.gutenberg.org/ebooks/4367.html.images"
+    },
+    {
+      "identifier": "2848",
+      "title": "Antiquities of the Jews",
+      "year": "N/A",
+      "subject": [
+        "Jews -- Antiquities"
+      ],
+      "description": "Author(s): Josephus, Flavius",
+      "url": "https://www.gutenberg.org/ebooks/2848.html.images"
+    },
+    {
+      "identifier": "6818",
+      "title": "The Arctic Prairies : a Canoe-Journey of 2,000 Miles in Search of the Caribou;: Being the Account of a Voyage to the Region North of Aylemer Lake",
+      "year": "N/A",
+      "subject": [
+        "Alberta -- Description and travel",
+        "Canada, Northern -- Description and travel",
+        "Canoes and canoeing -- Canada, Northern -- History -- 20th century",
+        "Caribou hunting -- Canada, Northern -- History -- 20th century",
+        "Mackenzie (N.W.T.) -- Description and travel",
+        "Outdoor life -- Canada, Northern -- History -- 20th century",
+        "Seton, Ernest Thompson, 1860-1946 -- Travel -- Canada, Northern"
+      ],
+      "description": "Author(s): Seton, Ernest Thompson",
+      "url": "https://www.gutenberg.org/ebooks/6818.html.images"
+    },
+    {
+      "identifier": "1257",
+      "title": "The three musketeers",
+      "year": "N/A",
+      "subject": [
+        "Adventure and adventurers -- Fiction",
+        "France -- History -- Louis XIII, 1610-1643 -- Fiction",
+        "Historical fiction",
+        "Swordsmen -- Fiction"
+      ],
+      "description": "Author(s): Dumas, Alexandre, Maquet, Auguste",
+      "url": "https://www.gutenberg.org/ebooks/1257.html.images"
+    },
+    {
+      "identifier": "147",
+      "title": "Common Sense",
+      "year": "N/A",
+      "subject": [
+        "Monarchy -- Early works to 1800",
+        "Political science -- Early works to 1800",
+        "United States -- Politics and government -- 1775-1783"
+      ],
+      "description": "Author(s): Paine, Thomas",
+      "url": "https://www.gutenberg.org/ebooks/147.html.images"
+    },
+    {
+      "identifier": "20203",
+      "title": "Autobiography of Benjamin Franklin",
+      "year": "N/A",
+      "subject": [
+        "Franklin, Benjamin, 1706-1790",
+        "Statesmen -- United States -- Biography"
+      ],
+      "description": "Author(s): Franklin, Benjamin",
+      "url": "https://www.gutenberg.org/ebooks/20203.html.images"
+    },
+    {
+      "identifier": "7142",
+      "title": "The History of the Peloponnesian War",
+      "year": "N/A",
+      "subject": [
+        "Greece -- History -- Peloponnesian War, 431-404 B.C."
+      ],
+      "description": "Author(s): Thucydides",
+      "url": "https://www.gutenberg.org/ebooks/7142.html.images"
+    },
+    {
+      "identifier": "44646",
+      "title": "Memoirs of the Duchesse de Dino (Afterwards Duchesse de Talleyrand et de Sagan), 1836-1840",
+      "year": "N/A",
+      "subject": [
+        "Dino, Dorothée, duchesse de, 1793-1862",
+        "Europe -- Politics and government -- 1815-1848",
+        "France -- Foreign relations -- 1830-1848"
+      ],
+      "description": "Author(s): Dino, Dorothée, duchesse de",
+      "url": "https://www.gutenberg.org/ebooks/44646.html.images"
+    },
+    {
+      "identifier": "851",
+      "title": "Narrative of the Captivity and Restoration of Mrs. Mary Rowlandson",
+      "year": "N/A",
+      "subject": [
+        "Indian captivities -- Massachusetts",
+        "King Philip's War, 1675-1676",
+        "Lancaster (Mass.) -- History -- Colonial period, ca. 1600-1775",
+        "Massachusetts -- Biography",
+        "Rowlandson, Mary White, approximately 1635-1711"
+      ],
+      "description": "Author(s): Rowlandson, Mary White",
+      "url": "https://www.gutenberg.org/ebooks/851.html.images"
+    },
+    {
+      "identifier": "10636",
+      "title": "The Travels of Marco Polo — Volume 1",
+      "year": "N/A",
+      "subject": [
+        "Asia -- Description and travel -- Early works to 1800",
+        "Mongols -- History",
+        "Polo, Marco, 1254-1323?",
+        "Voyages and travels"
+      ],
+      "description": "Author(s): Polo, Marco, Rusticiano, da Pisa",
+      "url": "https://www.gutenberg.org/ebooks/10636.html.images"
+    },
+    {
+      "identifier": "1946",
+      "title": "On War",
+      "year": "N/A",
+      "subject": [
+        "Military art and science",
+        "War"
+      ],
+      "description": "Author(s): Clausewitz, Carl von",
+      "url": "https://www.gutenberg.org/ebooks/1946.html.images"
+    },
+    {
+      "identifier": "22903",
+      "title": "The Expedition to Borneo of H.M.S. Dido: For the Suppression of Piracy",
+      "year": "N/A",
+      "subject": [
+        "Borneo -- Description and travel",
+        "Borneo -- History",
+        "Pirates -- Borneo"
+      ],
+      "description": "Author(s): Keppel, Henry, Sir, James, Rajah of Sarawak",
+      "url": "https://www.gutenberg.org/ebooks/22903.html.images"
+    },
+    {
+      "identifier": "39459",
+      "title": "The Contemporary Review, Volume 36, October 1879",
+      "year": "N/A",
+      "subject": [
+        "Arts -- Periodicals",
+        "Literature -- Periodicals",
+        "Political science -- Periodicals"
+      ],
+      "description": "Author(s): Various",
+      "url": "https://www.gutenberg.org/ebooks/39459.html.images"
+    },
+    {
+      "identifier": "7700",
+      "title": "Lysistrata",
+      "year": "N/A",
+      "subject": [
+        "Aristophanes -- Translations into English",
+        "Comedy plays",
+        "Greece -- History -- Peloponnesian War, 431-404 B.C. -- Drama",
+        "Greek drama (Comedy) -- Translations into English",
+        "Lysistrata (Fictitious character) -- Drama",
+        "Peace movements -- Drama",
+        "Women and peace -- Drama"
+      ],
+      "description": "Author(s): Aristophanes",
+      "url": "https://www.gutenberg.org/ebooks/7700.html.images"
+    },
+    {
+      "identifier": "6400",
+      "title": "The Lives of the Twelve Caesars, Complete",
+      "year": "N/A",
+      "subject": [
+        "Emperors -- Rome -- Biography -- Early works to 1800",
+        "Rome -- History -- Empire, 30 B.C.-284 A.D."
+      ],
+      "description": "Author(s): Suetonius",
+      "url": "https://www.gutenberg.org/ebooks/6400.html.images"
+    },
+    {
+      "identifier": "45249",
+      "title": "The History of Signboards, from the Earliest times to the Present Day",
+      "year": "N/A",
+      "subject": [
+        "Inn signs -- England -- History",
+        "Signs and signboards -- History"
+      ],
+      "description": "Author(s): Hotten, John Camden, Larwood, Jacob",
+      "url": "https://www.gutenberg.org/ebooks/45249.html.images"
+    },
+    {
+      "identifier": "69566",
+      "title": "The Egyptian Book of the dead",
+      "year": "N/A",
+      "subject": [
+        "Future life",
+        "Incantations, Egyptian"
+      ],
+      "description": "No author info",
+      "url": "https://www.gutenberg.org/ebooks/69566.html.images"
+    },
+    {
+      "identifier": "75883",
+      "title": "The Roll of Honour, Volume 1 : $b A biographical record of all members of His Majesty's naval  and military forces who have fallen in the war",
+      "year": "N/A",
+      "subject": [
+        "Soldiers -- Great Britain -- Biography",
+        "World War, 1914-1918 -- Registers of dead -- Great Britain"
+      ],
+      "description": "Author(s): Ruvigny et Raineval, Melville Henry Massue, marquis de",
+      "url": "https://www.gutenberg.org/ebooks/75883.html.images"
+    },
+    {
+      "identifier": "14977",
+      "title": "The Red Record: Tabulated Statistics and Alleged Causes of Lynching in the United States",
+      "year": "N/A",
+      "subject": [
+        "African Americans -- History -- 1877-1964",
+        "Lynching -- United States",
+        "Lynching -- United States -- Statistics"
+      ],
+      "description": "Author(s): Wells-Barnett, Ida B.",
+      "url": "https://www.gutenberg.org/ebooks/14977.html.images"
+    },
+    {
+      "identifier": "61",
+      "title": "The Communist Manifesto",
+      "year": "N/A",
+      "subject": [
+        "Communism",
+        "Socialism"
+      ],
+      "description": "Author(s): Marx, Karl, Engels, Friedrich",
+      "url": "https://www.gutenberg.org/ebooks/61.html.images"
+    },
+    {
+      "identifier": "75201",
+      "title": "A farewell to arms",
+      "year": "N/A",
+      "subject": [
+        "Man-woman relationships -- Fiction",
+        "Military deserters -- Fiction",
+        "Military hospitals -- Fiction",
+        "Soldiers -- United States -- Fiction",
+        "War stories",
+        "War wounds -- Fiction",
+        "World War, 1914-1918 -- Campaigns -- Italy -- Fiction",
+        "World War, 1914-1918 -- Fiction",
+        "World War, 1914-1918 -- Medical care -- Fiction"
+      ],
+      "description": "Author(s): Hemingway, Ernest",
+      "url": "https://www.gutenberg.org/ebooks/75201.html.images"
+    },
+    {
+      "identifier": "46976",
+      "title": "The Anabasis of Alexander : $b or, The history of the wars and conquests of Alexander the Great",
+      "year": "N/A",
+      "subject": [
+        "Alexander, the Great, 356 B.C.-323 B.C.",
+        "India -- History -- To 324 B.C.",
+        "Iran -- History -- To 640"
+      ],
+      "description": "Author(s): Arrian",
+      "url": "https://www.gutenberg.org/ebooks/46976.html.images"
+    },
+    {
+      "identifier": "61113",
+      "title": "The Natural History of Pliny, Volume 4 (of 6)",
+      "year": "N/A",
+      "subject": [
+        "Natural history -- Pre-Linnean works"
+      ],
+      "description": "Author(s): Pliny, the Elder",
+      "url": "https://www.gutenberg.org/ebooks/61113.html.images"
+    },
+    {
+      "identifier": "48438",
+      "title": "Rizal's own story of his life",
+      "year": "N/A",
+      "subject": [
+        "Philippines -- Biography",
+        "Rizal, José, 1861-1896"
+      ],
+      "description": "Author(s): Rizal, José",
+      "url": "https://www.gutenberg.org/ebooks/48438.html.images"
+    },
+    {
+      "identifier": "19576",
+      "title": "Anne of Green Gables",
+      "year": "N/A",
+      "subject": [
+        "Bildungsromans",
+        "Canada -- History -- 1867-1914 -- Fiction",
+        "Country life -- Prince Edward Island -- Fiction",
+        "Friendship -- Fiction",
+        "Girls -- Fiction",
+        "Islands -- Fiction",
+        "Orphans -- Fiction",
+        "Prince Edward Island -- History -- 20th century -- Fiction",
+        "Shirley, Anne (Fictitious character) -- Fiction"
+      ],
+      "description": "Author(s): Montgomery, L. M. (Lucy Maud)",
+      "url": "https://www.gutenberg.org/files/19576/19576-index.html"
+    },
+    {
+      "identifier": "25717",
+      "title": "The History of the Decline and Fall of the Roman Empire: Table of Contents with links in the HTML file to the two Project Gutenberg editions (12 volumes)",
+      "year": "N/A",
+      "subject": [
+        "Byzantine Empire -- History -- To 527",
+        "Indexes",
+        "Rome -- History -- Empire, 30 B.C.-476 A.D."
+      ],
+      "description": "Author(s): Gibbon, Edward",
+      "url": "https://www.gutenberg.org/ebooks/25717.html.images"
+    },
+    {
+      "identifier": "59101",
+      "title": "The Printer in Eighteenth-Century Williamsburg: An Account of His Life & Times, & of His Craft",
+      "year": "N/A",
+      "subject": [
+        "Printing -- Virginia -- Williamsburg -- History -- 18th century"
+      ],
+      "description": "Author(s): Rouse, Parke",
+      "url": "https://www.gutenberg.org/ebooks/59101.html.images"
+    },
+    {
+      "identifier": "20",
+      "title": "Paradise Lost",
+      "year": "N/A",
+      "subject": [
+        "Adam (Biblical figure) -- Poetry",
+        "Bible. Genesis -- History of Biblical events -- Poetry",
+        "Eve (Biblical figure) -- Poetry",
+        "Fall of man -- Poetry"
+      ],
+      "description": "Author(s): Milton, John",
+      "url": "https://www.gutenberg.org/ebooks/20.html.images"
+    },
+    {
+      "identifier": "42108",
+      "title": "The slang dictionary : $b Etymological, historical and anecdotal",
+      "year": "N/A",
+      "subject": [
+        "English language -- Dialects -- England -- London -- Glossaries, vocabularies, etc.",
+        "English language -- England -- London -- Slang -- Dictionaries",
+        "London (England) -- Languages -- Dictionaries"
+      ],
+      "description": "Author(s): Hotten, John Camden",
+      "url": "https://www.gutenberg.org/ebooks/42108.html.images"
+    },
+    {
+      "identifier": "2376",
+      "title": "Up from Slavery: An Autobiography",
+      "year": "N/A",
+      "subject": [
+        "African Americans -- Biography",
+        "Educators -- United States -- Biography",
+        "Tuskegee Institute",
+        "Washington, Booker T., 1856-1915"
+      ],
+      "description": "Author(s): Washington, Booker T.",
+      "url": "https://www.gutenberg.org/ebooks/2376.html.images"
+    },
+    {
+      "identifier": "41918",
+      "title": "The Philippines: Past and Present (Volume 2 of 2)",
+      "year": "N/A",
+      "subject": [
+        "Philippines",
+        "Philippines -- History -- 1898-1946"
+      ],
+      "description": "Author(s): Worcester, Dean C. (Dean Conant)",
+      "url": "https://www.gutenberg.org/ebooks/41918.html.images"
+    },
+    {
+      "identifier": "36965",
+      "title": "Harriet Martineau",
+      "year": "N/A",
+      "subject": [
+        "Authors, English -- 19th century -- Biography",
+        "Martineau, Harriet, 1802-1876",
+        "Women and literature -- England -- History -- 19th century",
+        "Women social reformers -- Great Britain -- Biography"
+      ],
+      "description": "Author(s): Miller, Florence Fenwick",
+      "url": "https://www.gutenberg.org/ebooks/36965.html.images"
+    },
+    {
+      "identifier": "2707",
+      "title": "The History of Herodotus — Volume 1",
+      "year": "N/A",
+      "subject": [
+        "Greece -- History -- To 146 B.C.",
+        "History, Ancient"
+      ],
+      "description": "Author(s): Herodotus",
+      "url": "https://www.gutenberg.org/ebooks/2707.html.images"
+    },
+    {
+      "identifier": "1170",
+      "title": "Anabasis",
+      "year": "N/A",
+      "subject": [
+        "Classical literature",
+        "Cyrus, the Younger, approximately 423 B.C.-401 B.C.",
+        "Greece -- History -- Expedition of Cyrus, 401 B.C.",
+        "Iran -- History -- To 640"
+      ],
+      "description": "Author(s): Xenophon",
+      "url": "https://www.gutenberg.org/ebooks/1170.html.images"
+    },
+    {
+      "identifier": "60976",
+      "title": "Rip Van Winkle",
+      "year": "N/A",
+      "subject": [
+        "Catskill Mountains Region (N.Y.) -- History -- 18th century -- Fiction",
+        "Fantasy fiction",
+        "Hudson River (N.Y. and N.J.) -- Fiction",
+        "New York (State) -- History -- 1775-1865 -- Fiction",
+        "Van Winkle, Rip (Fictitious character) -- Fiction"
+      ],
+      "description": "Author(s): Irving, Washington",
+      "url": "https://www.gutenberg.org/ebooks/60976.html.images"
+    },
+    {
+      "identifier": "51143",
+      "title": "The Waterloo Roll Call: With Biographical Notes and Anecdotes",
+      "year": "N/A",
+      "subject": [
+        "Great Britain. Army -- Registers",
+        "Waterloo, Battle of, Waterloo, Belgium, 1815"
+      ],
+      "description": "Author(s): Dalton, Charles",
+      "url": "https://www.gutenberg.org/ebooks/51143.html.images"
+    },
+    {
+      "identifier": "45634",
+      "title": "Myths of the Cherokee: Extract from the Nineteenth Annual Report of the Bureau of American Ethnology",
+      "year": "N/A",
+      "subject": [
+        "Cherokee Indians -- Folklore",
+        "Cherokee Indians -- History",
+        "Cherokee mythology",
+        "Legends -- Southern States",
+        "Tales -- Southern States"
+      ],
+      "description": "Author(s): Mooney, James",
+      "url": "https://www.gutenberg.org/ebooks/45634.html.images"
+    },
+    {
+      "identifier": "64488",
+      "title": "Roman Stoicism: being lectures on the history of the Stoic philosophy with special reference to its development within the Roman Empire",
+      "year": "N/A",
+      "subject": [
+        "Stoics"
+      ],
+      "description": "Author(s): Arnold, Edward Vernon",
+      "url": "https://www.gutenberg.org/ebooks/64488.html.images"
+    },
+    {
+      "identifier": "2760",
+      "title": "Celebrated Crimes (Complete)",
+      "year": "N/A",
+      "subject": [
+        "Crime",
+        "Criminals -- Biography"
+      ],
+      "description": "Author(s): Dumas, Alexandre",
+      "url": "https://www.gutenberg.org/ebooks/2760.html.images"
+    },
+    {
+      "identifier": "29728",
+      "title": "Cookery and Dining in Imperial Rome",
+      "year": "N/A",
+      "subject": [
+        "Cookbooks",
+        "Cooking, Roman -- Early works to 1800"
+      ],
+      "description": "Author(s): Apicius",
+      "url": "https://www.gutenberg.org/ebooks/29728.html.images"
+    },
+    {
+      "identifier": "51356",
+      "title": "The Birth of Tragedy; or, Hellenism and Pessimism",
+      "year": "N/A",
+      "subject": [
+        "Aesthetics",
+        "Greek drama (Tragedy) -- History and criticism -- Theory, etc.",
+        "Music -- Philosophy and aesthetics",
+        "Mythology, Greek, in literature",
+        "Tragedy",
+        "Tragic, The"
+      ],
+      "description": "Author(s): Nietzsche, Friedrich Wilhelm",
+      "url": "https://www.gutenberg.org/ebooks/51356.html.images"
+    },
+    {
+      "identifier": "27513",
+      "title": "The Book of the National Parks",
+      "year": "N/A",
+      "subject": [
+        "National parks and reserves -- United States"
+      ],
+      "description": "Author(s): Yard, Robert Sterling",
+      "url": "https://www.gutenberg.org/ebooks/27513.html.images"
+    },
+    {
+      "identifier": "73",
+      "title": "The Red Badge of Courage: An Episode of the American Civil War",
+      "year": "N/A",
+      "subject": [
+        "Chancellorsville, Battle of, Chancellorsville, Va., 1863 -- Fiction",
+        "Historical fiction",
+        "United States -- History -- Civil War, 1861-1865 -- Fiction",
+        "Virginia -- History -- Civil War, 1861-1865 -- Fiction",
+        "War stories"
+      ],
+      "description": "Author(s): Crane, Stephen",
+      "url": "https://www.gutenberg.org/ebooks/73.html.images"
+    },
+    {
+      "identifier": "2199",
+      "title": "The Iliad",
+      "year": "N/A",
+      "subject": [
+        "Achilles (Mythological character)",
+        "Classical literature",
+        "Epic poetry, Greek -- Translations into English",
+        "Trojan War"
+      ],
+      "description": "Author(s): Homer",
+      "url": "https://www.gutenberg.org/ebooks/2199.html.images"
+    },
+    {
+      "identifier": "43427",
+      "title": "Encyclopaedia Britannica, 11th Edition, \"Lord Chamberlain\" to \"Luqman\": Volume 17, Slice 1",
+      "year": "N/A",
+      "subject": [
+        "Encyclopedias and dictionaries"
+      ],
+      "description": "Author(s): Various",
+      "url": "https://www.gutenberg.org/ebooks/43427.html.images"
+    },
+    {
+      "identifier": "49266",
+      "title": "The Wars of Religion in France 1559-1576: The Huguenots, Catherine de Medici and Philip II",
+      "year": "N/A",
+      "subject": [
+        "France -- History -- Wars of the Huguenots, 1562-1598",
+        "Sainte Ligue (1576-1593)"
+      ],
+      "description": "Author(s): Thompson, James Westfall",
+      "url": "https://www.gutenberg.org/ebooks/49266.html.images"
+    },
+    {
+      "identifier": "59",
+      "title": "Discourse on the Method of Rightly Conducting One's Reason and of Seeking Truth in the Sciences",
+      "year": "N/A",
+      "subject": [
+        "Methodology",
+        "Science -- Methodology"
+      ],
+      "description": "Author(s): Descartes, René",
+      "url": "https://www.gutenberg.org/ebooks/59.html.images"
+    },
+    {
+      "identifier": "75617",
+      "title": "The British battle fleet, Vol. 2 (of 2) : $b its inception and growth throughout the centuries to the present day",
+      "year": "N/A",
+      "subject": [
+        "Great Britain -- History, Naval",
+        "Great Britain. Royal Navy -- History",
+        "Warships -- Great Britain -- History"
+      ],
+      "description": "Author(s): Jane, Fred T. (Frederick Thomas)",
+      "url": "https://www.gutenberg.org/ebooks/75617.html.images"
+    },
+    {
+      "identifier": "50922",
+      "title": "Perpetual Peace: A Philosophical Essay",
+      "year": "N/A",
+      "subject": [
+        "Peace"
+      ],
+      "description": "Author(s): Kant, Immanuel",
+      "url": "https://www.gutenberg.org/ebooks/50922.html.images"
+    },
+    {
+      "identifier": "940",
+      "title": "The Last of the Mohicans; A narrative of 1757",
+      "year": "N/A",
+      "subject": [
+        "Adventure stories",
+        "Bumppo, Natty (Fictitious character) -- Fiction",
+        "Frontier and pioneer life -- Fiction",
+        "Historical fiction",
+        "Mohegan Indians -- Fiction",
+        "United States -- History -- French and Indian War, 1754-1763 -- Fiction",
+        "War stories"
+      ],
+      "description": "Author(s): Cooper, James Fenimore",
+      "url": "https://www.gutenberg.org/ebooks/940.html.images"
+    },
+    {
+      "identifier": "589",
+      "title": "Catriona",
+      "year": "N/A",
+      "subject": [
+        "Adventure stories",
+        "Scotland -- History -- 18th century -- Fiction"
+      ],
+      "description": "Author(s): Stevenson, Robert Louis",
+      "url": "https://www.gutenberg.org/ebooks/589.html.images"
+    },
+    {
+      "identifier": "2360",
+      "title": "The Riddle of the Sands",
+      "year": "N/A",
+      "subject": [
+        "Adventure stories",
+        "Alternative histories (Fiction)",
+        "Frisian Islands -- Fiction",
+        "Great Britain -- History -- Invasions -- Fiction",
+        "Sailing -- Fiction",
+        "Sea stories",
+        "Secret service -- Fiction",
+        "Spy stories"
+      ],
+      "description": "Author(s): Childers, Erskine",
+      "url": "https://www.gutenberg.org/ebooks/2360.html.images"
+    },
+    {
+      "identifier": "1404",
+      "title": "The Federalist Papers",
+      "year": "N/A",
+      "subject": [
+        "Constitutional history -- United States -- Sources",
+        "Constitutional law -- United States"
+      ],
+      "description": "Author(s): Hamilton, Alexander, Jay, John, Madison, James",
+      "url": "https://www.gutenberg.org/ebooks/1404.html.images"
+    },
+    {
+      "identifier": "14975",
+      "title": "Southern Horrors: Lynch Law in All Its Phases",
+      "year": "N/A",
+      "subject": [
+        "Lynching"
+      ],
+      "description": "Author(s): Wells-Barnett, Ida B.",
+      "url": "https://www.gutenberg.org/ebooks/14975.html.images"
+    },
+    {
+      "identifier": "2739",
+      "title": "More Letters of Charles Darwin — Volume 1: A Record of His Work in a Series of Hitherto Unpublished Letters",
+      "year": "N/A",
+      "subject": [
+        "Darwin, Charles, 1809-1882 -- Correspondence",
+        "Evolution (Biology)",
+        "Naturalists -- Great Britain -- Correspondence"
+      ],
+      "description": "Author(s): Darwin, Charles",
+      "url": "https://www.gutenberg.org/ebooks/2739.html.images"
+    },
+    {
+      "identifier": "14672",
+      "title": "The Religion of the Ancient Celts",
+      "year": "N/A",
+      "subject": [
+        "Celts -- Religion",
+        "Mythology, Celtic"
+      ],
+      "description": "Author(s): MacCulloch, J. A. (John Arnott)",
+      "url": "https://www.gutenberg.org/ebooks/14672.html.images"
+    },
+    {
+      "identifier": "43076",
+      "title": "Agnes of Sorrento",
+      "year": "N/A",
+      "subject": [
+        "Catholic Church -- Italy -- History -- To 1500 -- Fiction",
+        "Historical fiction",
+        "Papacy -- History -- 1447-1565 -- Fiction",
+        "Savonarola, Girolamo, 1452-1498 -- Fiction",
+        "Sorrento (Italy) -- History -- Fiction"
+      ],
+      "description": "Author(s): Stowe, Harriet Beecher",
+      "url": "https://www.gutenberg.org/ebooks/43076.html.images"
+    },
+    {
+      "identifier": "37499",
+      "title": "Napoleon's Letters to Josephine, 1796-1812: For the First Time Collected and Translated, with Notes Social, Historical, and Chronological, from Contemporary Sources",
+      "year": "N/A",
+      "subject": [
+        "Josephine, Empress, consort of Napoleon I, Emperor of the French, 1763-1814 -- Correspondence",
+        "Napoleon I, Emperor of the French, 1769-1821 -- Correspondence"
+      ],
+      "description": "Author(s): Napoleon I, Emperor of the French",
+      "url": "https://www.gutenberg.org/ebooks/37499.html.images"
+    },
+    {
+      "identifier": "46954",
+      "title": "The Story of Siena and San Gimignano",
+      "year": "N/A",
+      "subject": [
+        "Art -- Italy -- Siena",
+        "San Gimignano (Italy) -- History",
+        "Siena (Italy) -- History"
+      ],
+      "description": "Author(s): Gardner, Edmund G.",
+      "url": "https://www.gutenberg.org/ebooks/46954.html.images"
+    },
+    {
+      "identifier": "4200",
+      "title": "The Diary of Samuel Pepys — Complete",
+      "year": "N/A",
+      "subject": [
+        "Cabinet officers -- Great Britain -- Diaries",
+        "Diarists -- Great Britain -- Diaries",
+        "Great Britain -- History -- Charles II, 1660-1685 -- Sources",
+        "Great Britain -- Social life and customs -- 17th century -- Sources",
+        "Pepys, Samuel, 1633-1703 -- Diaries"
+      ],
+      "description": "Author(s): Pepys, Samuel",
+      "url": "https://www.gutenberg.org/ebooks/4200.html.images"
+    },
+    {
+      "identifier": "6737",
+      "title": "The Social Cancer: A Complete English Version of Noli Me Tangere",
+      "year": "N/A",
+      "subject": [
+        "Historical fiction",
+        "Philippines -- History -- 1812-1898 -- Fiction"
+      ],
+      "description": "Author(s): Rizal, José",
+      "url": "https://www.gutenberg.org/ebooks/6737.html.images"
+    },
+    {
+      "identifier": "42884",
+      "title": "The Philippine Islands, 1493-1898, Volume 33, 1519-1522: Explorations by early navigators, descriptions of the islands and their peoples, their history and records of the Catholic missions, as related in contemporaneous books and manuscripts, showing the political, economic, commercial and religious conditions of those islands from their earliest relations with European nations to the close of the nineteenth century",
+      "year": "N/A",
+      "subject": [
+        "Demarcation line of Alexander VI",
+        "Missions -- Philippines",
+        "Philippines -- Discovery and exploration",
+        "Philippines -- History -- Sources"
+      ],
+      "description": "Author(s): Pigafetta, Antonio",
+      "url": "https://www.gutenberg.org/ebooks/42884.html.images"
+    },
+    {
+      "identifier": "271",
+      "title": "Black Beauty",
+      "year": "N/A",
+      "subject": [
+        "Great Britain -- History -- 19th century -- Juvenile fiction",
+        "Historical fiction",
+        "Horses -- Juvenile fiction",
+        "Human-animal relationships -- Juvenile fiction"
+      ],
+      "description": "Author(s): Sewell, Anna",
+      "url": "https://www.gutenberg.org/ebooks/271.html.images"
+    },
+    {
+      "identifier": "59007",
+      "title": "The Roman Festivals of the Period of the Republic: An Introduction to the Study of the Religion of the Romans",
+      "year": "N/A",
+      "subject": [
+        "Cults -- Rome",
+        "Festivals -- Rome",
+        "Rome -- Religion"
+      ],
+      "description": "Author(s): Fowler, W. Warde (William Warde)",
+      "url": "https://www.gutenberg.org/ebooks/59007.html.images"
+    },
+    {
+      "identifier": "9662",
+      "title": "An Enquiry Concerning Human Understanding",
+      "year": "N/A",
+      "subject": [
+        "Ethics",
+        "Knowledge, Theory of"
+      ],
+      "description": "Author(s): Hume, David",
+      "url": "https://www.gutenberg.org/ebooks/9662.html.images"
+    },
+    {
+      "identifier": "32474",
+      "title": "The Memoirs of the Conquistador Bernal Diaz del Castillo, Vol 1 (of 2): Written by Himself Containing a True and Full Account of the Discovery and Conquest of Mexico and New Spain.",
+      "year": "N/A",
+      "subject": [
+        "Mexico -- History -- Conquest, 1519-1540"
+      ],
+      "description": "Author(s): Díaz del Castillo, Bernal",
+      "url": "https://www.gutenberg.org/ebooks/32474.html.images"
+    },
+    {
+      "identifier": "49513",
+      "title": "The Complete Herbal: To which is now added, upwards of one hundred additional herbs, with a display of their medicinal and occult qualities physically applied to the cure of all disorders incident to mankind: to which are now first annexed, the English physician enlarged, and key to Physic.",
+      "year": "N/A",
+      "subject": [
+        "Botany, Medical",
+        "Botany, Medical -- England",
+        "Herbs -- Therapeutic use",
+        "Materia medica, Vegetable",
+        "Medicinal plants",
+        "Medicinal plants -- England"
+      ],
+      "description": "Author(s): Culpeper, Nicholas",
+      "url": "https://www.gutenberg.org/ebooks/49513.html.images"
+    },
+    {
+      "identifier": "67330",
+      "title": "A History of Magic and Experimental Science, Volume 2 (of 2): During the First Thirteen Centuries of Our Era",
+      "year": "N/A",
+      "subject": [
+        "Magic -- History",
+        "Science -- History"
+      ],
+      "description": "Author(s): Thorndike, Lynn",
+      "url": "https://www.gutenberg.org/ebooks/67330.html.images"
+    },
+    {
+      "identifier": "28500",
+      "title": "All about coffee",
+      "year": "N/A",
+      "subject": [
+        "Coffee",
+        "Coffee Industry",
+        "Drinking customs"
+      ],
+      "description": "Author(s): Ukers, William H. (William Harrison)",
+      "url": "https://www.gutenberg.org/ebooks/28500.html.images"
+    },
+    {
+      "identifier": "48155",
+      "title": "History of Ancient Pottery: Greek, Etruscan, and Roman.  Volume 2 (of 2)",
+      "year": "N/A",
+      "subject": [
+        "Mythology, Classical, in art",
+        "Pottery, Ancient",
+        "Pottery, Etruscan",
+        "Pottery, Greek",
+        "Pottery, Roman"
+      ],
+      "description": "Author(s): Walters, H. B. (Henry Beauchamp), Birch, Samuel",
+      "url": "https://www.gutenberg.org/ebooks/48155.html.images"
+    },
+    {
+      "identifier": "19637",
+      "title": "Black Beauty - The Autobiography of a Horse",
+      "year": "N/A",
+      "subject": [
+        "Great Britain -- History -- 19th century -- Juvenile fiction",
+        "Historical fiction",
+        "Horses -- Juvenile fiction",
+        "Human-animal relationships -- Juvenile fiction"
+      ],
+      "description": "Author(s): Sewell, Anna",
+      "url": "https://www.gutenberg.org/files/19637/19637-index.html"
+    },
+    {
+      "identifier": "66410",
+      "title": "A guide book of art, architecture, and historic interests in Pennsylvania",
+      "year": "N/A",
+      "subject": [
+        "Architecture -- Pennsylvania",
+        "Art -- Pennsylvania",
+        "Historic buildings -- Pennsylvania",
+        "Pennsylvania -- Guidebooks",
+        "Pennsylvania -- History"
+      ],
+      "description": "No author info",
+      "url": "https://www.gutenberg.org/ebooks/66410.html.images"
+    },
+    {
+      "identifier": "39232",
+      "title": "Encyclopaedia Britannica, 11th Edition, \"Hinduism\" to \"Home, Earls of\": Volume 13, Slice 5",
+      "year": "N/A",
+      "subject": [
+        "Encyclopedias and dictionaries"
+      ],
+      "description": "Author(s): Various",
+      "url": "https://www.gutenberg.org/ebooks/39232.html.images"
+    },
+    {
+      "identifier": "2850",
+      "title": "The Wars of the Jews; Or, The History of the Destruction of Jerusalem",
+      "year": "N/A",
+      "subject": [
+        "Jews -- History"
+      ],
+      "description": "Author(s): Josephus, Flavius",
+      "url": "https://www.gutenberg.org/ebooks/2850.html.images"
+    },
+    {
+      "identifier": "20587",
+      "title": "Integration of the Armed Forces, 1940-1965",
+      "year": "N/A",
+      "subject": [
+        "African American soldiers",
+        "United States -- Race relations"
+      ],
+      "description": "Author(s): MacGregor, Morris J.",
+      "url": "https://www.gutenberg.org/ebooks/20587.html.images"
+    },
+    {
+      "identifier": "7524",
+      "title": "The Germany and the Agricola of Tacitus",
+      "year": "N/A",
+      "subject": [
+        "Agricola, Gnaeus Julius, 40-93",
+        "Germanic peoples -- Early works to 1800",
+        "Statesmen -- Rome -- Biography -- Early works to 1800"
+      ],
+      "description": "Author(s): Tacitus, Cornelius",
+      "url": "https://www.gutenberg.org/ebooks/7524.html.images"
+    },
+    {
+      "identifier": "44028",
+      "title": "The Every Day Book of History and Chronology: Embracing the Anniversaries of Memorable Persons and Events in Every Period and State of the World, from the Creation to the Present Time",
+      "year": "N/A",
+      "subject": [
+        "Chronology, Historical"
+      ],
+      "description": "Author(s): Munsell, Joel",
+      "url": "https://www.gutenberg.org/ebooks/44028.html.images"
+    },
+    {
+      "identifier": "57493",
+      "title": "The Natural History of Pliny, Volume 1 (of 6)",
+      "year": "N/A",
+      "subject": [
+        "Natural history -- Pre-Linnean works"
+      ],
+      "description": "Author(s): Pliny, the Elder",
+      "url": "https://www.gutenberg.org/ebooks/57493.html.images"
+    },
+    {
+      "identifier": "19800",
+      "title": "London and the Kingdom - Volume 1: A History Derived Mainly from the Archives at Guildhall in the Custody of the Corporation of the City of London.",
+      "year": "N/A",
+      "subject": [
+        "London (England) -- History"
+      ],
+      "description": "Author(s): Sharpe, Reginald R. (Reginald Robinson)",
+      "url": "https://www.gutenberg.org/ebooks/19800.html.images"
+    },
+    {
+      "identifier": "77692",
+      "title": "Spanish colonial literature in South America",
+      "year": "N/A",
+      "subject": [
+        "Spanish American literature -- History and criticism"
+      ],
+      "description": "Author(s): Moses, Bernard",
+      "url": "https://www.gutenberg.org/ebooks/77692.html.images"
+    },
+    {
+      "identifier": "69262",
+      "title": "History for ready reference, Volume 4, Nicæa to Tunis",
+      "year": "N/A",
+      "subject": [
+        "History -- Dictionaries"
+      ],
+      "description": "Author(s): Larned, J. N. (Josephus Nelson)",
+      "url": "https://www.gutenberg.org/ebooks/69262.html.images"
+    },
+    {
+      "identifier": "421",
+      "title": "Kidnapped",
+      "year": "N/A",
+      "subject": [
+        "Adventure and adventurers -- Fiction",
+        "Historical fiction",
+        "Kidnapping -- Fiction",
+        "Scotland -- History -- 18th century -- Fiction"
+      ],
+      "description": "Author(s): Stevenson, Robert Louis",
+      "url": "https://www.gutenberg.org/ebooks/421.html.images"
+    },
+    {
+      "identifier": "2610",
+      "title": "Notre-Dame de Paris",
+      "year": "N/A",
+      "subject": [
+        "Clergy -- Fiction",
+        "France -- History -- Louis XI, 1461-1483 -- Fiction",
+        "Historical fiction",
+        "Notre-Dame de Paris (Cathedral) -- Fiction",
+        "Paris (France) -- History -- To 1515 -- Fiction",
+        "People with disabilities -- Fiction",
+        "Romances"
+      ],
+      "description": "Author(s): Hugo, Victor",
+      "url": "https://www.gutenberg.org/ebooks/2610.html.images"
+    },
+    {
+      "identifier": "8300",
+      "title": "The Bible, Douay-Rheims, Complete: The Challoner Revision",
+      "year": "N/A",
+      "subject": [
+        "Bible"
+      ],
+      "description": "No author info",
+      "url": "https://www.gutenberg.org/ebooks/8300.html.images"
+    },
+    {
+      "identifier": "45631",
+      "title": "Twelve Years a Slave: Narrative of Solomon Northup, a Citizen of New-York, Kidnapped in Washington City in 1841, and Rescued in 1853, from a Cotton Plantation near the Red River in Louisiana",
+      "year": "N/A",
+      "subject": [
+        "African Americans -- Biography",
+        "Enslaved persons -- United States -- Biography",
+        "Enslaved persons' writings, American",
+        "Northup, Solomon, 1808-1863?",
+        "Plantation life -- Louisiana -- History -- 19th century",
+        "Slavery -- Louisiana -- History -- 19th century"
+      ],
+      "description": "Author(s): Northup, Solomon",
+      "url": "https://www.gutenberg.org/ebooks/45631.html.images"
+    },
+    {
+      "identifier": "375",
+      "title": "An Occurrence at Owl Creek Bridge",
+      "year": "N/A",
+      "subject": [
+        "Prisoners -- Fiction",
+        "Short stories",
+        "United States -- History -- Civil War, 1861-1865 -- Fiction"
+      ],
+      "description": "Author(s): Bierce, Ambrose",
+      "url": "https://www.gutenberg.org/ebooks/375.html.images"
+    },
+    {
+      "identifier": "26315",
+      "title": "Shakespeare's family",
+      "year": "N/A",
+      "subject": [
+        "Arden family",
+        "Shakespeare family",
+        "Shakespeare, William, 1564-1616 -- Family"
+      ],
+      "description": "Author(s): Stopes, C. C. (Charlotte Carmichael)",
+      "url": "https://www.gutenberg.org/ebooks/26315.html.images"
+    },
+    {
+      "identifier": "41617",
+      "title": "A Complete Guide to Heraldry",
+      "year": "N/A",
+      "subject": [
+        "Heraldry -- Great Britain"
+      ],
+      "description": "Author(s): Fox-Davies, Arthur Charles",
+      "url": "https://www.gutenberg.org/ebooks/41617.html.images"
+    },
+    {
+      "identifier": "9473",
+      "title": "The Knights of the Cross, or, Krzyzacy: Historical Romance",
+      "year": "N/A",
+      "subject": [
+        "Poland -- History -- Jagellons, 1386-1572 -- Fiction",
+        "Teutonic Knights -- History -- Fiction"
+      ],
+      "description": "Author(s): Sienkiewicz, Henryk",
+      "url": "https://www.gutenberg.org/ebooks/9473.html.images"
+    },
+    {
+      "identifier": "731",
+      "title": "History of the Decline and Fall of the Roman Empire — Volume 1",
+      "year": "N/A",
+      "subject": [
+        "Byzantine Empire -- History -- To 527",
+        "Rome -- History -- Empire, 30 B.C.-476 A.D."
+      ],
+      "description": "Author(s): Gibbon, Edward",
+      "url": "https://www.gutenberg.org/ebooks/731.html.images"
+    },
+    {
+      "identifier": "18047",
+      "title": "Dio's Rome, Volume 1: An Historical Narrative Originally Composed in Greek during the Reigns of Septimius Severus, Geta and Caracalla, Macrinus, Elagabalus and Alexander Severus: and Now Presented in English Form",
+      "year": "N/A",
+      "subject": [
+        "Rome -- History"
+      ],
+      "description": "Author(s): Cassius Dio Cocceianus",
+      "url": "https://www.gutenberg.org/ebooks/18047.html.images"
+    },
+    {
+      "identifier": "22797",
+      "title": "Diderot and the Encyclopædists (Vol. 2 of 2)",
+      "year": "N/A",
+      "subject": [
+        "Diderot, Denis, 1713-1784",
+        "Encyclopedists"
+      ],
+      "description": "Author(s): Morley, John",
+      "url": "https://www.gutenberg.org/ebooks/22797.html.images"
+    },
+    {
+      "identifier": "13529",
+      "title": "The Influence of Sea Power Upon History, 1660-1783",
+      "year": "N/A",
+      "subject": [
+        "Naval history, Modern",
+        "Sea-power"
+      ],
+      "description": "Author(s): Mahan, A. T. (Alfred Thayer)",
+      "url": "https://www.gutenberg.org/ebooks/13529.html.images"
+    },
+    {
+      "identifier": "59331",
+      "title": "The Origin and Growth of the Healing Art: A Popular History of Medicine in All Ages and Countries",
+      "year": "N/A",
+      "subject": [
+        "Medicine -- History"
+      ],
+      "description": "Author(s): Berdoe, Edward",
+      "url": "https://www.gutenberg.org/ebooks/59331.html.images"
+    },
+    {
+      "identifier": "76639",
+      "title": "Eloisa : $b or, A series of original letters",
+      "year": "N/A",
+      "subject": [
+        "Alps Region -- History -- 18th century -- Fiction",
+        "Epistolary fiction",
+        "French fiction -- Translations into English",
+        "Man-woman relationships -- Fiction",
+        "Psychological fiction",
+        "Women -- Fiction"
+      ],
+      "description": "Author(s): Rousseau, Jean-Jacques",
+      "url": "https://www.gutenberg.org/ebooks/76639.html.images"
+    },
+    {
+      "identifier": "31086",
+      "title": "\"And they thought we wouldn't fight\"",
+      "year": "N/A",
+      "subject": [
+        "World War, 1914-1918 -- Campaigns -- Western Front",
+        "World War, 1914-1918 -- Personal narratives"
+      ],
+      "description": "Author(s): Gibbons, Floyd Phillips",
+      "url": "https://www.gutenberg.org/ebooks/31086.html.images"
+    },
+    {
+      "identifier": "58465",
+      "title": "Gypsy Sorcery and Fortune Telling: Illustrated by numerous incantations, specimens of medical magic, anecdotes and tales",
+      "year": "N/A",
+      "subject": [
+        "Fortune-telling",
+        "Magic, Romani",
+        "Romanies"
+      ],
+      "description": "Author(s): Leland, Charles Godfrey",
+      "url": "https://www.gutenberg.org/ebooks/58465.html.images"
+    },
+    {
+      "identifier": "38326",
+      "title": "Bede's Ecclesiastical History of England",
+      "year": "N/A",
+      "subject": [
+        "England -- Church history -- 449-1066"
+      ],
+      "description": "Author(s): Bede, the Venerable, Saint",
+      "url": "https://www.gutenberg.org/ebooks/38326.html.images"
+    },
+    {
+      "identifier": "25282",
+      "title": "The Jewish State",
+      "year": "N/A",
+      "subject": [
+        "Herzl, Theodor, 1860-1904",
+        "Zionism",
+        "Zionists -- Austria -- Biography"
+      ],
+      "description": "Author(s): Herzl, Theodor",
+      "url": "https://www.gutenberg.org/ebooks/25282.html.images"
+    },
+    {
+      "identifier": "32449",
+      "title": "Japanese Girls and Women: Revised and Enlarged Edition",
+      "year": "N/A",
+      "subject": [
+        "Japan -- Social life and customs -- 1868-1912",
+        "Women -- Japan -- Social conditions",
+        "Women -- Japan -- Social life and customs"
+      ],
+      "description": "Author(s): Bacon, Alice Mabel",
+      "url": "https://www.gutenberg.org/ebooks/32449.html.images"
+    },
+    {
+      "identifier": "3530",
+      "title": "Love-at-arms : $b being a narrative excerpted from the chronicles of Urbino, during the dominion of the high and mighty Messer Guidobaldo da Montefeltro",
+      "year": "N/A",
+      "subject": [
+        "Arranged marriage -- Fiction",
+        "Borgia, Cesare, 1476?-1507 -- Fiction",
+        "Italy -- History -- 1492-1559 -- Fiction",
+        "Urbino (Italy) -- Fiction"
+      ],
+      "description": "Author(s): Sabatini, Rafael",
+      "url": "https://www.gutenberg.org/ebooks/3530.html.images"
+    },
+    {
+      "identifier": "60230",
+      "title": "The Natural History of Pliny, Volume 2 (of 6)",
+      "year": "N/A",
+      "subject": [
+        "Natural history -- Pre-Linnean works"
+      ],
+      "description": "Author(s): Pliny, the Elder",
+      "url": "https://www.gutenberg.org/ebooks/60230.html.images"
+    },
+    {
+      "identifier": "49668",
+      "title": "Ancient Monuments of the Mississippi Valley: Smithsonian Contributions to Knowledge, Vol. I.",
+      "year": "N/A",
+      "subject": [
+        "Indians of North America -- Mississippi River Valley -- Antiquities",
+        "Mississippi River Valley -- Antiquities",
+        "Mounds -- Mississippi River Valley",
+        "Ohio River Valley -- Antiquities"
+      ],
+      "description": "Author(s): Squier, E. G. (Ephraim George), Davis, E. H. (Edwin Hamilton)",
+      "url": "https://www.gutenberg.org/ebooks/49668.html.images"
+    },
+    {
+      "identifier": "58834",
+      "title": "London City",
+      "year": "N/A",
+      "subject": [
+        "Guilds -- England -- London",
+        "London (England) -- Description and travel",
+        "London (England) -- History"
+      ],
+      "description": "Author(s): Besant, Walter",
+      "url": "https://www.gutenberg.org/ebooks/58834.html.images"
+    },
+    {
+      "identifier": "54879",
+      "title": "The Memoirs of François René Vicomte de Chateaubriand sometime Ambassador to England, Volume 4 (of 6): Mémoires d'outre-tombe volume 4",
+      "year": "N/A",
+      "subject": [
+        "Chateaubriand, François-René, vicomte de, 1768-1848"
+      ],
+      "description": "Author(s): Chateaubriand, François-René, vicomte de",
+      "url": "https://www.gutenberg.org/ebooks/54879.html.images"
+    },
+    {
+      "identifier": "2087",
+      "title": "Life and Letters of Charles Darwin — Volume 1",
+      "year": "N/A",
+      "subject": [
+        "Darwin, Charles, 1809-1882",
+        "Naturalists -- Great Britain -- Biography",
+        "Naturalists -- Great Britain -- Correspondence"
+      ],
+      "description": "Author(s): Darwin, Charles",
+      "url": "https://www.gutenberg.org/ebooks/2087.html.images"
+    },
+    {
+      "identifier": "61240",
+      "title": "History of Botany (1530-1860)",
+      "year": "N/A",
+      "subject": [
+        "Botany -- History"
+      ],
+      "description": "Author(s): Sachs, Julius",
+      "url": "https://www.gutenberg.org/ebooks/61240.html.images"
+    },
+    {
+      "identifier": "816",
+      "title": "Democracy in America — Volume 2",
+      "year": "N/A",
+      "subject": [
+        "Democracy -- United States",
+        "United States -- Politics and government",
+        "United States -- Social conditions"
+      ],
+      "description": "Author(s): Tocqueville, Alexis de",
+      "url": "https://www.gutenberg.org/ebooks/816.html.images"
+    },
+    {
+      "identifier": "20439",
+      "title": "Susan B. Anthony: Rebel, Crusader, Humanitarian",
+      "year": "N/A",
+      "subject": [
+        "Anthony, Susan B. (Susan Brownell), 1820-1906"
+      ],
+      "description": "Author(s): Lutz, Alma",
+      "url": "https://www.gutenberg.org/ebooks/20439.html.images"
+    },
+    {
+      "identifier": "2981",
+      "title": "The Memoirs of Jacques Casanova de Seingalt, 1725-1798. Complete",
+      "year": "N/A",
+      "subject": [
+        "Casanova, Giacomo, 1725-1798",
+        "Europe -- History -- 18th century -- Biography"
+      ],
+      "description": "Author(s): Casanova, Giacomo",
+      "url": "https://www.gutenberg.org/ebooks/2981.html.images"
+    },
+    {
+      "identifier": "60086",
+      "title": "The Boy Travellers in The Russian Empire: Adventures of Two Youths in a Journey in European and Asiatic Russia, with Accounts of a Tour across Siberia, Voyages on the Amoor, Volga, and Other Rivers, a Visit to Central Asia, Travels among the Exiles, and a Historical Sketch of the Empire from Its Foundation to the Present Time",
+      "year": "N/A",
+      "subject": [
+        "Adventure stories",
+        "Children -- Conduct of life -- Juvenile fiction",
+        "Conduct of life -- Juvenile fiction",
+        "Exiles -- Juvenile fiction",
+        "Friendship -- Juvenile fiction",
+        "Natural history -- Juvenile fiction",
+        "Rivers -- Juvenile fiction",
+        "Russia -- History -- Juvenile fiction",
+        "Voyages and travels -- Juvenile fiction"
+      ],
+      "description": "Author(s): Knox, Thomas Wallace",
+      "url": "https://www.gutenberg.org/ebooks/60086.html.images"
+    },
+    {
+      "identifier": "40863",
+      "title": "Encyclopaedia Britannica, 11th Edition, \"Justinian II.\" to \"Kells\": Volume 15, Slice 6",
+      "year": "N/A",
+      "subject": [
+        "Encyclopedias and dictionaries"
+      ],
+      "description": "Author(s): Various",
+      "url": "https://www.gutenberg.org/ebooks/40863.html.images"
+    },
+    {
+      "identifier": "36548",
+      "title": "A Plain Introduction to the Criticism of the New Testament, Vol. I.",
+      "year": "N/A",
+      "subject": [
+        "Bible. New Testament -- Criticism, interpretation, etc."
+      ],
+      "description": "Author(s): Scrivener, Frederick Henry Ambrose",
+      "url": "https://www.gutenberg.org/ebooks/36548.html.images"
+    },
+    {
+      "identifier": "16119",
+      "title": "Doctrina Christiana: The first book printed in the Philippines, Manila, 1593.",
+      "year": "N/A",
+      "subject": [
+        "Block books -- Facsimiles",
+        "Catholic Church -- Catechisms -- Spanish",
+        "Catholic Church -- Catechisms -- Tagalog",
+        "Tagalog language -- Texts"
+      ],
+      "description": "No author info",
+      "url": "https://www.gutenberg.org/ebooks/16119.html.images"
+    },
+    {
+      "identifier": "16351",
+      "title": "Critical and Historical Essays: Lectures delivered at Columbia University",
+      "year": "N/A",
+      "subject": [
+        "Music -- History and criticism"
+      ],
+      "description": "Author(s): MacDowell, Edward",
+      "url": "https://www.gutenberg.org/ebooks/16351.html.images"
+    },
+    {
+      "identifier": "32155",
+      "title": "The Love Letters of Henry VIII to Anne Boleyn; With Notes",
+      "year": "N/A",
+      "subject": [
+        "Anne Boleyn, Queen, consort of Henry VIII, King of England, 1507-1536 -- Correspondence",
+        "Great Britain -- Kings and rulers -- Correspondence",
+        "Henry VIII, King of England, 1491-1547 -- Correspondence",
+        "Love-letters -- Early works to 1800"
+      ],
+      "description": "Author(s): Henry VIII, King of England",
+      "url": "https://www.gutenberg.org/ebooks/32155.html.images"
     }
   ]
 }
