@@ -9,6 +9,7 @@ const readerModal = document.getElementById('readerModal');
 const readerFrame = document.getElementById('readerFrame');
 const readerTitle = document.getElementById('readerTitle');
 const closeReaderBtn = document.getElementById('closeReaderBtn');
+const readerLoader = document.getElementById('readerLoader');
 
 let allItems = [];
 let showOnlyBookshelf = false;
@@ -114,12 +115,20 @@ function render() {
 
 function openReader(title, url) {
   readerTitle.textContent = title;
+  readerLoader.style.display = 'flex'; // 显示加载动画
+  
+  // 监听 iframe 加载完成事件
+  readerFrame.onload = function() {
+    readerLoader.style.display = 'none'; // 隐藏加载动画
+  };
+  
   readerFrame.src = url;
   readerModal.classList.add('open');
 }
 
 closeReaderBtn.addEventListener('click', () => {
   readerModal.classList.remove('open');
+  readerFrame.onload = null; // 清理事件
   readerFrame.src = ''; // 清空 iframe，停止加载
 });
 
