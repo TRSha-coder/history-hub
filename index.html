@@ -15,11 +15,12 @@
   <main class="container">
     <section class="toolbar">
       <input id="q" type="search" placeholder="搜索标题、主题、年份（例如：china / 1912）" />
+      <button id="bookshelfBtn">我的书架</button>
       <button id="reloadBtn">刷新数据说明</button>
     </section>
 
     <p class="hint">
-      数据来源：Internet Archive 元数据。<br />
+      数据来源：Open Library 元数据。<br />
       首次部署后，请运行 <code>python scripts/fetch_magazines.py</code> 生成/更新 <code>data/magazines.json</code>。
     </p>
 
@@ -27,13 +28,30 @@
     <section id="grid" class="grid"></section>
   </main>
 
+  <!-- 阅读器 Modal -->
+  <div id="readerModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="readerTitle">阅读中</h2>
+        <button id="closeReaderBtn" class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <iframe id="readerFrame" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
   <template id="cardTpl">
     <article class="card">
       <h3 class="title"></h3>
       <p class="meta"></p>
       <p class="desc"></p>
       <div class="tags"></div>
-      <a class="link" target="_blank" rel="noopener noreferrer">查看原始条目</a>
+      <div class="actions">
+        <button class="bookmark-btn">加入书架</button>
+        <button class="read-btn">站内阅读</button>
+        <a class="link" target="_blank" rel="noopener noreferrer">外部打开</a>
+      </div>
     </article>
   </template>
 
