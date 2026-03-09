@@ -133,6 +133,12 @@ function normalizeReaderText(rawText) {
     .join("\n\n");
 }
 
+function extractTextFromHtml(htmlText) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(htmlText, "text/html");
+  return doc.body?.textContent || "";
+}
+
 function renderLocalReaderMeta(item) {
   if (!item?.title) {
     localReaderMeta.classList.add("hidden");
@@ -303,23 +309,82 @@ async function openBookInReader(bookId) {
   setLocalReaderStatus(`正在加载：${fallbackTitle}`);
   switchTab("local-reader");
   try {
-    const resp = await fetch(`/api/magazine/${encodeURIComponent(bookId)}/read`);
-    const data = await resp.json();
-    if (!resp.ok) {
-      throw new Error(data?.detail || `HTTP ${resp.status}`);
-    }
-    const source = data.source_url || fallbackItem?.webpage_url || "";
-    const title = data.title || fallbackTitle;
-    const creator = data.creator || fallbackItem?.creator || "未知";
-    const content = data.content || "";
-    renderLocalReaderContent(content, title, { title, creator, source });
-    saveLocalReaderState({ id: String(bookId), title, creator, source, content });
+    const data = await fetchReaderPayloadFromApi(bookId);
+    renderReaderFromPayload(bookId, data, fallbackItem, fallbackTitle);
   } catch (err) {
-    console.error(err);
-    renderLocalReaderMeta(null);
-    localReaderContent.innerHTML = '<p class="local-reader-empty">加载失败，请稍后重试或改用原页阅读。</p>';
-    setLocalReaderStatus(`加载失败：${err.message || "未知错误"}`, true);
+    console.warn("站内阅读 API 不可用，尝试前端直连读取：", err);
+    try {
+      const data = await fetchReaderPayloadFromGutendex(bookId, fallbackItem);
+      renderReaderFromPayload(bookId, data, fallbackItem, fallbackTitle);
+    } catch (fallbackErr) {
+      console.error(fallbackErr);
+      renderLocalReaderMeta(null);
+      localReaderContent.innerHTML = '<p class="local-reader-empty">加载失败，请稍后重试或改用原页阅读。</p>';
+      setLocalReaderStatus(`加载失败：${fallbackErr.message || "未知错误"}`, true);
+    }
   }
+}
+
+function renderReaderFromPayload(bookId, data, fallbackItem, fallbackTitle) {
+  const source = data.source_url || fallbackItem?.webpage_url || "";
+  const title = data.title || fallbackTitle;
+  const creator = data.creator || fallbackItem?.creator || "未知";
+  const content = data.content || "";
+  renderLocalReaderContent(content, title, { title, creator, source });
+  saveLocalReaderState({ id: String(bookId), title, creator, source, content });
+}
+
+async function fetchReaderPayloadFromApi(bookId) {
+  const resp = await fetch(`/api/magazine/${encodeURIComponent(bookId)}/read`);
+  const raw = await resp.text();
+  let data = null;
+  try {
+    data = JSON.parse(raw);
+  } catch {
+    throw new Error("阅读接口不可用（返回非 JSON），已尝试自动回退");
+  }
+  if (!resp.ok) {
+    throw new Error(data?.detail || `HTTP ${resp.status}`);
+  }
+  return data;
+}
+
+function pickReadableSource(formats, identifier) {
+  const candidates = [
+    "text/plain; charset=utf-8",
+    "text/plain",
+    "text/html; charset=utf-8",
+    "text/html",
+  ];
+  for (const key of candidates) {
+    if (formats?.[key]) return { url: formats[key], format: key };
+  }
+  return {
+    url: `https://www.gutenberg.org/files/${identifier}/${identifier}-0.txt`,
+    format: "text/plain",
+  };
+}
+
+async function fetchReaderPayloadFromGutendex(bookId, fallbackItem) {
+  const detailResp = await fetch(`${GUTENDEX_BASE}/?ids=${encodeURIComponent(bookId)}`);
+  if (!detailResp.ok) throw new Error(`获取书籍详情失败：HTTP ${detailResp.status}`);
+  const detailData = await detailResp.json();
+  const doc = Array.isArray(detailData?.results) ? detailData.results[0] : null;
+  if (!doc?.id) throw new Error("书籍不存在或无法读取");
+
+  const normalized = normalizeMagazineEntry(doc);
+  const readable = pickReadableSource(doc.formats || {}, normalized.id);
+  const contentResp = await fetch(readable.url);
+  if (!contentResp.ok) throw new Error(`获取正文失败：HTTP ${contentResp.status}`);
+  const rawText = await contentResp.text();
+  const content = readable.format.includes("html") ? extractTextFromHtml(rawText) : rawText;
+
+  return {
+    title: normalized.title || fallbackItem?.title || `书籍 #${bookId}`,
+    creator: normalized.creator || fallbackItem?.creator || "未知",
+    source_url: normalized.webpage_url || fallbackItem?.webpage_url || "",
+    content,
+  };
 }
 
 // ─── 事件委托（统一处理卡片内按钮） ────────────────────────────────────────
