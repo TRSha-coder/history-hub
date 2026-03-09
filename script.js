@@ -433,6 +433,38 @@ function _renderParagraphs(text) {
     fragment.appendChild(p);
   }
   chapterText.appendChild(fragment);
+  _notifyTranslationPlugins();
+}
+
+/**
+ * 通知翻译插件（沉浸式翻译等）本区域有新内容需要处理。
+ * 插件首次扫描时 #chapterText 为空并被标记为已处理；
+ * 章节动态注入后需重置该标记并触发重新扫描。
+ */
+function _notifyTranslationPlugins() {
+  // 清除"已处理"标记，使插件对本容器重新扫描
+  chapterText.removeAttribute("data-immersive-translate-walked");
+  readerContent.removeAttribute("data-immersive-translate-walked");
+
+  // 等渲染完成后调用插件 API
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      try {
+        if (window.__immersiveTranslate?.translatePageAndWait) {
+          window.__immersiveTranslate.translatePageAndWait();
+          return;
+        }
+        if (window.immersiveTranslate?.translatePage) {
+          window.immersiveTranslate.translatePage();
+          return;
+        }
+      } catch (_) {}
+      try {
+        document.dispatchEvent(new CustomEvent("immersive-translate:page-loaded"));
+        chapterText.dispatchEvent(new CustomEvent("translate:new-content", { bubbles: true }));
+      } catch (_) {}
+    }, 80);
+  });
 }
 
 async function openReader(bookId, bookTitle, webpageUrl) {
