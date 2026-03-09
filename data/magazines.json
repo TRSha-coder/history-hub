@@ -1,1283 +1,416 @@
 {
-  "source": "Open Library",
-  "query": "q: history magazine",
-  "count": 100,
+  "source": "Project Gutenberg",
+  "query": "topic: history",
+  "count": 32,
   "items": [
     {
-      "identifier": "OL12832W",
-      "title": "Death Comes for the Archbishop",
-      "year": "1732",
+      "identifier": "26184",
+      "title": "Simple Sabotage Field Manual",
+      "year": "N/A",
       "subject": [
-        "Fiction",
-        "Clergy",
-        "History",
-        "Missions",
-        "Hopi Indians",
-        "Navajo Indians",
-        "Catholic Church",
-        "New mexico, fiction",
-        "American fiction (fictional works by one author)",
-        "Large type books"
+        "Sabotage"
       ],
-      "description": "Author(s): Willa Cather",
-      "url": "https://openlibrary.org/works/OL12832W"
+      "description": "Author(s): United States. Office of Strategic Services",
+      "url": "https://www.gutenberg.org/ebooks/26184.html.images"
     },
     {
-      "identifier": "OL66534W",
-      "title": "Northanger Abbey",
-      "year": "1818",
+      "identifier": "67979",
+      "title": "The Blue Castle: a novel",
+      "year": "N/A",
       "subject": [
-        "Mate selection",
-        "Cousins",
-        "Fiction",
-        "Young women",
-        "Horror tales",
-        "Families",
-        "Uncles",
-        "Appreciation",
-        "Children of the rich",
-        "English Love stories"
+        "Canada -- History -- 1914-1945 -- Fiction",
+        "Choice (Psychology) -- Fiction",
+        "Love -- Fiction",
+        "Romance fiction",
+        "Self-actualization (Psychology) -- Fiction",
+        "Single women -- Fiction",
+        "Young adult fiction"
       ],
-      "description": "Author(s): Jane Austen",
-      "url": "https://openlibrary.org/works/OL66534W"
+      "description": "Author(s): Montgomery, L. M. (Lucy Maud)",
+      "url": "https://www.gutenberg.org/ebooks/67979.html.images"
     },
     {
-      "identifier": "OL16249171W",
-      "title": "Hans Andersen's Fairy Tales",
-      "year": "1846",
-      "subject": [
-        "Miniature books",
-        "Translations into French",
-        "Juvenile literature",
-        "Translations into Swedish",
-        "Specimens",
-        "Basic English",
-        "Translations into Bengali",
-        "Folklore",
-        "Denmark",
-        "Translations into German"
-      ],
-      "description": "Author(s): Hans Christian Andersen",
-      "url": "https://openlibrary.org/works/OL16249171W"
-    },
-    {
-      "identifier": "OL262477W",
-      "title": "The Return of Sherlock Holmes",
-      "year": "1903",
-      "subject": [
-        "air guns",
-        "Americans",
-        "anise",
-        "anonymity",
-        "attempted murder",
-        "baritsu",
-        "blackmail",
-        "broughams",
-        "burglary",
-        "busts"
-      ],
-      "description": "Author(s): Arthur Conan Doyle",
-      "url": "https://openlibrary.org/works/OL262477W"
-    },
-    {
-      "identifier": "OL362427W",
-      "title": "Romeo and Juliet",
-      "year": "1597",
-      "subject": [
-        "Classical Literature",
-        "British and irish drama (dramatic works by one author)",
-        "Conflicto entre generaciones",
-        "Conflict of generations",
-        "courtship",
-        "Drama",
-        "Drama inglés",
-        "Dramatic production",
-        "Enemistad mortal",
-        "English drama (collections), early modern and elizabethan, 1500-1600"
-      ],
-      "description": "Author(s): William Shakespeare",
-      "url": "https://openlibrary.org/works/OL362427W"
-    },
-    {
-      "identifier": "OL8193465W",
-      "title": "A Tale of Two Cities",
-      "year": "1800",
-      "subject": [
-        "British",
-        "British and irish fiction (fictional works by one author)",
-        "Children's fiction",
-        "Criticism and interpretation",
-        "English fiction",
-        "English literature",
-        "Executions and executioners",
-        "Fathers and daughters",
-        "Fiction",
-        "classics"
-      ],
-      "description": "Author(s): Charles Dickens",
-      "url": "https://openlibrary.org/works/OL8193465W"
-    },
-    {
-      "identifier": "OL19908W",
-      "title": "Kim",
-      "year": "1901",
-      "subject": [
-        "Fiction",
-        "Irish",
-        "Lamas",
-        "Irish in fiction",
-        "Orphans",
-        "Boys in fiction",
-        "Boys",
-        "Lamas in fiction",
-        "Orphans in fiction",
-        "India in fiction"
-      ],
-      "description": "Author(s): Rudyard Kipling",
-      "url": "https://openlibrary.org/works/OL19908W"
-    },
-    {
-      "identifier": "OL53908W",
-      "title": "Adventures of Huckleberry Finn",
-      "year": "1876",
-      "subject": [
-        "adventure and adventurers",
-        "Adventure stories",
-        "American fiction (fictional works by one author)",
-        "American literature",
-        "Boys",
-        "Child and youth fiction",
-        "Children's fiction",
-        "child witnesses",
-        "Courtship",
-        "English language"
-      ],
-      "description": "Author(s): Mark Twain",
-      "url": "https://openlibrary.org/works/OL53908W"
-    },
-    {
-      "identifier": "OL450063W",
-      "title": "Frankenstein or The Modern Prometheus",
-      "year": "1818",
-      "subject": [
-        "Frankenstein (Fictitious character)",
-        "Frankenstein's monster (Fictitious character)",
-        "Fiction",
-        "Victor Frankenstein (Fictitious character)",
-        "Scientists",
-        "Monsters",
-        "Fiction, horror",
-        "Frankenstein (fictitious character), fiction",
-        "Physicians, fiction",
-        "British fiction (fictional works by one author)"
-      ],
-      "description": "Author(s): Mary Shelley",
-      "url": "https://openlibrary.org/works/OL450063W"
-    },
-    {
-      "identifier": "OL262554W",
-      "title": "The Complete Sherlock Holmes [4 novels, 56 stories]",
-      "year": "1900",
-      "subject": [
-        "Action & Adventure Fiction",
-        "Adventure stories",
-        "air guns",
-        "Americans",
-        "amorality",
-        "ancestors",
-        "Andamanese",
-        "Anglo-Saxons",
-        "anise",
-        "anonymity"
-      ],
-      "description": "Author(s): Arthur Conan Doyle",
-      "url": "https://openlibrary.org/works/OL262554W"
-    },
-    {
-      "identifier": "OL262426W",
-      "title": "The Case-Book of Sherlock Holmes",
-      "year": "1927",
-      "subject": [
-        "Fiction",
-        "English Detective and mystery stories",
-        "Private investigators",
-        "Children's stories, English",
-        "Mystery and detective stories",
-        "English Short stories",
-        "Holmes, sherlock (fictitious character), fiction",
-        "Watson, john h. (fictitious character), fiction",
-        "British and irish fiction (fictional works by one author)",
-        "Fiction, mystery & detective, short stories"
-      ],
-      "description": "Author(s): Arthur Conan Doyle",
-      "url": "https://openlibrary.org/works/OL262426W"
-    },
-    {
-      "identifier": "OL38663W",
-      "title": "Heart of Darkness",
-      "year": "1899",
-      "subject": [
-        "Fiction",
-        "Romance",
-        "Degeneration",
-        "Literature",
-        "Description and travel",
-        "Diaries",
-        "Sailors",
-        "Short stories",
-        "English literature",
-        "Suffering"
-      ],
-      "description": "Author(s): Joseph Conrad",
-      "url": "https://openlibrary.org/works/OL38663W"
-    },
-    {
-      "identifier": "OL8193416W",
+      "identifier": "174",
       "title": "The Picture of Dorian Gray",
-      "year": "1890",
+      "year": "N/A",
       "subject": [
-        "British and irish fiction (fictional works by one author)",
-        "Conduct of life, fiction",
-        "Fantasy fiction",
-        "Appearance (Philosophy)",
-        "Fiction",
-        "Conduct of life",
-        "Youthfulness",
-        "Portraits",
-        "Apparence (Philosophie)",
-        "Romans, nouvelles"
+        "Appearance (Philosophy) -- Fiction",
+        "Conduct of life -- Fiction",
+        "Didactic fiction",
+        "Great Britain -- History -- Victoria, 1837-1901 -- Fiction",
+        "London (England) -- History -- 1800-1950 -- Fiction",
+        "Paranormal fiction",
+        "Portraits -- Fiction",
+        "Supernatural -- Fiction"
       ],
-      "description": "Author(s): Oscar Wilde",
-      "url": "https://openlibrary.org/works/OL8193416W"
+      "description": "Author(s): Wilde, Oscar",
+      "url": "https://www.gutenberg.org/ebooks/174.html.images"
     },
     {
-      "identifier": "OL17732W",
-      "title": "Bible",
-      "year": "1200",
+      "identifier": "1259",
+      "title": "Twenty years after",
+      "year": "N/A",
       "subject": [
-        "Manuscripts, Latin (Medieval and modern)",
-        "Glossaries, vocabularies",
-        "Early works to 1800",
-        "Bible",
-        "Religion",
-        "Bibles",
-        "Biblical Studies - General",
-        "Religion / Bible / General",
-        "Bible - General",
-        "Commentaries"
+        "France -- History -- Louis XIV, 1643-1715 -- Fiction"
       ],
-      "description": "Author(s): Bible",
-      "url": "https://openlibrary.org/works/OL17732W"
+      "description": "Author(s): Dumas, Alexandre, Maquet, Auguste",
+      "url": "https://www.gutenberg.org/ebooks/1259.html.images"
     },
     {
-      "identifier": "OL8721462W",
-      "title": "Great Expectations",
-      "year": "1861",
+      "identifier": "98",
+      "title": "A Tale of Two Cities",
+      "year": "N/A",
       "subject": [
-        "Authors",
-        "Benefactors",
-        "Bildungsromans",
-        "Boys",
-        "British and irish fiction (fictional works by one author)",
-        "Child and youth fiction",
-        "Classic Literature",
-        "Coming of age",
-        "Conduct of life",
-        "Criticism and interpretation"
-      ],
-      "description": "Author(s): Charles Dickens",
-      "url": "https://openlibrary.org/works/OL8721462W"
-    },
-    {
-      "identifier": "OL45089W",
-      "title": "Robinson Crusoe",
-      "year": "1686",
-      "subject": [
-        "Crusoe, robinson (fictitious character), fiction",
-        "British and irish fiction (fictional works by one author)",
-        "Survival",
-        "Fiction",
-        "Dans la littérature",
-        "Îles",
-        "Islands",
-        "Naufrages",
-        "Robinson Crusoe (Fictitious character)",
-        "Translations into Swedish"
-      ],
-      "description": "Author(s): Daniel Defoe, J. J. Grandville, Petrus Borel, Les éditions du Rey, N. C. Wyeth",
-      "url": "https://openlibrary.org/works/OL45089W"
-    },
-    {
-      "identifier": "OL262421W",
-      "title": "The Adventures of Sherlock Holmes [12 stories]",
-      "year": "1892",
-      "subject": [
-        "Classic Literature",
-        "Murder",
-        "Mystery",
-        "Conclusions",
-        "amorality",
-        "Anglo-Saxons",
-        "Apaces",
-        "aristocracy",
-        "banks",
-        "barques"
-      ],
-      "description": "Author(s): Arthur Conan Doyle",
-      "url": "https://openlibrary.org/works/OL262421W"
-    },
-    {
-      "identifier": "OL262454W",
-      "title": "The Hound of the Baskervilles",
-      "year": "1900",
-      "subject": [
-        "crime novel",
-        "English Civil War",
-        "mires",
-        "tors",
-        "tombs",
-        "Dogs",
-        "England, fiction",
-        "Holmes, sherlock (fictitious character), fiction",
-        "Watson, john h. (fictitious character), fiction",
-        "British and irish fiction (fictional works by one author)"
-      ],
-      "description": "Author(s): Arthur Conan Doyle",
-      "url": "https://openlibrary.org/works/OL262454W"
-    },
-    {
-      "identifier": "OL24166W",
-      "title": "Kidnapped",
-      "year": "1886",
-      "subject": [
-        "Juvenile fiction",
-        "Fiction",
-        "History",
-        "Adventure and adventurers",
-        "Scotland",
-        "Adventure",
-        "Adventure fiction",
+        "British -- France -- Paris -- Fiction",
+        "Executions and executioners -- Fiction",
+        "France -- History -- Revolution, 1789-1799 -- Fiction",
+        "French -- England -- London -- Fiction",
         "Historical fiction",
-        "Teenage boys",
-        "Kidnapping"
+        "London (England) -- History -- 18th century -- Fiction",
+        "Lookalikes -- Fiction",
+        "Paris (France) -- History -- 1789-1799 -- Fiction",
+        "War stories"
       ],
-      "description": "Author(s): Robert Louis Stevenson",
-      "url": "https://openlibrary.org/works/OL24166W"
+      "description": "Author(s): Dickens, Charles",
+      "url": "https://www.gutenberg.org/ebooks/98.html.images"
     },
     {
-      "identifier": "OL77958W",
-      "title": "The Last of the Mohicans",
-      "year": "1826",
+      "identifier": "1184",
+      "title": "The Count of Monte Cristo",
+      "year": "N/A",
       "subject": [
         "Adventure stories",
-        "Ficción",
-        "Fiction",
-        "Frontier and pioneer life",
-        "Historia",
+        "Dantès, Edmond (Fictitious character) -- Fiction",
+        "France -- History -- 19th century -- Fiction",
         "Historical fiction",
-        "History",
-        "Indians of North America",
-        "Indios de América del Norte",
-        "Juvenile fiction"
+        "Pirates -- Fiction",
+        "Prisoners -- Fiction",
+        "Revenge -- Fiction"
       ],
-      "description": "Author(s): James Fenimore Cooper",
-      "url": "https://openlibrary.org/works/OL77958W"
+      "description": "Author(s): Dumas, Alexandre, Maquet, Auguste",
+      "url": "https://www.gutenberg.org/ebooks/1184.html.images"
     },
     {
-      "identifier": "OL32466W",
-      "title": "A Christmas Carol",
-      "year": "1843",
+      "identifier": "7290",
+      "title": "韓詩外傳, Complete",
+      "year": "N/A",
       "subject": [
-        "Children's fiction",
-        "Toy and movable books",
-        "Christmas, fiction",
-        "Children's plays, English",
-        "Christmas",
-        "Drama",
-        "Ghosts",
-        "Plays",
-        "Ghost plays",
-        "British and irish fiction (fictional works by one author)"
+        "Shi jing"
       ],
-      "description": "Author(s): Charles Dickens, Groth, Nancy Baker",
-      "url": "https://openlibrary.org/works/OL32466W"
+      "description": "Author(s): Han, Ying, active 150 B.C.",
+      "url": "https://www.gutenberg.org/ebooks/7290.html.images"
     },
     {
-      "identifier": "OL151411W",
-      "title": "Alice's Adventures in Wonderland / Through the Looking Glass",
-      "year": "1889",
+      "identifier": "1232",
+      "title": "The Prince",
+      "year": "N/A",
       "subject": [
-        "adventure and adventurers",
-        "adventure and adventurers, fiction",
-        "adventure stories",
-        "adventure travel",
-        "animals",
-        "anthropomorphism",
-        "artists' illustrated books",
-        "books and reading",
-        "british and irish fiction (fictional works by one author)",
-        "child and youth fiction"
+        "Political ethics -- Early works to 1800",
+        "Political science -- Philosophy -- Early works to 1800",
+        "State, The -- Early works to 1800"
       ],
-      "description": "Author(s): Lewis Carroll",
-      "url": "https://openlibrary.org/works/OL151411W"
+      "description": "Author(s): Machiavelli, Niccolò",
+      "url": "https://www.gutenberg.org/ebooks/1232.html.images"
     },
     {
-      "identifier": "OL16333W",
-      "title": "Leaves of Grass",
-      "year": "1855",
+      "identifier": "3207",
+      "title": "Leviathan",
+      "year": "N/A",
       "subject": [
-        "Manuscripts",
-        "United States Civil War, 1861-1865",
-        "Gay poets",
-        "Presidents",
-        "Poetry",
-        "American Poets",
-        "Fiction",
-        "English poetry",
-        "American poetry",
-        "Mysticism"
+        "Political science -- Early works to 1800",
+        "State, The -- Early works to 1800"
       ],
-      "description": "Author(s): Walt Whitman",
-      "url": "https://openlibrary.org/works/OL16333W"
+      "description": "Author(s): Hobbes, Thomas",
+      "url": "https://www.gutenberg.org/ebooks/3207.html.images"
     },
     {
-      "identifier": "OL66562W",
-      "title": "Sense and Sensibility",
-      "year": "1811",
+      "identifier": "25344",
+      "title": "The Scarlet Letter",
+      "year": "N/A",
       "subject": [
-        "Fiction, Romance, Historical, Regency",
-        "Inheritance and succession, fiction",
-        "Mate selection, fiction",
-        "Social classes, fiction",
-        "Family life, fiction",
-        "Text-books for foreigners",
-        "Young women,  fiction",
-        "Literature",
-        "Readers",
-        "Gentry"
+        "Adultery -- Fiction",
+        "Boston (Mass.) -- History -- Colonial period, ca. 1600-1775 -- Fiction",
+        "Clergy -- Fiction",
+        "Historical fiction",
+        "Illegitimate children -- Fiction",
+        "Married women -- Fiction",
+        "Psychological fiction",
+        "Puritans -- Fiction",
+        "Revenge -- Fiction",
+        "Triangles (Interpersonal relations) -- Fiction"
       ],
-      "description": "Author(s): Jane Austen",
-      "url": "https://openlibrary.org/works/OL66562W"
+      "description": "Author(s): Hawthorne, Nathaniel",
+      "url": "https://www.gutenberg.org/ebooks/25344.html.images"
     },
     {
-      "identifier": "OL29983W",
-      "title": "Little Women",
-      "year": "1848",
+      "identifier": "205",
+      "title": "Walden, and On The Duty Of Civil Disobedience",
+      "year": "N/A",
       "subject": [
-        "Romans",
-        "Jeunes filles",
-        "Soeurs",
-        "Sisters",
-        "Young women",
-        "Fiction",
-        "Fiction, women",
-        "Young women, fiction",
-        "Family life",
-        "Literatura Norte Americana"
+        "Authors, American -- 19th century -- Biography",
+        "Civil disobedience",
+        "Government, Resistance to",
+        "Natural history -- Massachusetts -- Walden Woods",
+        "Solitude",
+        "Thoreau, Henry David, 1817-1862 -- Homes and haunts -- Massachusetts -- Walden Woods",
+        "Walden Woods (Mass.) -- Social life and customs",
+        "Wilderness areas -- Massachusetts -- Walden Woods"
       ],
-      "description": "Author(s): Louisa May Alcott",
-      "url": "https://openlibrary.org/works/OL29983W"
+      "description": "Author(s): Thoreau, Henry David",
+      "url": "https://www.gutenberg.org/ebooks/205.html.images"
     },
     {
-      "identifier": "OL63910W",
-      "title": "The works of Washington Irving",
-      "year": "1800",
+      "identifier": "408",
+      "title": "The Souls of Black Folk",
+      "year": "N/A",
       "subject": [
-        "American Authors",
-        "Collected works",
-        "Description and travel",
-        "Discovery and exploration",
-        "History",
-        "History, Comic, satirical",
-        "Indians of North America",
-        "Collections",
-        "Biographies",
-        "Biography"
+        "African Americans"
       ],
-      "description": "Author(s): Washington Irving",
-      "url": "https://openlibrary.org/works/OL63910W"
+      "description": "Author(s): Du Bois, W. E. B. (William Edward Burghardt)",
+      "url": "https://www.gutenberg.org/ebooks/408.html.images"
     },
     {
-      "identifier": "OL44841W",
-      "title": "Tales from Shakespeare [20 tales]",
-      "year": "1800",
+      "identifier": "2600",
+      "title": "War and Peace",
+      "year": "N/A",
       "subject": [
-        "Adaptations",
-        "Shakespeare, william, 1564-1616, adaptations",
-        "Juvenile literature",
-        "Stories, plots",
-        "Paraphrases, tales",
-        "Plots (Drama, novel, etc.)",
-        "Children's plays",
-        "Shakespeare, william, 1564-1616, juvenile literature",
-        "Non-Classifiable",
-        "Sale Books"
+        "Aristocracy (Social class) -- Russia -- Fiction",
+        "Historical fiction",
+        "Napoleonic Wars, 1800-1815 -- Campaigns -- Russia -- Fiction",
+        "Russia -- History -- Alexander I, 1801-1825 -- Fiction",
+        "War stories"
       ],
-      "description": "Author(s): Charles Lamb, Mary Lamb",
-      "url": "https://openlibrary.org/works/OL44841W"
+      "description": "Author(s): Tolstoy, Leo, graf",
+      "url": "https://www.gutenberg.org/ebooks/2600.html.images"
     },
     {
-      "identifier": "OL9743022W",
-      "title": "History Magazine Volume One",
-      "year": "2000",
-      "subject": [],
-      "description": "Author(s): History Magazine",
-      "url": "https://openlibrary.org/works/OL9743022W"
-    },
-    {
-      "identifier": "OL9743023W",
-      "title": "History Magazine Volume Two",
-      "year": "2001",
-      "subject": [],
-      "description": "Author(s): History Magazine",
-      "url": "https://openlibrary.org/works/OL9743023W"
-    },
-    {
-      "identifier": "OL29970W",
-      "title": "An Old-Fashioned Girl",
-      "year": "1869",
+      "identifier": "45",
+      "title": "Anne of Green Gables",
+      "year": "N/A",
       "subject": [
-        "Conduct of life",
-        "Juvenile literature",
-        "Juvenile fiction",
-        "Fiction",
-        "Young women",
-        "Classic Literature",
-        "Friendship",
-        "History",
-        "Wealth",
-        "Happiness"
+        "Bildungsromans",
+        "Canada -- History -- 1867-1914 -- Fiction",
+        "Country life -- Prince Edward Island -- Fiction",
+        "Friendship -- Fiction",
+        "Girls -- Fiction",
+        "Islands -- Fiction",
+        "Orphans -- Fiction",
+        "Prince Edward Island -- History -- 20th century -- Fiction",
+        "Shirley, Anne (Fictitious character) -- Fiction"
       ],
-      "description": "Author(s): Louisa May Alcott",
-      "url": "https://openlibrary.org/works/OL29970W"
+      "description": "Author(s): Montgomery, L. M. (Lucy Maud)",
+      "url": "https://www.gutenberg.org/ebooks/45.html.images"
     },
     {
-      "identifier": "OL2983646W",
-      "title": "Anarchism and Other Essays",
-      "year": "1910",
+      "identifier": "7370",
+      "title": "Second Treatise of Government",
+      "year": "N/A",
       "subject": [
-        "Anarchism",
-        "Feminism",
-        "Anarchism and anarchists",
-        "Essays",
-        "Nonfiction",
-        "Politics",
-        "Social and moral questions",
-        "Women",
-        "Social justice",
-        "Women, social conditions"
+        "Liberty -- Early works to 1800",
+        "Political science -- Early works to 1800",
+        "Toleration -- Early works to 1800"
       ],
-      "description": "Author(s): Emma Goldman",
-      "url": "https://openlibrary.org/works/OL2983646W"
+      "description": "Author(s): Locke, John",
+      "url": "https://www.gutenberg.org/ebooks/7370.html.images"
     },
     {
-      "identifier": "OL54155W",
-      "title": "Personal Recollections of Joan of Arc",
-      "year": "1895",
+      "identifier": "23",
+      "title": "Narrative of the Life of Frederick Douglass, an American Slave",
+      "year": "N/A",
       "subject": [
-        "Christian women saints",
-        "Fiction",
-        "Open Library Staff Picks",
-        "Christian saints",
-        "History",
-        "American fiction (fictional works by one author)",
-        "France, fiction",
-        "Joan, of arc, saint, 1412-1431",
-        "Fiction, historical, general",
-        "Middle Ages"
+        "Abolitionists -- United States -- Biography",
+        "African American abolitionists -- Biography",
+        "Douglass, Frederick, 1818-1895",
+        "Enslaved persons -- United States -- Biography"
       ],
-      "description": "Author(s): Mark Twain",
-      "url": "https://openlibrary.org/works/OL54155W"
+      "description": "Author(s): Douglass, Frederick",
+      "url": "https://www.gutenberg.org/ebooks/23.html.images"
     },
     {
-      "identifier": "OL21100985W",
-      "title": "Celebrated Pedestrian and Other Historical Curiosities",
-      "year": "2013",
+      "identifier": "45304",
+      "title": "The City of God, Volume I",
+      "year": "N/A",
       "subject": [
-        "Great britain, history",
-        "World history",
-        "History",
-        "Miscellanea"
+        "Apologetics -- Early works to 1800",
+        "Kingdom of God -- Early works to 1800"
       ],
-      "description": "Author(s): BBC History Magazine",
-      "url": "https://openlibrary.org/works/OL21100985W"
+      "description": "Author(s): Augustine, of Hippo, Saint",
+      "url": "https://www.gutenberg.org/ebooks/45304.html.images"
     },
     {
-      "identifier": "OL40295297W",
-      "title": "Calumet History Magazine",
-      "year": "2014",
-      "subject": [],
-      "description": "Author(s): Richard Buchko",
-      "url": "https://openlibrary.org/works/OL40295297W"
-    },
-    {
-      "identifier": "OL41578621W",
-      "title": "Calumet History Magazine",
-      "year": "2014",
-      "subject": [],
-      "description": "Author(s): Richard Buchko",
-      "url": "https://openlibrary.org/works/OL41578621W"
-    },
-    {
-      "identifier": "OL20423726W",
-      "title": "Calumet History Magazine",
-      "year": "2011",
+      "identifier": "15399",
+      "title": "The Interesting Narrative of the Life of Olaudah Equiano, Or Gustavus Vassa, The African: Written By Himself",
+      "year": "N/A",
       "subject": [
-        "United states, history",
-        "Periodicals"
+        "Enslaved persons -- Great Britain -- Biography",
+        "Enslaved persons -- United States -- Biography",
+        "Equiano, Olaudah, 1745-1797"
       ],
-      "description": "Author(s): Richard Buchko",
-      "url": "https://openlibrary.org/works/OL20423726W"
+      "description": "Author(s): Equiano, Olaudah",
+      "url": "https://www.gutenberg.org/ebooks/15399.html.images"
     },
     {
-      "identifier": "OL59733W",
-      "title": "The Door into Summer",
-      "year": "1957",
+      "identifier": "73887",
+      "title": "Modern ships of war",
+      "year": "N/A",
       "subject": [
-        "American Science fiction",
-        "Cold Sleep",
-        "Hired Girl Inc.",
-        "Science fiction",
-        "Time Travel",
-        "Fiction, science fiction, general",
-        "Artificial hibernation",
-        "Fiction",
-        "Twenty-first century",
-        "American literature"
+        "Navies",
+        "Warships"
       ],
-      "description": "Author(s): Robert A. Heinlein",
-      "url": "https://openlibrary.org/works/OL59733W"
+      "description": "Author(s): Reed, Edward J. (Edward James), Sir, Simpson, Edward",
+      "url": "https://www.gutenberg.org/ebooks/73887.html.images"
     },
     {
-      "identifier": "OL9654152W",
-      "title": "Fayette Historic Townsite",
-      "year": "2000",
+      "identifier": "25162",
+      "title": "池北偶談",
+      "year": "N/A",
       "subject": [
-        "Extinct cities",
-        "Historic sites",
-        "History"
+        "China -- History -- Qing dynasty, 1644-1912 -- Anecdotes"
       ],
-      "description": "Author(s): Michigan History magazine",
-      "url": "https://openlibrary.org/works/OL9654152W"
+      "description": "Author(s): Wang, Shizhen",
+      "url": "https://www.gutenberg.org/ebooks/25162.html.images"
     },
     {
-      "identifier": "OL9213961W",
-      "title": "Desert Storm",
-      "year": "1997",
+      "identifier": "1719",
+      "title": "The Ballad of the White Horse",
+      "year": "N/A",
       "subject": [
-        "Persian gulf war, 1991"
+        "Alfred, King of England, 849-899 -- Poetry",
+        "Christian poetry",
+        "Epic poetry",
+        "Great Britain -- History -- Alfred, 871-899 -- Poetry",
+        "Historical poetry",
+        "White Horse, Vale of (England) -- Poetry"
       ],
-      "description": "Author(s): Military History Magazine",
-      "url": "https://openlibrary.org/works/OL9213961W"
+      "description": "Author(s): Chesterton, G. K. (Gilbert Keith)",
+      "url": "https://www.gutenberg.org/ebooks/1719.html.images"
     },
     {
-      "identifier": "OL42880342W",
-      "title": "Wild Bill -- McCanles tragedy (illustrated)",
-      "year": "1927",
+      "identifier": "47629",
+      "title": "Ang \"Filibusterismo\" (Karugtóng ng Noli Me Tangere)",
+      "year": "N/A",
       "subject": [
-        "History"
+        "Nationalists -- Philippines -- Fiction",
+        "Philippine fiction (Spanish) -- Translations into Tagalog",
+        "Philippines -- History -- Fiction"
       ],
-      "description": "Author(s): Nebraska History Magazine",
-      "url": "https://openlibrary.org/works/OL42880342W"
+      "description": "Author(s): Rizal, José",
+      "url": "https://www.gutenberg.org/ebooks/47629.html.images"
     },
     {
-      "identifier": "OL17455643W",
-      "title": "The Celebrated Pedestrian",
-      "year": "2009",
+      "identifier": "132",
+      "title": "The Art of War",
+      "year": "N/A",
       "subject": [
-        "History",
-        "Miscellanea",
-        "Curiosities and wonders",
-        "World history",
-        "Great britain, history"
+        "Military art and science -- Early works to 1800",
+        "War -- Early works to 1800"
       ],
-      "description": "Author(s): BBC History Magazine",
-      "url": "https://openlibrary.org/works/OL17455643W"
+      "description": "Author(s): Sunzi, active 6th century B.C.",
+      "url": "https://www.gutenberg.org/ebooks/132.html.images"
     },
     {
-      "identifier": "OL8384077W",
-      "title": "Low!",
-      "year": "2002",
-      "subject": [],
-      "description": "Author(s): BBC \"History\" magazine",
-      "url": "https://openlibrary.org/works/OL8384077W"
-    },
-    {
-      "identifier": "OL15332376W",
-      "title": "The Short Stories of Ernest Hemingway",
-      "year": "1930",
+      "identifier": "10676",
+      "title": "The Reign of Greed",
+      "year": "N/A",
       "subject": [
-        "American Short stories",
-        "Drama",
-        "Fiction",
-        "History",
-        "Manners and customs",
-        "Short stories",
-        "Spain Civil War, 1936-1939",
-        "Translations into Vietnamese",
-        "Social life and customs",
-        "Adventure fiction"
+        "Nationalists -- Philippines -- Fiction",
+        "Philippine fiction (Spanish) -- Translations into English",
+        "Philippines -- History -- Fiction"
       ],
-      "description": "Author(s): Ernest Hemingway",
-      "url": "https://openlibrary.org/works/OL15332376W"
+      "description": "Author(s): Rizal, José",
+      "url": "https://www.gutenberg.org/ebooks/10676.html.images"
     },
     {
-      "identifier": "OL34206674W",
-      "title": "Michigan History Magazine",
-      "year": "2022",
-      "subject": [],
-      "description": "Author(s): Anonymous",
-      "url": "https://openlibrary.org/works/OL34206674W"
-    },
-    {
-      "identifier": "OL18721233M",
-      "title": "Moravian history magazine.",
-      "year": "1998",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL18721233M"
-    },
-    {
-      "identifier": "OL28535471W",
-      "title": "Wiltshire Archaeological and Natural History Magazine",
-      "year": "2018",
-      "subject": [],
-      "description": "Author(s): Wiltshire Archaeological and Natural His",
-      "url": "https://openlibrary.org/works/OL28535471W"
-    },
-    {
-      "identifier": "OL21726363M",
-      "title": "Moravian history magazine.",
-      "year": "",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL21726363M"
-    },
-    {
-      "identifier": "OL21726367M",
-      "title": "Moravian history magazine.",
-      "year": "",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL21726367M"
-    },
-    {
-      "identifier": "OL18721231M",
-      "title": "Moravian history magazine.",
-      "year": "1998",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL18721231M"
-    },
-    {
-      "identifier": "OL18721278M",
-      "title": "Moravian history magazine.",
-      "year": "2000",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL18721278M"
-    },
-    {
-      "identifier": "OL18721288M",
-      "title": "Moravian history magazine.",
-      "year": "2000",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL18721288M"
-    },
-    {
-      "identifier": "OL24472211W",
-      "title": "Michigan History Magazine",
-      "year": "2018",
-      "subject": [],
-      "description": "Author(s): Anonymous",
-      "url": "https://openlibrary.org/works/OL24472211W"
-    },
-    {
-      "identifier": "OL29252683W",
-      "title": "Military History Magazine",
-      "year": "1991",
-      "subject": [],
-      "description": "Author(s): Wall",
-      "url": "https://openlibrary.org/works/OL29252683W"
-    },
-    {
-      "identifier": "OL27767685W",
-      "title": "International history magazine",
-      "year": "",
+      "identifier": "52206",
+      "title": "隨園詩話",
+      "year": "N/A",
       "subject": [
-        "World history",
-        "Periodicals"
+        "Chinese poetry -- History and criticism"
+      ],
+      "description": "Author(s): Yuan, Mei",
+      "url": "https://www.gutenberg.org/ebooks/52206.html.images"
+    },
+    {
+      "identifier": "45502",
+      "title": "How the Other Half Lives: Studies Among the Tenements of New York",
+      "year": "N/A",
+      "subject": [
+        "Poor -- New York (State) -- New York",
+        "Tenement houses -- New York (State) -- New York"
+      ],
+      "description": "Author(s): Riis, Jacob A. (Jacob August)",
+      "url": "https://www.gutenberg.org/ebooks/45502.html.images"
+    },
+    {
+      "identifier": "41",
+      "title": "The Legend of Sleepy Hollow",
+      "year": "N/A",
+      "subject": [
+        "Ghosts -- Fiction",
+        "New York (State) -- History -- 1775-1865 -- Fiction"
+      ],
+      "description": "Author(s): Irving, Washington",
+      "url": "https://www.gutenberg.org/ebooks/41.html.images"
+    },
+    {
+      "identifier": "26",
+      "title": "Paradise Lost",
+      "year": "N/A",
+      "subject": [
+        "Adam (Biblical figure) -- Poetry",
+        "Bible. Genesis -- History of Biblical events -- Poetry",
+        "Eve (Biblical figure) -- Poetry",
+        "Fall of man -- Poetry"
+      ],
+      "description": "Author(s): Milton, John",
+      "url": "https://www.gutenberg.org/ebooks/26.html.images"
+    },
+    {
+      "identifier": "3300",
+      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "year": "N/A",
+      "subject": [
+        "Economics"
+      ],
+      "description": "Author(s): Smith, Adam",
+      "url": "https://www.gutenberg.org/ebooks/3300.html.images"
+    },
+    {
+      "identifier": "600",
+      "title": "Notes from the Underground",
+      "year": "N/A",
+      "subject": [
+        "Political fiction",
+        "Russia -- History -- 1801-1917 -- Fiction",
+        "Russia -- Officials and employees -- Fiction"
+      ],
+      "description": "Author(s): Dostoyevsky, Fyodor",
+      "url": "https://www.gutenberg.org/ebooks/600.html.images"
+    },
+    {
+      "identifier": "245",
+      "title": "Life on the Mississippi",
+      "year": "N/A",
+      "subject": [
+        "Authors, American -- 19th century -- Biography",
+        "Mississippi River -- Description and travel",
+        "Mississippi River Valley -- Social life and customs -- 19th century",
+        "Pilots and pilotage -- Mississippi River",
+        "Twain, Mark, 1835-1910 -- Travel -- Mississippi River"
+      ],
+      "description": "Author(s): Twain, Mark",
+      "url": "https://www.gutenberg.org/ebooks/245.html.images"
+    },
+    {
+      "identifier": "57724",
+      "title": "A Cyclopaedia of Canadian Biography: Being Chiefly Men of the Time: A Collection of Persons Distinguished in Professional and Political Life, Leaders in the Commerce and Industry of Canada, and Successful Pioneers",
+      "year": "N/A",
+      "subject": [
+        "Canada -- Biography",
+        "Canada -- Biography -- Dictionaries"
       ],
       "description": "",
-      "url": "https://openlibrary.org/works/OL27767685W"
-    },
-    {
-      "identifier": "OL28480316W",
-      "title": "Michigan History Magazine",
-      "year": "2018",
-      "subject": [],
-      "description": "Author(s): Anonymous",
-      "url": "https://openlibrary.org/works/OL28480316W"
-    },
-    {
-      "identifier": "OL39746619W",
-      "title": "Calumet History Magazine",
-      "year": "2011",
-      "subject": [
-        "United states, history",
-        "Periodicals"
-      ],
-      "description": "Author(s): Richard Buchko",
-      "url": "https://openlibrary.org/works/OL39746619W"
-    },
-    {
-      "identifier": "OL17089452W",
-      "title": "Michigan history magazine",
-      "year": "1966",
-      "subject": [
-        "Periodicals",
-        "History"
-      ],
-      "description": "Author(s): Michigan Historical Commission",
-      "url": "https://openlibrary.org/works/OL17089452W"
-    },
-    {
-      "identifier": "OL21003350M",
-      "title": "Moravian history magazine.",
-      "year": "1992",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL21003350M"
-    },
-    {
-      "identifier": "OL18721208M",
-      "title": "Moravian history magazine.",
-      "year": "1996",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL18721208M"
-    },
-    {
-      "identifier": "OL18897501M",
-      "title": "Moravian history magazine.",
-      "year": "2000",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL18897501M"
-    },
-    {
-      "identifier": "OL21003310M",
-      "title": "Moravian history magazine.",
-      "year": "1994",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL21003310M"
-    },
-    {
-      "identifier": "OL18721224M",
-      "title": "Moravian history magazine.",
-      "year": "1997",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL18721224M"
-    },
-    {
-      "identifier": "OL18721277M",
-      "title": "Moravian history magazine.",
-      "year": "1997",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL18721277M"
-    },
-    {
-      "identifier": "OL18874453M",
-      "title": "Local History magazine.",
-      "year": "1984",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL18874453M"
-    },
-    {
-      "identifier": "OL18721283M",
-      "title": "Moravian history magazine.",
-      "year": "1999",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL18721283M"
-    },
-    {
-      "identifier": "OL18721223M",
-      "title": "Moravian history magazine.",
-      "year": "1996",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL18721223M"
-    },
-    {
-      "identifier": "OL29635485W",
-      "title": "Sport History Magazine",
-      "year": "2018",
-      "subject": [],
-      "description": "Author(s): Francesco A. Beltrami",
-      "url": "https://openlibrary.org/works/OL29635485W"
-    },
-    {
-      "identifier": "OL39920435W",
-      "title": "Calumet History Magazine",
-      "year": "2011",
-      "subject": [
-        "United states, history",
-        "Periodicals"
-      ],
-      "description": "Author(s): Richard Buchko",
-      "url": "https://openlibrary.org/works/OL39920435W"
-    },
-    {
-      "identifier": "OL25443250W",
-      "title": "Alaskan History Magazine",
-      "year": "2019",
-      "subject": [],
-      "description": "Author(s): Gary Stein, Thomas Eley, Jon Van Zyle, Helen Hegener",
-      "url": "https://openlibrary.org/works/OL25443250W"
-    },
-    {
-      "identifier": "OL7500989W",
-      "title": "The Wiltshire archaeological and natural history magazine",
-      "year": "1855",
-      "subject": [],
-      "description": "Author(s): Wiltshire Archaeological and Natural History Society.",
-      "url": "https://openlibrary.org/works/OL7500989W"
-    },
-    {
-      "identifier": "OL36738W",
-      "title": "Le vicomte de Bragelonne, ou, dix ans plus tard",
-      "year": "1848",
-      "subject": [
-        "Fiction",
-        "History",
-        "Romans",
-        "Histoire",
-        "Historical Fiction",
-        "France Hist. Louis XIV, 1643-1715 Fiction",
-        "Fiction, historical, general",
-        "Fiction, classics",
-        "Fiction, action & adventure",
-        "Fiction, general"
-      ],
-      "description": "Author(s): Alexandre Dumas, Auguste Maquet, Alexandre Dumas, Auguste Maquet",
-      "url": "https://openlibrary.org/works/OL36738W"
-    },
-    {
-      "identifier": "OL20165W",
-      "title": "Puck of Pook's Hill",
-      "year": "1900",
-      "subject": [
-        "Fiction",
-        "Space and time",
-        "History",
-        "Classic Literature",
-        "Children's stories",
-        "Juvenile fiction",
-        "Fiction, fantasy, general",
-        "England, fiction",
-        "British and irish fiction (fictional works by one author)",
-        "Fiction, historical, general"
-      ],
-      "description": "Author(s): Rudyard Kipling",
-      "url": "https://openlibrary.org/works/OL20165W"
-    },
-    {
-      "identifier": "OL20049774M",
-      "title": "Moravian history magazine.",
-      "year": "2002",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL20049774M"
-    },
-    {
-      "identifier": "OL28203714W",
-      "title": "The Wiltshire archaeological and natural history magazine",
-      "year": "1970",
-      "subject": [
-        "Natural history",
-        "Periodicals",
-        "Antiquities",
-        "Local History",
-        "Archaeology"
-      ],
-      "description": "Author(s): Wiltshire Archaeological and Natural History Society. Natural History Section",
-      "url": "https://openlibrary.org/works/OL28203714W"
-    },
-    {
-      "identifier": "OL28474988W",
-      "title": "Michigan History Magazine; Volume 1",
-      "year": "2018",
-      "subject": [],
-      "description": "Author(s): Michigan Historical Commission",
-      "url": "https://openlibrary.org/works/OL28474988W"
-    },
-    {
-      "identifier": "OL16873633W",
-      "title": "The Wiltshire archaeological and natural history magazine",
-      "year": "1881",
-      "subject": [
-        "Natural history",
-        "Periodicals",
-        "History"
-      ],
-      "description": "Author(s): Wiltshire Archaeological and Natural History Society",
-      "url": "https://openlibrary.org/works/OL16873633W"
-    },
-    {
-      "identifier": "OL37657341W",
-      "title": "Michigan History Magazine; Volume 6",
-      "year": "2023",
-      "subject": [],
-      "description": "Author(s): Michigan Historical Commission, Michigan State Historical Society, Michigan Pioneer and Historical Society",
-      "url": "https://openlibrary.org/works/OL37657341W"
-    },
-    {
-      "identifier": "OL16880699W",
-      "title": "The Wiltshire archaeological and natural history magazine",
-      "year": "",
-      "subject": [
-        "Eng Wiltshire",
-        "Wiltshire",
-        "Natural history",
-        "England",
-        "Periodicals",
-        "History"
-      ],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL16880699W"
-    },
-    {
-      "identifier": "OL24164W",
-      "title": "The master of Ballantrae",
-      "year": "1888",
-      "subject": [
-        "Fiction",
-        "Absence and presumption of death",
-        "History",
-        "Brothers",
-        "Inheritance and succession",
-        "Revenge",
-        "Fiction in English",
-        "British and irish fiction (fictional works by one author)",
-        "Scotland, fiction",
-        "Fiction, historical"
-      ],
-      "description": "Author(s): Robert Louis Stevenson, Robert Luis Stevenson, robert l stevenson",
-      "url": "https://openlibrary.org/works/OL24164W"
-    },
-    {
-      "identifier": "OL22222344W",
-      "title": "Wiltshire Archaeological and Natural History Magazine",
-      "year": "2018",
-      "subject": [],
-      "description": "Author(s): Edward Hungerford Goddard",
-      "url": "https://openlibrary.org/works/OL22222344W"
-    },
-    {
-      "identifier": "OL37680431W",
-      "title": "Michigan History Magazine; Volume 2",
-      "year": "2023",
-      "subject": [],
-      "description": "Author(s): Michigan Historical Commission, Michigan State Historical Society, Michigan Pioneer and Historical Society",
-      "url": "https://openlibrary.org/works/OL37680431W"
-    },
-    {
-      "identifier": "OL40492119W",
-      "title": "Keweenaw History Magazine #4",
-      "year": "2014",
-      "subject": [],
-      "description": "Author(s): Richard Buchko",
-      "url": "https://openlibrary.org/works/OL40492119W"
-    },
-    {
-      "identifier": "OL12154297M",
-      "title": "Military History Magazine-1996 Calendar",
-      "year": "1995",
-      "subject": [
-        "Calendars & Diaries"
-      ],
-      "description": "Author(s): Abrams",
-      "url": "https://openlibrary.org/works/OL12154297M"
-    },
-    {
-      "identifier": "OL11698719M",
-      "title": "Military History Magazine-1996 Calendar",
-      "year": "1995",
-      "subject": [
-        "Non-Classifiable",
-        "Calendars - Special Interests"
-      ],
-      "description": "Author(s): Cowles Magazine, Abrams",
-      "url": "https://openlibrary.org/works/OL11698719M"
-    },
-    {
-      "identifier": "OL31086111W",
-      "title": "Age of Bronze History Magazine",
-      "year": "2021",
-      "subject": [],
-      "description": "Author(s): Maxim Ferapontov",
-      "url": "https://openlibrary.org/works/OL31086111W"
-    },
-    {
-      "identifier": "OL35955032W",
-      "title": "Alaskan History Magazine 2019 Anthology",
-      "year": "2020",
-      "subject": [],
-      "description": "Author(s): Patricia Schmidt, Tim Jones, Jon Van Zyle, Helen Hegener",
-      "url": "https://openlibrary.org/works/OL35955032W"
-    },
-    {
-      "identifier": "OL39768451W",
-      "title": "Keweenaw History Magazine #4",
-      "year": "2012",
-      "subject": [],
-      "description": "Author(s): Richard Buchko",
-      "url": "https://openlibrary.org/works/OL39768451W"
-    },
-    {
-      "identifier": "OL16849989W",
-      "title": "Michigan history",
-      "year": "",
-      "subject": [
-        "Periodicals",
-        "History"
-      ],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL16849989W"
-    },
-    {
-      "identifier": "OL8368141W",
-      "title": "Wir Kinder vom Bahnhof Zoo",
-      "year": "1978",
-      "subject": [
-        "Youth",
-        "Case studies",
-        "Prostitution",
-        "Drug use",
-        "Heroin habit",
-        "Adolescent girls",
-        "Biographies",
-        "Toxicomanie",
-        "Prostitution enfantine",
-        "Heroin abuse"
-      ],
-      "description": "Author(s): Christiane Felscherinow, Kai Hermann, Horst Rieck, Sonja Vukovic",
-      "url": "https://openlibrary.org/works/OL8368141W"
-    },
-    {
-      "identifier": "OL25575391W",
-      "title": "Alaskan History Magazine, July-August 2020",
-      "year": "2020",
-      "subject": [],
-      "description": "Author(s): Helen Hegener",
-      "url": "https://openlibrary.org/works/OL25575391W"
-    },
-    {
-      "identifier": "OL35917246W",
-      "title": "Alaskan History Magazine, November-December 2020",
-      "year": "2020",
-      "subject": [],
-      "description": "Author(s): Thom Swan, Helen Hegener",
-      "url": "https://openlibrary.org/works/OL35917246W"
-    },
-    {
-      "identifier": "OL22243346W",
-      "title": "Wiltshire Archaeological and Natural History Magazine",
-      "year": "2020",
-      "subject": [],
-      "description": "Author(s): Wiltshire Archaeological And Na Society",
-      "url": "https://openlibrary.org/works/OL22243346W"
-    },
-    {
-      "identifier": "OL33752511W",
-      "title": "Cobblestone History Magazine for Young People",
-      "year": "1993",
-      "subject": [],
-      "description": "",
-      "url": "https://openlibrary.org/works/OL33752511W"
-    },
-    {
-      "identifier": "OL35964527W",
-      "title": "Alaskan History Magazine Sept-Oct 2020",
-      "year": "2020",
-      "subject": [],
-      "description": "Author(s): Helen Hegener",
-      "url": "https://openlibrary.org/works/OL35964527W"
-    },
-    {
-      "identifier": "OL20932767W",
-      "title": "Commercialised History",
-      "year": "1900",
-      "subject": [
-        "European history",
-        "Communication studies",
-        "Education",
-        "History: theory & methods",
-        "Historiography",
-        "History in popular culture",
-        "History",
-        "Study and teaching"
-      ],
-      "description": "Author(s): Susanne Popp",
-      "url": "https://openlibrary.org/works/OL20932767W"
-    },
-    {
-      "identifier": "OL16880686W",
-      "title": "The Wiltshire archaeological and natural history magazine",
-      "year": "1981",
-      "subject": [
-        "Natural history",
-        "Excavations (Archaeology)",
-        "Periodicals",
-        "Antiquities"
-      ],
-      "description": "Author(s): Wiltshire Archaeological and Natural History Society",
-      "url": "https://openlibrary.org/works/OL16880686W"
-    },
-    {
-      "identifier": "OL1550515W",
-      "title": "My life of exploration",
-      "year": "1921",
-      "subject": [],
-      "description": "Author(s): Carl Lumholtz",
-      "url": "https://openlibrary.org/works/OL1550515W"
-    },
-    {
-      "identifier": "OL33237665W",
-      "title": "The local history magazine and its publication",
-      "year": "1955",
-      "subject": [
-        "Local history",
-        "Historiography",
-        "Periodicals"
-      ],
-      "description": "Author(s): Milton W. Hamilton",
-      "url": "https://openlibrary.org/works/OL33237665W"
-    },
-    {
-      "identifier": "OL34086878W",
-      "title": "Wiltshire Archaeological and Natural History Magazine; 13",
-      "year": "2021",
-      "subject": [],
-      "description": "Author(s): Edward Hungerford 1854- Goddard, Wiltshire Archaeological and Natural",
-      "url": "https://openlibrary.org/works/OL34086878W"
-    },
-    {
-      "identifier": "OL12290959M",
-      "title": "The Floating Republic (BBC History Magazine Classics)",
-      "year": "2002",
-      "subject": [
-        "British & Irish history: c 1700 to c 1900",
-        "Naval forces & warfare"
-      ],
-      "description": "Author(s): G. Manwaring, Bonamy Dobree",
-      "url": "https://openlibrary.org/works/OL12290959M"
+      "url": "https://www.gutenberg.org/ebooks/57724.html.images"
     }
   ]
 }

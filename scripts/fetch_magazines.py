@@ -2,52 +2,59 @@ import json
 from pathlib import Path
 import requests
 
-URL = "https://openlibrary.org/search.json"
+URL = "https://gutendex.com/books/"
 OUT = Path(__file__).resolve().parents[1] / "data" / "magazines.json"
 
 def fetch_rows(limit: int = 100) -> list[dict]:
+    # 使用 Gutendex API 搜索 history 相关的书籍
     params = {
-        "q": "history magazine",
-        "limit": limit,
-        "fields": "key,title,first_publish_year,author_name,subject"
+        "topic": "history",
     }
     r = requests.get(URL, params=params, timeout=30)
     r.raise_for_status()
-    docs = r.json().get("docs", [])
+    results = r.json().get("results", [])
     
     items = []
-    for d in docs:
-        key = d.get("key", "").replace("/works/", "")
-        if not key:
-            continue
+    for d in results[:limit]:
+        ident = str(d.get("id"))
+        title = d.get("title", "Unknown")
         
-        subjects = d.get("subject", [])
-        authors = d.get("author_name", [])
+        authors = [a.get("name") for a in d.get("authors", []) if a.get("name")]
+        subjects = d.get("subjects", [])
         
         description = ""
         if authors:
             description = f"Author(s): {', '.join(authors)}"
             
+        # Gutenberg 书籍链接，支持站内阅读 iframe
+        read_url = f"https://www.gutenberg.org/ebooks/{ident}"
+        
+        # 如果有 html 格式，可以直接提供给站内阅读器更好的体验，但这里默认用书籍落地页
+        formats = d.get("formats", {})
+        html_url = formats.get("text/html") or formats.get("text/html; charset=utf-8")
+        if html_url:
+            read_url = html_url
+            
         items.append({
-            "identifier": key,
-            "title": d.get("title", "Unknown"),
-            "year": str(d.get("first_publish_year", "")),
+            "identifier": ident,
+            "title": title,
+            "year": "N/A", # 古登堡接口通常不直接提供首次出版年份
             "subject": subjects[:10],
             "description": description,
-            "url": f"https://openlibrary.org/works/{key}"
+            "url": read_url
         })
         
     return items
 
 def main() -> None:
-    print("Fetching data from Open Library...")
+    print("Fetching data from Project Gutenberg (Gutendex)...")
     items = fetch_rows()
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(
         json.dumps(
             {
-                "source": "Open Library",
-                "query": "q: history magazine",
+                "source": "Project Gutenberg",
+                "query": "topic: history",
                 "count": len(items),
                 "items": items,
             },
