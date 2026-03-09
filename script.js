@@ -1,6 +1,6 @@
 /**
  * 历史杂志馆 - 前端脚本
- * 功能：搜索 · 书架记忆阅读进度 · 按章节加载阅读
+ * 功能：搜索 · 书架记忆阅读进度 · 按章节加载阅读（纯客户端，兼容 GitHub Pages）
  */
 
 // ─── 常量 ──────────────────────────────────────────────────────────────────
@@ -51,6 +51,103 @@ const readerState = {
   chapters: [],
   currentChapter: 0,
 };
+
+// ─── 客户端章节缓存与解析（替代后端 /api/book/* 接口，兼容静态托管）─────────
+/** 内存缓存：{bookId: [{title, content}, ...]} */
+const _chapterCache = {};
+
+/** 匹配章节/篇/卷等标题行（与 Python 后端 CHAPTER_RE 等效） */
+const CHAPTER_RE = /^[ \t]{0,4}((?:CHAPTER|PART|BOOK|SECTION|VOLUME|ACT)[ \t]+(?:[IVXLCDM]{1,10}|\d{1,4}(?:st|nd|rd|th)?|(?:THE\s+)?[A-Z][A-Z ]{0,40}?))[ \t]*(?:\.|:|—|--)?[ \t]*$/gm;
+
+function _splitChapters(rawText) {
+  let text = rawText;
+
+  // 去除 Gutenberg 页眉
+  for (const marker of [
+    "*** START OF THE PROJECT GUTENBERG",
+    "*** START OF THIS PROJECT GUTENBERG",
+    "*END*THE SMALL PRINT",
+  ]) {
+    const idx = text.indexOf(marker);
+    if (idx !== -1) {
+      const nl = text.indexOf("\n", idx);
+      if (nl !== -1) text = text.slice(nl + 1);
+      break;
+    }
+  }
+
+  // 去除 Gutenberg 页脚
+  for (const marker of [
+    "*** END OF THE PROJECT GUTENBERG",
+    "*** END OF THIS PROJECT GUTENBERG",
+    "End of the Project Gutenberg",
+    "End of Project Gutenberg",
+  ]) {
+    const idx = text.indexOf(marker);
+    if (idx !== -1) { text = text.slice(0, idx); break; }
+  }
+
+  // 重置正则 lastIndex（使用 /g 标志时需要）
+  CHAPTER_RE.lastIndex = 0;
+  const matches = [...text.matchAll(CHAPTER_RE)];
+
+  if (matches.length < 2) {
+    // 无章节标题 — 按段落分页，每页约 3000 字符
+    const paragraphs = text.split(/\n\n+/).map(p => p.trim()).filter(Boolean);
+    if (!paragraphs.length) return [{ title: "全文", content: text.slice(0, 30000) }];
+
+    const pages = [];
+    let cur = [], curLen = 0;
+    for (const para of paragraphs) {
+      if (curLen + para.length > 3000 && cur.length) {
+        pages.push(cur.join("\n\n"));
+        cur = [para];
+        curLen = para.length;
+      } else {
+        cur.push(para);
+        curLen += para.length;
+      }
+    }
+    if (cur.length) pages.push(cur.join("\n\n"));
+    return pages.map((p, i) => ({ title: `第 ${i + 1} 页`, content: p }));
+  }
+
+  return matches.map((m, i) => {
+    const title = m[1].trim();
+    const start = m.index;
+    const end = i + 1 < matches.length ? matches[i + 1].index : text.length;
+    let content = text.slice(start, end).trim();
+    if (content.length > 30000) content = content.slice(0, 30000) + "\n\n…（章节内容过长，已截取前部分）";
+    return { title, content };
+  });
+}
+
+async function _fetchBookChapters(bookId) {
+  if (_chapterCache[bookId]) return _chapterCache[bookId];
+
+  // 获取书籍元数据（含文本文件 URL）
+  const metaResp = await fetch(`https://gutendex.com/books/?ids=${encodeURIComponent(bookId)}`);
+  if (!metaResp.ok) throw new Error(`Gutendex 请求失败: HTTP ${metaResp.status}`);
+  const meta = await metaResp.json();
+
+  const results = meta.results || [];
+  if (!results.length) throw new Error(`书籍不存在: ${bookId}`);
+
+  const formats = results[0].formats || {};
+  const textUrl =
+    formats["text/plain; charset=utf-8"] ||
+    formats["text/plain; charset=us-ascii"] ||
+    formats["text/plain"];
+
+  if (!textUrl) throw new Error("该书籍无纯文本版本，无法按章节加载");
+
+  const textResp = await fetch(textUrl);
+  if (!textResp.ok) throw new Error(`获取书籍文本失败: HTTP ${textResp.status}`);
+  const text = await textResp.text();
+
+  _chapterCache[bookId] = _splitChapters(text);
+  return _chapterCache[bookId];
+}
 
 // ─── 书架管理（localStorage） ──────────────────────────────────────────────
 function loadShelf() {
@@ -299,16 +396,15 @@ async function openReader(bookId, bookTitle, webpageUrl) {
   const savedChapter  = shelf[bookId]?.currentChapter ?? 0;
 
   try {
-    const resp = await fetch(`/api/book/${bookId}/chapters`);
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    const data = await resp.json();
+    // 直接在浏览器端获取并解析书籍文本（无需后端）
+    const chapters = await _fetchBookChapters(bookId);
 
-    readerState.chapters = data.chapters;
-    renderChapterList(data.chapters, savedChapter);
+    readerState.chapters = chapters;
+    renderChapterList(chapters, savedChapter);
 
     // 同步更新书架总章节数
     if (shelf[bookId]) {
-      saveReadingProgress(bookId, savedChapter, data.total);
+      saveReadingProgress(bookId, savedChapter, chapters.length);
     }
 
     await loadChapter(bookId, savedChapter);
@@ -342,21 +438,26 @@ async function loadChapter(bookId, chapterNum) {
   readerContent.scrollTop  = 0;
 
   try {
-    const resp = await fetch(`/api/book/${bookId}/chapter/${chapterNum}`);
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    const data = await resp.json();
+    // 从客户端缓存中取章节内容
+    const chapters = await _fetchBookChapters(bookId);
+    if (chapterNum < 0 || chapterNum >= chapters.length) {
+      throw new Error(`章节不存在: ${chapterNum}`);
+    }
 
-    chapterTitle.textContent = data.title;
-    chapterText.textContent  = data.content;
+    const chapter = chapters[chapterNum];
+    const total   = chapters.length;
+
+    chapterTitle.textContent = chapter.title;
+    chapterText.textContent  = chapter.content;
     readerState.currentChapter = chapterNum;
 
-    prevChapterBtn.disabled   = !data.has_prev;
-    nextChapterBtn.disabled   = !data.has_next;
-    chapterIndicator.textContent = `${chapterNum + 1} / ${data.total}`;
-    readerChapterInfo.textContent = `${chapterNum + 1} / ${data.total}`;
+    prevChapterBtn.disabled   = chapterNum <= 0;
+    nextChapterBtn.disabled   = chapterNum >= total - 1;
+    chapterIndicator.textContent = `${chapterNum + 1} / ${total}`;
+    readerChapterInfo.textContent = `${chapterNum + 1} / ${total}`;
 
     // 顶部进度条
-    const pct = data.total > 1 ? (chapterNum / (data.total - 1)) * 100 : 100;
+    const pct = total > 1 ? (chapterNum / (total - 1)) * 100 : 100;
     progressFill.style.width = `${pct}%`;
 
     // 侧栏高亮
@@ -367,7 +468,7 @@ async function loadChapter(bookId, chapterNum) {
       ?.scrollIntoView({ block: "nearest", behavior: "smooth" });
 
     // 保存进度（仅书架中的书）
-    saveReadingProgress(bookId, chapterNum, data.total);
+    saveReadingProgress(bookId, chapterNum, total);
 
   } catch (err) {
     chapterText.textContent = `加载章节失败：${err.message}`;
