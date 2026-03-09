@@ -1,416 +1,55 @@
 {
-  "source": "Project Gutenberg",
-  "query": "topic: history",
-  "count": 32,
+  "source": "Local Pre-generated Content",
+  "query": "本地中国历史与世界历史数据集",
+  "count": 4,
   "items": [
     {
-      "identifier": "26184",
-      "title": "Simple Sabotage Field Manual",
-      "year": "N/A",
+      "identifier": "shiji-01",
+      "title": "史记 · 五帝本纪",
+      "year": "西汉",
       "subject": [
-        "Sabotage"
+        "中国历史",
+        "纪传体通史",
+        "上古史"
       ],
-      "description": "Author(s): United States. Office of Strategic Services",
-      "url": "https://www.gutenberg.org/ebooks/26184.html.images"
+      "description": "作者：司马迁。《史记》是中国历史上第一部纪传体通史，被列为“二十四史”之首。本篇为《五帝本纪》，记载了黄帝、颛顼、帝喾、尧、舜的生平事迹。",
+      "url": "./data/books/shiji-01.html"
     },
     {
-      "identifier": "67979",
-      "title": "The Blue Castle: a novel",
-      "year": "N/A",
+      "identifier": "zizhitongjian-01",
+      "title": "资治通鉴 · 周纪一",
+      "year": "北宋",
       "subject": [
-        "Canada -- History -- 1914-1945 -- Fiction",
-        "Choice (Psychology) -- Fiction",
-        "Love -- Fiction",
-        "Romance fiction",
-        "Self-actualization (Psychology) -- Fiction",
-        "Single women -- Fiction",
-        "Young adult fiction"
+        "中国历史",
+        "编年体通史",
+        "古代政治"
       ],
-      "description": "Author(s): Montgomery, L. M. (Lucy Maud)",
-      "url": "https://www.gutenberg.org/ebooks/67979.html.images"
+      "description": "作者：司马光。《资治通鉴》是由北宋史学家司马光主编的一部多卷本编年体史书。本篇起于周威烈王二十三年，终于周烈王三十三年。",
+      "url": "./data/books/zizhitongjian-01.html"
     },
     {
-      "identifier": "174",
-      "title": "The Picture of Dorian Gray",
-      "year": "N/A",
+      "identifier": "history-mag-01",
+      "title": "近代史研究 (示例期刊)",
+      "year": "2023",
       "subject": [
-        "Appearance (Philosophy) -- Fiction",
-        "Conduct of life -- Fiction",
-        "Didactic fiction",
-        "Great Britain -- History -- Victoria, 1837-1901 -- Fiction",
-        "London (England) -- History -- 1800-1950 -- Fiction",
-        "Paranormal fiction",
-        "Portraits -- Fiction",
-        "Supernatural -- Fiction"
+        "近代史",
+        "学术期刊",
+        "历史研究"
       ],
-      "description": "Author(s): Wilde, Oscar",
-      "url": "https://www.gutenberg.org/ebooks/174.html.images"
+      "description": "作者：近代史研究所。探讨中国近代史上的重大历史事件与社会变迁。本期特稿：晚清社会经济结构转型分析。",
+      "url": "./data/books/history-mag-01.html"
     },
     {
-      "identifier": "1259",
-      "title": "Twenty years after",
-      "year": "N/A",
+      "identifier": "world-history-01",
+      "title": "世界历史摘要：工业革命",
+      "year": "2024",
       "subject": [
-        "France -- History -- Louis XIV, 1643-1715 -- Fiction"
+        "世界历史",
+        "工业革命",
+        "欧洲史"
       ],
-      "description": "Author(s): Dumas, Alexandre, Maquet, Auguste",
-      "url": "https://www.gutenberg.org/ebooks/1259.html.images"
-    },
-    {
-      "identifier": "98",
-      "title": "A Tale of Two Cities",
-      "year": "N/A",
-      "subject": [
-        "British -- France -- Paris -- Fiction",
-        "Executions and executioners -- Fiction",
-        "France -- History -- Revolution, 1789-1799 -- Fiction",
-        "French -- England -- London -- Fiction",
-        "Historical fiction",
-        "London (England) -- History -- 18th century -- Fiction",
-        "Lookalikes -- Fiction",
-        "Paris (France) -- History -- 1789-1799 -- Fiction",
-        "War stories"
-      ],
-      "description": "Author(s): Dickens, Charles",
-      "url": "https://www.gutenberg.org/ebooks/98.html.images"
-    },
-    {
-      "identifier": "1184",
-      "title": "The Count of Monte Cristo",
-      "year": "N/A",
-      "subject": [
-        "Adventure stories",
-        "Dantès, Edmond (Fictitious character) -- Fiction",
-        "France -- History -- 19th century -- Fiction",
-        "Historical fiction",
-        "Pirates -- Fiction",
-        "Prisoners -- Fiction",
-        "Revenge -- Fiction"
-      ],
-      "description": "Author(s): Dumas, Alexandre, Maquet, Auguste",
-      "url": "https://www.gutenberg.org/ebooks/1184.html.images"
-    },
-    {
-      "identifier": "7290",
-      "title": "韓詩外傳, Complete",
-      "year": "N/A",
-      "subject": [
-        "Shi jing"
-      ],
-      "description": "Author(s): Han, Ying, active 150 B.C.",
-      "url": "https://www.gutenberg.org/ebooks/7290.html.images"
-    },
-    {
-      "identifier": "1232",
-      "title": "The Prince",
-      "year": "N/A",
-      "subject": [
-        "Political ethics -- Early works to 1800",
-        "Political science -- Philosophy -- Early works to 1800",
-        "State, The -- Early works to 1800"
-      ],
-      "description": "Author(s): Machiavelli, Niccolò",
-      "url": "https://www.gutenberg.org/ebooks/1232.html.images"
-    },
-    {
-      "identifier": "3207",
-      "title": "Leviathan",
-      "year": "N/A",
-      "subject": [
-        "Political science -- Early works to 1800",
-        "State, The -- Early works to 1800"
-      ],
-      "description": "Author(s): Hobbes, Thomas",
-      "url": "https://www.gutenberg.org/ebooks/3207.html.images"
-    },
-    {
-      "identifier": "25344",
-      "title": "The Scarlet Letter",
-      "year": "N/A",
-      "subject": [
-        "Adultery -- Fiction",
-        "Boston (Mass.) -- History -- Colonial period, ca. 1600-1775 -- Fiction",
-        "Clergy -- Fiction",
-        "Historical fiction",
-        "Illegitimate children -- Fiction",
-        "Married women -- Fiction",
-        "Psychological fiction",
-        "Puritans -- Fiction",
-        "Revenge -- Fiction",
-        "Triangles (Interpersonal relations) -- Fiction"
-      ],
-      "description": "Author(s): Hawthorne, Nathaniel",
-      "url": "https://www.gutenberg.org/ebooks/25344.html.images"
-    },
-    {
-      "identifier": "205",
-      "title": "Walden, and On The Duty Of Civil Disobedience",
-      "year": "N/A",
-      "subject": [
-        "Authors, American -- 19th century -- Biography",
-        "Civil disobedience",
-        "Government, Resistance to",
-        "Natural history -- Massachusetts -- Walden Woods",
-        "Solitude",
-        "Thoreau, Henry David, 1817-1862 -- Homes and haunts -- Massachusetts -- Walden Woods",
-        "Walden Woods (Mass.) -- Social life and customs",
-        "Wilderness areas -- Massachusetts -- Walden Woods"
-      ],
-      "description": "Author(s): Thoreau, Henry David",
-      "url": "https://www.gutenberg.org/ebooks/205.html.images"
-    },
-    {
-      "identifier": "408",
-      "title": "The Souls of Black Folk",
-      "year": "N/A",
-      "subject": [
-        "African Americans"
-      ],
-      "description": "Author(s): Du Bois, W. E. B. (William Edward Burghardt)",
-      "url": "https://www.gutenberg.org/ebooks/408.html.images"
-    },
-    {
-      "identifier": "2600",
-      "title": "War and Peace",
-      "year": "N/A",
-      "subject": [
-        "Aristocracy (Social class) -- Russia -- Fiction",
-        "Historical fiction",
-        "Napoleonic Wars, 1800-1815 -- Campaigns -- Russia -- Fiction",
-        "Russia -- History -- Alexander I, 1801-1825 -- Fiction",
-        "War stories"
-      ],
-      "description": "Author(s): Tolstoy, Leo, graf",
-      "url": "https://www.gutenberg.org/ebooks/2600.html.images"
-    },
-    {
-      "identifier": "45",
-      "title": "Anne of Green Gables",
-      "year": "N/A",
-      "subject": [
-        "Bildungsromans",
-        "Canada -- History -- 1867-1914 -- Fiction",
-        "Country life -- Prince Edward Island -- Fiction",
-        "Friendship -- Fiction",
-        "Girls -- Fiction",
-        "Islands -- Fiction",
-        "Orphans -- Fiction",
-        "Prince Edward Island -- History -- 20th century -- Fiction",
-        "Shirley, Anne (Fictitious character) -- Fiction"
-      ],
-      "description": "Author(s): Montgomery, L. M. (Lucy Maud)",
-      "url": "https://www.gutenberg.org/ebooks/45.html.images"
-    },
-    {
-      "identifier": "7370",
-      "title": "Second Treatise of Government",
-      "year": "N/A",
-      "subject": [
-        "Liberty -- Early works to 1800",
-        "Political science -- Early works to 1800",
-        "Toleration -- Early works to 1800"
-      ],
-      "description": "Author(s): Locke, John",
-      "url": "https://www.gutenberg.org/ebooks/7370.html.images"
-    },
-    {
-      "identifier": "23",
-      "title": "Narrative of the Life of Frederick Douglass, an American Slave",
-      "year": "N/A",
-      "subject": [
-        "Abolitionists -- United States -- Biography",
-        "African American abolitionists -- Biography",
-        "Douglass, Frederick, 1818-1895",
-        "Enslaved persons -- United States -- Biography"
-      ],
-      "description": "Author(s): Douglass, Frederick",
-      "url": "https://www.gutenberg.org/ebooks/23.html.images"
-    },
-    {
-      "identifier": "45304",
-      "title": "The City of God, Volume I",
-      "year": "N/A",
-      "subject": [
-        "Apologetics -- Early works to 1800",
-        "Kingdom of God -- Early works to 1800"
-      ],
-      "description": "Author(s): Augustine, of Hippo, Saint",
-      "url": "https://www.gutenberg.org/ebooks/45304.html.images"
-    },
-    {
-      "identifier": "15399",
-      "title": "The Interesting Narrative of the Life of Olaudah Equiano, Or Gustavus Vassa, The African: Written By Himself",
-      "year": "N/A",
-      "subject": [
-        "Enslaved persons -- Great Britain -- Biography",
-        "Enslaved persons -- United States -- Biography",
-        "Equiano, Olaudah, 1745-1797"
-      ],
-      "description": "Author(s): Equiano, Olaudah",
-      "url": "https://www.gutenberg.org/ebooks/15399.html.images"
-    },
-    {
-      "identifier": "73887",
-      "title": "Modern ships of war",
-      "year": "N/A",
-      "subject": [
-        "Navies",
-        "Warships"
-      ],
-      "description": "Author(s): Reed, Edward J. (Edward James), Sir, Simpson, Edward",
-      "url": "https://www.gutenberg.org/ebooks/73887.html.images"
-    },
-    {
-      "identifier": "25162",
-      "title": "池北偶談",
-      "year": "N/A",
-      "subject": [
-        "China -- History -- Qing dynasty, 1644-1912 -- Anecdotes"
-      ],
-      "description": "Author(s): Wang, Shizhen",
-      "url": "https://www.gutenberg.org/ebooks/25162.html.images"
-    },
-    {
-      "identifier": "1719",
-      "title": "The Ballad of the White Horse",
-      "year": "N/A",
-      "subject": [
-        "Alfred, King of England, 849-899 -- Poetry",
-        "Christian poetry",
-        "Epic poetry",
-        "Great Britain -- History -- Alfred, 871-899 -- Poetry",
-        "Historical poetry",
-        "White Horse, Vale of (England) -- Poetry"
-      ],
-      "description": "Author(s): Chesterton, G. K. (Gilbert Keith)",
-      "url": "https://www.gutenberg.org/ebooks/1719.html.images"
-    },
-    {
-      "identifier": "47629",
-      "title": "Ang \"Filibusterismo\" (Karugtóng ng Noli Me Tangere)",
-      "year": "N/A",
-      "subject": [
-        "Nationalists -- Philippines -- Fiction",
-        "Philippine fiction (Spanish) -- Translations into Tagalog",
-        "Philippines -- History -- Fiction"
-      ],
-      "description": "Author(s): Rizal, José",
-      "url": "https://www.gutenberg.org/ebooks/47629.html.images"
-    },
-    {
-      "identifier": "132",
-      "title": "The Art of War",
-      "year": "N/A",
-      "subject": [
-        "Military art and science -- Early works to 1800",
-        "War -- Early works to 1800"
-      ],
-      "description": "Author(s): Sunzi, active 6th century B.C.",
-      "url": "https://www.gutenberg.org/ebooks/132.html.images"
-    },
-    {
-      "identifier": "10676",
-      "title": "The Reign of Greed",
-      "year": "N/A",
-      "subject": [
-        "Nationalists -- Philippines -- Fiction",
-        "Philippine fiction (Spanish) -- Translations into English",
-        "Philippines -- History -- Fiction"
-      ],
-      "description": "Author(s): Rizal, José",
-      "url": "https://www.gutenberg.org/ebooks/10676.html.images"
-    },
-    {
-      "identifier": "52206",
-      "title": "隨園詩話",
-      "year": "N/A",
-      "subject": [
-        "Chinese poetry -- History and criticism"
-      ],
-      "description": "Author(s): Yuan, Mei",
-      "url": "https://www.gutenberg.org/ebooks/52206.html.images"
-    },
-    {
-      "identifier": "45502",
-      "title": "How the Other Half Lives: Studies Among the Tenements of New York",
-      "year": "N/A",
-      "subject": [
-        "Poor -- New York (State) -- New York",
-        "Tenement houses -- New York (State) -- New York"
-      ],
-      "description": "Author(s): Riis, Jacob A. (Jacob August)",
-      "url": "https://www.gutenberg.org/ebooks/45502.html.images"
-    },
-    {
-      "identifier": "41",
-      "title": "The Legend of Sleepy Hollow",
-      "year": "N/A",
-      "subject": [
-        "Ghosts -- Fiction",
-        "New York (State) -- History -- 1775-1865 -- Fiction"
-      ],
-      "description": "Author(s): Irving, Washington",
-      "url": "https://www.gutenberg.org/ebooks/41.html.images"
-    },
-    {
-      "identifier": "26",
-      "title": "Paradise Lost",
-      "year": "N/A",
-      "subject": [
-        "Adam (Biblical figure) -- Poetry",
-        "Bible. Genesis -- History of Biblical events -- Poetry",
-        "Eve (Biblical figure) -- Poetry",
-        "Fall of man -- Poetry"
-      ],
-      "description": "Author(s): Milton, John",
-      "url": "https://www.gutenberg.org/ebooks/26.html.images"
-    },
-    {
-      "identifier": "3300",
-      "title": "An Inquiry into the Nature and Causes of the Wealth of Nations",
-      "year": "N/A",
-      "subject": [
-        "Economics"
-      ],
-      "description": "Author(s): Smith, Adam",
-      "url": "https://www.gutenberg.org/ebooks/3300.html.images"
-    },
-    {
-      "identifier": "600",
-      "title": "Notes from the Underground",
-      "year": "N/A",
-      "subject": [
-        "Political fiction",
-        "Russia -- History -- 1801-1917 -- Fiction",
-        "Russia -- Officials and employees -- Fiction"
-      ],
-      "description": "Author(s): Dostoyevsky, Fyodor",
-      "url": "https://www.gutenberg.org/ebooks/600.html.images"
-    },
-    {
-      "identifier": "245",
-      "title": "Life on the Mississippi",
-      "year": "N/A",
-      "subject": [
-        "Authors, American -- 19th century -- Biography",
-        "Mississippi River -- Description and travel",
-        "Mississippi River Valley -- Social life and customs -- 19th century",
-        "Pilots and pilotage -- Mississippi River",
-        "Twain, Mark, 1835-1910 -- Travel -- Mississippi River"
-      ],
-      "description": "Author(s): Twain, Mark",
-      "url": "https://www.gutenberg.org/ebooks/245.html.images"
-    },
-    {
-      "identifier": "57724",
-      "title": "A Cyclopaedia of Canadian Biography: Being Chiefly Men of the Time: A Collection of Persons Distinguished in Professional and Political Life, Leaders in the Commerce and Industry of Canada, and Successful Pioneers",
-      "year": "N/A",
-      "subject": [
-        "Canada -- Biography",
-        "Canada -- Biography -- Dictionaries"
-      ],
-      "description": "",
-      "url": "https://www.gutenberg.org/ebooks/57724.html.images"
+      "description": "作者：历史学苑。简述18世纪从英国发源的第一次工业革命如何彻底改变了人类社会的生产方式和阶级结构。",
+      "url": "./data/books/world-history-01.html"
     }
   ]
 }
